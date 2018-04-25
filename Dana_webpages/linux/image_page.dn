@@ -4,7 +4,8 @@ component provides ws.Web requires io.Output out, io.FileSystem fileSystem, ws.F
 
 	bool Web:get(char path[], DocStream s)
 		{
-				
+			s.writeStatus(200, "", new Header("Content-Length", ""))// to avoid ERR_INVALID_CHUNKED_ENCODING in google chrome response status and content lenght needs to be updated as so
+			s.write("<!DOCTYPE html>")	
 			s.write("<html>")
 				s.write("<head>")
 					s.write("<title>Image Based Test Page</title>")
