@@ -1,0 +1,3 @@
+[submodule "Dana_Ubuntu_Image"]
+	path = Dana_Ubuntu_Image
+	url = https://github.com/sasadla/Dana_ubuntu_image.git
