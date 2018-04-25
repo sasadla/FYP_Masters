@@ -1,0 +1,8 @@
+version: '3'
+services:
+  dana-web-service:
+    build: ./linux
+    #image: sasadla/dana-service-1.0.0:latest
+    ports:
+     - '5000:2018'
+    restart: always

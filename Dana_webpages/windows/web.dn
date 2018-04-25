@@ -26,7 +26,7 @@ component provides ws.Web requires io.Output out, io.FileSystem fileSystem, ws.F
 				s.write("</div>")
 			s.write("</body>")
 		s.write("</html>")
-		//out.println("home page done")
+		out.println("home page done")
 		return true
 		}
 
