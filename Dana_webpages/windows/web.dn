@@ -1,0 +1,40 @@
+uses ws.forms.FileFormField
+
+component provides ws.Web requires io.Output out, io.FileSystem fileSystem, ws.FormParser fparser {
+
+	bool Web:get(char path[], DocStream s)
+		{
+		
+		s.write("<html>")
+			s.write("<head>")
+				s.write("<title>33661839 FYP Test Home</title>")
+				s.write("<link href=\"swc/css/main.css\" rel=\"stylesheet\" type=\"text/css\">")
+			s.write("</head>")
+			
+			s.write("<body>")
+				s.write("<div class = \"pagebox\">")
+					s.write("<h1>This is the 33661839 FYP test home page</h1>")
+					s.write("<h2>Following Test Pages are Available</h2>")
+
+					s.write("<div class = \"page_options\">")
+					
+						s.write("<a href=\"text_page\">Text Based</a>")
+						s.write("<a href=\"image_page\">Image based</a>")
+						s.write("<a href=\"image_text_page\">Text and Image based</a>")
+
+					s.write("</div>")
+				s.write("</div>")
+			s.write("</body>")
+		s.write("</html>")
+		//out.println("home page done")
+		return true
+		}
+
+	bool Web:post(char path[], char contentType[], byte content[], DocStream stream)
+		{
+		
+		
+		return true
+		}
+
+	}
