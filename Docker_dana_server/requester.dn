@@ -1,0 +1,30 @@
+component provides App requires io.Output out, data.StringUtil stringUtil, net.http.HTTPRequest rq, data.IntUtil intUtl {
+ 
+ 
+	
+	int App:main(AppParam params[])
+	{
+		int req_num = 100
+		int cnt = 1
+		while (cnt<=req_num)
+		{
+			rqst("http://localhost:5000",cnt)
+			cnt++
+		}
+		
+		return 0
+	}
+ 
+	
+	
+	
+	
+	void rqst(char url[],int cnt)
+	{
+		HTTPResponse r = rq.get(url, null)/*"http://127.0.0.1:5100"*/
+		char resp[] =r.content
+		char c[] =intUtl.intToString(cnt)
+		out.println("Request number $c made to: $url")
+		//out.println("res is: $resp")
+	}
+}

@@ -8,6 +8,6 @@ dnc text_page.dn
 dnc image_page.dn
 dnc image_text_page.dn
 echo "Dana Component running on "
+echo "Container-IP is: " 
 hostname --ip-address 
-echo " ...."
 dana ws.core
