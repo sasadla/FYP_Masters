@@ -1,0 +1,95 @@
+component provides App requires io.Output out, data.StringUtil stringUtil, net.http.HTTPRequest rq, data.IntUtil intUtl,io.File,data.query.Search search,os.Run run {
+ 
+ 
+	
+	int App:main(AppParam params[])
+	{
+		inspect_container("localhost",get_cntnr_id("D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\ids_res.txt"))
+		get_status("D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\status_res.txt")
+		return 0
+	}
+	
+	void inspect_container(char ip[],String ids[])
+	{	int cntr=0
+		while (ids[cntr]!=null)
+		{
+			if (ids[cntr]==null){
+			}
+			else{
+				char id[]=ids[cntr].string
+				char path[]="D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\d_inspect $id"
+				RunStatus s = run.execute(path)
+				extract_ip_gtway("D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\inspect_res.txt")
+				out.println("The container id is: $id")
+			}
+			cntr++
+		}
+		
+	
+		
+	
+	}
+	
+		void get_status(char f_n[])
+	{
+		RunStatus s = run.execute("D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\live_container_info")
+						
+		char res[] = read_file(f_n)
+		
+		out.println("Status result is: $res")
+		
+//		return cntnr_id
+	
+	}
+	
+	
+	String[] get_cntnr_id(char f_n[])
+	{
+		RunStatus s = run.execute("D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\get_ids")
+						
+		char res[] = read_file(f_n)
+		String cntnr_id[]
+		
+		cntnr_id = stringUtil.explode(res, "\n\r")
+		
+		//out.println(cntnr_id[0].string)
+		
+		return cntnr_id
+	
+	}
+	
+	
+	void extract_ip_gtway(char f_n[])
+	{
+		char rest[]
+		char gtwy[]
+		char c_ip[]
+		
+		
+		//search.search(read_file(f_n), "IPAddress", rest)
+		
+		rest = stringUtil.explode(read_file(f_n), ":")[193].string
+		
+		gtwy = stringUtil.explode(rest, ",")[0].string
+		
+		rest = stringUtil.explode(read_file(f_n), ":")[194].string
+		
+		c_ip = stringUtil.explode(rest, ",")[0].string
+		
+		out.println("Extracted data is Gateway: $gtwy coantiner ip: $c_ip")
+	
+	}
+	
+	
+	
+	
+	char[] read_file(char f_name[])
+	{
+		File f = new File(f_name, File.FILE_ACCESS_READ)
+
+		char q[] = f.read(f.getSize())
+		
+		return q
+		
+	}
+}
