@@ -1,23 +1,49 @@
-component provides App requires io.Output out, data.StringUtil stringUtil, net.http.HTTPRequest rq, data.IntUtil intUtl {
+uses time.DateTime
+component provides App requires io.Output out, data.StringUtil stringUtil, net.http.HTTPRequest rq, data.IntUtil intUtl,time.DateUtil dtTm,io.File, os.Run run {
  
  
 	
 	int App:main(AppParam params[])
-	{
-		int req_num = 100
+	{	
+		//DateTime dttm
+		//int2 st
+		//int2 end
+		int req_num = 10
 		int cnt = 1
+		RunStatus s = run.execute("if exist requester_log.txt break> requester_log.txt")
 		while (cnt<=req_num)
 		{
+		//	st=dttm.millisecond
 			rqst("http://localhost:5000",cnt)
+		//	end=dttm.millisecond
+		//	out.println(st)
+		//	out.println(end)
+			
 			cnt++
 		}
-		
+		//out.println(read_file("requester_log.txt"))
 		return 0
 	}
  
 	
 	
+	void write_to_file(char f_n[],char d[])
+	{	
+		File f = new File(f_n, File.FILE_ACCESS_WRITE)
+		f.setPos(f.getSize())
+		f.write("$d\n")
+		f.close()
+	}
 	
+	char[] read_file(char f_name[])
+	{
+		File f = new File(f_name, File.FILE_ACCESS_READ)
+
+		char q[] = f.read(f.getSize())
+		
+		return q
+		
+	}
 	
 	void rqst(char url[],int cnt)
 	{
@@ -25,6 +51,7 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 		char resp[] =r.content
 		char c[] =intUtl.intToString(cnt)
 		out.println("Request number $c made to: $url")
+		write_to_file("requester_log.txt","Request number $c made to: $url")
 		//out.println("res is: $resp")
 	}
 }
