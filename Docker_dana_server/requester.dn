@@ -10,18 +10,29 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 		//int2 end
 		int req_num = 10
 		int cnt = 1
-		RunStatus s = run.execute("if exist requester_log.txt break> requester_log.txt")
+		char url[] = "http://localhost:5000"
+		char log_name[] = "requester_log.txt"
+		Thread t = asynch::rqst(url,cnt)
+		
+		RunStatus s = run.execute("if exist $log_name break> $log_name.txt")
+		
+		
+		
+		
 		while (cnt<=req_num)
 		{
 		//	st=dttm.millisecond
-			rqst("http://localhost:5000",cnt)
+			
+		//	t.join()
+			rqst(url,cnt)
+		
 		//	end=dttm.millisecond
 		//	out.println(st)
 		//	out.println(end)
 			
 			cnt++
 		}
-		//out.println(read_file("requester_log.txt"))
+	//	out.println(read_file("$log_name"))
 		return 0
 	}
  
