@@ -1,41 +1,92 @@
 uses time.DateTime
-component provides App requires io.Output out, data.StringUtil stringUtil, net.http.HTTPRequest rq, data.IntUtil intUtl,time.DateUtil dtTm,io.File, os.Run run {
+component provides App requires io.Output out, data.StringUtil stringUtil, net.http.HTTPRequest rq, data.IntUtil intUtl,time.DateUtil dtTm,io.File, os.Run run,time.Calendar caln {
  
  
 	
 	int App:main(AppParam params[])
 	{	
-		//DateTime dttm
-		//int2 st
-		//int2 end
 		int req_num = 10
 		int cnt = 1
-		char url[] = "http://localhost:5000"
-		char log_name[] = "requester_log.txt"
-		Thread t = asynch::rqst(url,cnt)
+		int threadCount = 5
+		//int urls_to_check = threadCount
+		Thread myThreads[] = new Thread[threadCount]
+		String urls[] = stringUtil.explode(read_file("tst_urls.txt"), "\n\r")//only put 5 links in this file otherwise system will crash
 		
-		RunStatus s = run.execute("if exist $log_name break> $log_name.txt")
+		out.println("Getting Minimum reply time for web service")
 		
+		int min_rep_avg = get_min_reply_avg_time(urls)
 		
-		
-		
-		while (cnt<=req_num)
-		{
-		//	st=dttm.millisecond
+		out.println("\nStarting time to reply test for web service with $(intUtl.intToString(threadCount)) threads\nMaking Requests now")
+		for (int i = 0; i < threadCount; i++)
+		{	
+			char url[]
+			if (urls[i] != null && i < urls.arrayLength)
+			{
+				url = urls[i].string
+			}
+			//out.println(url)
+			myThreads[i] = asynch::rqst(url, i, req_num)
 			
-		//	t.join()
-			rqst(url,cnt)
-		
-		//	end=dttm.millisecond
-		//	out.println(st)
-		//	out.println(end)
-			
-			cnt++
 		}
-	//	out.println(read_file("$log_name"))
+		
+		for (int i = 0; i < threadCount; i++)
+		{
+			myThreads[i].join()
+			
+		}
+		//out.println("")
+		out.println("\nTest Complete results are:")
+		gen_time_avgs_log(threadCount,req_num,min_rep_avg)
+		
+		
+		
 		return 0
 	}
  
+ 
+	int get_min_reply_avg_time(String urls[])
+	{
+		int min_avg = 0
+		for (int i = 0; i < 5; i++)
+		{	
+			char url[]
+			if (urls[i]!= null)
+			{
+				url = urls[i].string
+			}
+			//out.println(url)
+			min_avg = min_avg + rqst(url, 1, 1)
+			
+		}
+		min_avg = min_avg/5
+		//out.println("Minimum average reply time for web service test is: $(intUtl.intToString(min_avg)) ms")
+		return min_avg
+	}
+ 
+	void gen_time_avgs_log(int threadCount,int req_num,int min_rep_avg)
+	{	
+		int avg_tme[] = new int [threadCount]
+		int final_avg = 0
+		char log_name[] = "controller_ttr_log.txt"
+		RunStatus s = run.execute("if exist $log_name break> $log_name")
+		for (int i = 0; i < threadCount; i++)
+		{
+			char log_name_T[] = "requester_log_$(intUtl.intToString(i)).txt"
+			char res[] = read_file(log_name_T)
+			char url[] = stringUtil.explode(res, "\n\r")[0].string
+			
+			url = new char[](stringUtil.explode(res, ":")[1].string,":",stringUtil.explode(res, ":")[2].string,":",stringUtil.explode(stringUtil.explode(res, ":")[3].string,"\n\r")[0].string)
+			
+			avg_tme[i] =intUtl.intFromString(stringUtil.explode((stringUtil.explode(res, "\n\r")[req_num+1].string), ":")[1].string)
+			final_avg = final_avg + avg_tme[i]
+			write_to_file(log_name,"Average reply time for thread number $(intUtl.intToString(i+1)) testing the url $url is:$(intUtl.intToString(avg_tme[i])) ms")
+			s = run.execute("DEL D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\$log_name_T")
+		}
+		final_avg = final_avg/ threadCount
+		write_to_file(log_name,"Final average reply time for web service test is:$(intUtl.intToString(final_avg)) ms")
+		write_to_file(log_name,"Minimum average reply time for web service test is:$(intUtl.intToString(min_rep_avg)) ms")
+		out.println(read_file(log_name))
+	}
 	
 	
 	void write_to_file(char f_n[],char d[])
@@ -52,17 +103,45 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 
 		char q[] = f.read(f.getSize())
 		
+		f.close()
+		
 		return q
 		
 	}
 	
-	void rqst(char url[],int cnt)
+	int rqst(char url[],int cnt, int reqno)
 	{
-		HTTPResponse r = rq.get(url, null)/*"http://127.0.0.1:5100"*/
-		char resp[] =r.content
-		char c[] =intUtl.intToString(cnt)
-		out.println("Request number $c made to: $url")
-		write_to_file("requester_log.txt","Request number $c made to: $url")
+		char log_name[] = "requester_log_$(intUtl.intToString(cnt)).txt"
+		RunStatus s = run.execute("if exist $log_name break> $log_name")
+		int tme[] = new int [reqno]
+		int avg = 0
+		write_to_file(log_name,"This log is for URL :$url")
+		for (int i = 0; i < reqno; i++)
+		{
+			DateTime st = caln.getTime()
+			HTTPResponse r = rq.get(url, null)/*"http://127.0.0.1:5100"*/
+			
+			DateTime end = caln.getTime()
+			
+			DateTime dif = dtTm.diff(st, end)
+			
+			int e_t =dtTm.toMilliseconds(dif)
+			tme[i]= e_t
+			//char resp[] =r.content
+			//out.println("Request number: $(intUtl.intToString(i+1)) made to: $url with response time: $(intUtl.intToString(e_t)) ms")
+			out.print("-")
+			
+			write_to_file(log_name,"Request number: $(intUtl.intToString(i+1)) made to: $url with response time: $(intUtl.intToString(e_t)) ms")
+		}
+		
+		for (int x = 0; x < reqno; x++)
+		{
+			avg = avg + tme[x]
+			
+		}
+		avg = avg/reqno
+		write_to_file(log_name,"Average for thread number $(intUtl.intToString(cnt+1)):$(intUtl.intToString(avg))")
 		//out.println("res is: $resp")
+		return avg
 	}
 }

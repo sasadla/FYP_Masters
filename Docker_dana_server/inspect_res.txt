@@ -1,0 +1,205 @@
+[
+    {
+        "Id": "48324ffe8d05a06ef21782b9696d4594b5b055bbc79c03fa668f3314e9c93c31",
+        "Created": "2018-04-30T13:29:15.3749953Z",
+        "Path": "./run.bash",
+        "Args": [],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 14200,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2018-04-30T13:47:07.7841785Z",
+            "FinishedAt": "2018-04-30T13:46:55.2577007Z"
+        },
+        "Image": "sha256:acffb911555aba6e66e59b9d271bd3e872eed150127ad51b5dc89c638a9f27c8",
+        "ResolvConfPath": "/var/lib/docker/containers/48324ffe8d05a06ef21782b9696d4594b5b055bbc79c03fa668f3314e9c93c31/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/48324ffe8d05a06ef21782b9696d4594b5b055bbc79c03fa668f3314e9c93c31/hostname",
+        "HostsPath": "/var/lib/docker/containers/48324ffe8d05a06ef21782b9696d4594b5b055bbc79c03fa668f3314e9c93c31/hosts",
+        "LogPath": "/var/lib/docker/containers/48324ffe8d05a06ef21782b9696d4594b5b055bbc79c03fa668f3314e9c93c31/48324ffe8d05a06ef21782b9696d4594b5b055bbc79c03fa668f3314e9c93c31-json.log",
+        "Name": "/docker_dana_server_dana-web-service_1",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "docker_dana_server_default",
+            "PortBindings": {
+                "2018/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "5000"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "always",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": [],
+            "CapAdd": null,
+            "CapDrop": null,
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "shareable",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DiskQuota": 0,
+            "KernelMemory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": 0,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/c7d27bf23e900aaf8ba7fbe43be7a94ab6bb6562a8f0f3ba2db9eff881ce7f8c-init/diff:/var/lib/docker/overlay2/6cabab6e215cb6aebeae1e1e2dea95c52908718874aa2b89245e1cb21e1b8bf2/diff:/var/lib/docker/overlay2/be6efc5f0bb79ed613331b884ea871f922c4b18ee33cc69b4ff3b7da291645d1/diff:/var/lib/docker/overlay2/c903b21253dd1c7684f5950fbbfe6188fc19f25f5a581b37da7e68cf6077e955/diff:/var/lib/docker/overlay2/d02d55bf8545c3080dcc98c1dd0c047613a0d38177d4bc40af25f401eb7611e3/diff:/var/lib/docker/overlay2/12df218324eb5c4e784db6e87a35a51b9ff1e1bc2ffc15663071f90bbf842146/diff:/var/lib/docker/overlay2/1b361552148bef098a3ba4e5804fe91af7df82fd2120baddd7c08cda33778d54/diff:/var/lib/docker/overlay2/dcae0c1dc8f416ff6008b3b741c2253156843cf8556042b2769d22777ecc1675/diff:/var/lib/docker/overlay2/cddd25ebe099995fd3ae08f76fee5bc9fce4ddafc5152ac288315c75f661dc04/diff:/var/lib/docker/overlay2/cd4694865a6d5834958def39889292e6fb40ae1ac8fef0d6f9575819a920ef62/diff:/var/lib/docker/overlay2/6f836d81e07c291a98a25fb786de8e64581bf626e80ee345af3116e01a035380/diff:/var/lib/docker/overlay2/3782ca56bcfa73b3bedafd183bf5050a92b87dade991e7d214b228a23d062ab0/diff:/var/lib/docker/overlay2/50bcc95abcea8bb4ced144182e307beab00fbbdac81d92198b3c8bf14cb8099e/diff:/var/lib/docker/overlay2/64f725f8d0855272e8b245d6ad3721e32a27b63386baefadff568fa92898dad3/diff:/var/lib/docker/overlay2/0adfd5cce5312f4e1008d0bcaf5044e82742ab7c33b348017cad1127a3688883/diff:/var/lib/docker/overlay2/43d1a000e5b6d2520553691287bd884edf60d7d45783313d9a794a5a62d50407/diff:/var/lib/docker/overlay2/2da788efed9dd9eb8383006a0572b577809f7cf5653d05543770d3c0a78fa462/diff",
+                "MergedDir": "/var/lib/docker/overlay2/c7d27bf23e900aaf8ba7fbe43be7a94ab6bb6562a8f0f3ba2db9eff881ce7f8c/merged",
+                "UpperDir": "/var/lib/docker/overlay2/c7d27bf23e900aaf8ba7fbe43be7a94ab6bb6562a8f0f3ba2db9eff881ce7f8c/diff",
+                "WorkDir": "/var/lib/docker/overlay2/c7d27bf23e900aaf8ba7fbe43be7a94ab6bb6562a8f0f3ba2db9eff881ce7f8c/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "48324ffe8d05",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "2018/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/dana_home/dana_ubu64_[215]",
+                "DANA_HOME=/usr/bin/dana_home/dana_ubu64_[215]"
+            ],
+            "Cmd": null,
+            "ArgsEscaped": true,
+            "Image": "dana-web-service:latest",
+            "Volumes": null,
+            "WorkingDir": "/usr/local/bin/app",
+            "Entrypoint": [
+                "./run.bash"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "Maintainer": "Saarim Aatri Sadla",
+                "com.docker.compose.config-hash": "55c29b0cc41b74f6b98355536a69636dae44d266ba20f93477fbb10096a7d22b",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "docker_dana_server",
+                "com.docker.compose.service": "dana-web-service",
+                "com.docker.compose.version": "1.21.0"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "a83f66b46c3804edde7c42a17c788660e77baef7192f5ed69f5448f902994bd4",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "2018/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "5000"
+                    }
+                ]
+            },
+            "SandboxKey": "/var/run/docker/netns/a83f66b46c38",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "docker_dana_server_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "dana-web-service",
+                        "48324ffe8d05"
+                    ],
+                    "NetworkID": "c62fa394fcd8b12161d75250883a1bff063961efe1df1f9b9569911bb9f82201",
+                    "EndpointID": "56a09c2535fef9685a17427b48fe49c0362d960ac1e1645198ac4469b7ebde89",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:12:00:02",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]

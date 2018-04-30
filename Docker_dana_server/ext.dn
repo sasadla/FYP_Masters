@@ -1,4 +1,4 @@
-component provides App requires io.Output out, data.StringUtil stringUtil, net.http.HTTPRequest rq, data.IntUtil intUtl,io.File,data.query.Search search,os.Run run {
+component provides App requires io.Output out, data.StringUtil stringUtil, net.http.HTTPRequest rq, data.IntUtil intUtl,io.File,data.query.Search search,os.Run run,data.json.JSONParser parser {
  
  
 	
@@ -11,7 +11,8 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 	
 	void inspect_container(char ip[],String ids[])
 	{	int cntr=0
-		while (ids[cntr]!=null)
+		char log_path[]="D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\inspect_res.txt"
+		while (cntr < ids.arrayLength)// ids[cntr]!=null)
 		{
 			if (ids[cntr]==null){
 			}
@@ -19,7 +20,14 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 				char id[]=ids[cntr].string
 				char path[]="D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\d_inspect $id"
 				RunStatus s = run.execute(path)
-				extract_ip_gtway("D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\inspect_res.txt")
+				char gtwy[]=extract_info_on_container(log_path,"Gateway")
+				
+				char c_ip[]  = extract_info_on_container(log_path,"IPAddress")
+				
+				out.println("Gateway is: $gtwy")
+				
+				out.println("Ip address is: $c_ip")
+				
 				out.println("The container id is: $id")
 			}
 			cntr++
@@ -38,7 +46,6 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 		
 		out.println("Status result is: $res")
 		
-//		return cntnr_id
 	
 	}
 	
@@ -59,24 +66,26 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 	}
 	
 	
-	void extract_ip_gtway(char f_n[])
+	char[] extract_info_on_container(char f_n[],char info[])
 	{
 		char rest[]
-		char gtwy[]
-		char c_ip[]
+		char infrm[]
 		
+		char jsonArray[] = new char[]("{ \"array\":", read_file(f_n), "}")
+		//out.println(jsonArray)
+		JSONElement doc = parser.parseDocument(jsonArray)
 		
-		//search.search(read_file(f_n), "IPAddress", rest)
+		JSONElement cellA = parser.getValue(doc, "array").children[0]
+	
+		JSONElement leaf = parser.getValue(cellA, "NetworkSettings")
 		
-		rest = stringUtil.explode(read_file(f_n), ":")[193].string
+		leaf = parser.getValue(leaf, "Networks")
 		
-		gtwy = stringUtil.explode(rest, ",")[0].string
+		leaf = parser.getValue(leaf, "docker_dana_server_default")
 		
-		rest = stringUtil.explode(read_file(f_n), ":")[194].string
+		infrm = parser.getValue(leaf, info).value
 		
-		c_ip = stringUtil.explode(rest, ",")[0].string
-		
-		out.println("Extracted data is Gateway: $gtwy coantiner ip: $c_ip")
+		return infrm
 	
 	}
 	
