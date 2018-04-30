@@ -1,10 +1,58 @@
 uses time.DateTime
-component provides App requires io.Output out, data.StringUtil stringUtil, net.http.HTTPRequest rq, data.IntUtil intUtl,time.DateUtil dtTm,io.File, os.Run run,time.Calendar caln {
+component provides App requires io.Output out, data.StringUtil stringUtil, net.http.HTTPRequest rq, data.IntUtil intUtl,time.DateUtil dtTm,io.File, os.Run run,time.Calendar caln, data.json.JSONParser jparser  {
  
  
 	
 	int App:main(AppParam params[])
 	{	
+		
+		String ids[] = get_cntnr_id("D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\ids_res.txt")
+		int cntr=0
+		char log_path_ins[]="D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\inspect_res.txt"
+		char gt[] = "Gateway"
+		char i_p[]= "IPAddress"
+		
+		char stats[] = get_status("D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\status_res.txt")
+		RunStatus s = run.execute("if exist controller_container_stats_log.txt break> controller_container_stats_log.txt")
+		while (cntr < ids.arrayLength)
+		{
+			if (ids[cntr]==null){
+			}
+			else{
+				char id[]=ids[cntr].string
+				char path[]="D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\d_inspect $id"
+				s = run.execute(path)
+	
+				//out.println("Container id is:$id")
+				write_to_file("controller_container_stats_log.txt","Container id is:$id")
+				//out.println("Gateway is:$(extract_info_on_container(log_path_ins,gt))")
+				write_to_file("controller_container_stats_log.txt","Gateway is:$(extract_info_on_container(log_path_ins,gt))")
+			//	out.println("Ip address is:$(extract_info_on_container(log_path_ins,i_p))")
+				write_to_file("controller_container_stats_log.txt","Ip address is:$(extract_info_on_container(log_path_ins,i_p))")
+			}
+			cntr++
+		}
+		
+		
+		out.println("\n--------------------------------------------------------------")
+		out.println("Machine Stats are:")
+		out.println("$stats")
+		out.println("\n--------------------------------------------------------------")
+		out.println("Container details:")
+		out.println(read_file("controller_container_stats_log.txt"))
+		out.println("\n--------------------------------------------------------------")
+		
+		start_test()
+		
+		out.println("\n--------------------------------------------------------------\n")
+		
+		
+		return 0
+	}
+ 
+	void start_test()
+	{
+	
 		int req_num = 10
 		int cnt = 1
 		int threadCount = 5
@@ -38,12 +86,10 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 		out.println("\nTest Complete results are:")
 		gen_time_avgs_log(threadCount,req_num,min_rep_avg)
 		
-		
-		
-		return 0
+	
 	}
- 
- 
+	
+	
 	int get_min_reply_avg_time(String urls[])
 	{
 		int min_avg = 0
@@ -89,6 +135,60 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 	}
 	
 	
+	
+	
+	
+	char[] get_status(char f_n[])
+	{
+		RunStatus s = run.execute("D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\live_container_info")
+						
+		char res[] = read_file(f_n)
+		
+		//out.println("Status result is: $res")
+		return res
+	
+	}
+	
+	
+	String[] get_cntnr_id(char f_n[])
+	{
+		RunStatus s = run.execute("D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\get_ids")
+						
+		char res[] = read_file(f_n)
+		String cntnr_id[]
+		
+		cntnr_id = stringUtil.explode(res, "\n\r")
+		
+		//out.println(cntnr_id[0].string)
+		
+		return cntnr_id
+	
+	}
+	
+	
+	char[] extract_info_on_container(char f_n[],char info[])
+	{
+		char infrm[]
+		
+		char jsonArray[] = new char[]("{ \"array\":", read_file(f_n), "}")
+		//out.println(jsonArray)
+		JSONElement doc = jparser.parseDocument(jsonArray)
+		
+		JSONElement cellA = jparser.getValue(doc, "array").children[0]
+	
+		JSONElement leaf = jparser.getValue(cellA, "NetworkSettings")
+		
+		leaf = jparser.getValue(leaf, "Networks")
+		
+		leaf = jparser.getValue(leaf, "docker_dana_server_default")
+		
+		infrm = jparser.getValue(leaf, info).value
+		
+		return infrm
+	
+	}
+	
+	
 	void write_to_file(char f_n[],char d[])
 	{	
 		File f = new File(f_n, File.FILE_ACCESS_WRITE)
@@ -100,11 +200,8 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 	char[] read_file(char f_name[])
 	{
 		File f = new File(f_name, File.FILE_ACCESS_READ)
-
 		char q[] = f.read(f.getSize())
-		
 		f.close()
-		
 		return q
 		
 	}
@@ -144,4 +241,5 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 		//out.println("res is: $resp")
 		return avg
 	}
+	
 }

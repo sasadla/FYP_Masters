@@ -1,7 +1,0 @@
-Average reply time for thread number 1 testing the url http://localhost:5000 is:6914 ms
-Average reply time for thread number 2 testing the url http://localhost:5000/text_page is:6565 ms
-Average reply time for thread number 3 testing the url http://localhost:5000/image_page is:6752 ms
-Average reply time for thread number 4 testing the url http://localhost:5000/image_text_page is:6440 ms
-Average reply time for thread number 5 testing the url http://localhost:5000/index is:7040 ms
-Final average reply time for web service test is:6742 ms
-Minimum average reply time for web service test is:1511 ms
