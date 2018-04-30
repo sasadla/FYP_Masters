@@ -1,0 +1,3 @@
+Container id is:3459f05b3535
+Gateway is:172.18.0.1
+Ip address is:172.18.0.2

@@ -34,17 +34,17 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 		}
 		
 		
-		out.println("\n--------------------------------------------------------------")
+		out.println("\n---------------------------------------------------")
 		out.println("Machine Stats are:")
 		out.println("$stats")
-		out.println("\n--------------------------------------------------------------")
+		out.println("\n---------------------------------------------------")
 		out.println("Container details:")
 		out.println(read_file("controller_container_stats_log.txt"))
-		out.println("\n--------------------------------------------------------------")
+		out.println("\n---------------------------------------------------")
 		
 		start_test()
 		
-		out.println("\n--------------------------------------------------------------\n")
+		out.println("\n---------------------------------------------------\n")
 		
 		
 		return 0
