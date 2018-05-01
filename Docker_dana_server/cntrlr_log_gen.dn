@@ -11,6 +11,8 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 		char log_path_ins[]="D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\inspect_res.txt"
 		char gt[] = "Gateway"
 		char i_p[]= "IPAddress"
+		int final_avg
+		char c_details[]
 		
 		char stats[] = get_status("D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\status_res.txt")
 		RunStatus s = run.execute("if exist controller_container_stats_log.txt break> controller_container_stats_log.txt")
@@ -23,39 +25,68 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 				char path[]="D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\d_inspect $id"
 				s = run.execute(path)
 	
-				//out.println("Container id is:$id")
 				write_to_file("controller_container_stats_log.txt","Container id is:$id")
-				//out.println("Gateway is:$(extract_info_on_container(log_path_ins,gt))")
 				write_to_file("controller_container_stats_log.txt","Gateway is:$(extract_info_on_container(log_path_ins,gt))")
-			//	out.println("Ip address is:$(extract_info_on_container(log_path_ins,i_p))")
 				write_to_file("controller_container_stats_log.txt","Ip address is:$(extract_info_on_container(log_path_ins,i_p))")
 			}
 			cntr++
 		}
 		
+		c_details = read_file("controller_container_stats_log.txt")
 		
 		out.println("\n--------------------------------------------------")
 		out.println("Machine Stats are:")
 		out.println("$stats")
 		out.println("\n--------------------------------------------------")
 		out.println("Container details:")
-		out.println(read_file("controller_container_stats_log.txt"))
+		out.println(c_details)
 		out.println("\n--------------------------------------------------")
 		
-		start_test()
+		final_avg = start_test(5)
+		gen_status_table(stats,c_details)
+
+		out.println("\n--------------------------------------------------\n")
+		
+		out.println(read_file("controller_table_log.txt"))
+				
 		
 		out.println("\n--------------------------------------------------\n")
 		
 		
 		return 0
 	}
+	
+	void gen_status_table(char stats[],char c_details[])
+	{
+	// three log files:
+		//controller_container_stats_log.txt containerid,ip,gateway (c_details)
+		//controller_ttr_log.txt //min avg max avg ttr
+		//status_res.txt host details here (stats)
+		
+		char log_name[] ="controller_table_log.txt"
+		RunStatus s = run.execute("if exist $log_name break> $log_name")
+		
+		char host_ident[] = stringUtil.explode(stringUtil.explode(stats, ":")[1].string,"\n\r")[1].string
+		
+		char c_id[] = stringUtil.explode(stringUtil.explode(c_details, ":")[1].string,"\n\r")[0].string
+		char c_ip_on_host[] = stringUtil.explode(stringUtil.explode(c_details, ":")[3].string,"\n\r")[0].string
+		char avg_ttr_w_srvc[] = stringUtil.explode(stringUtil.explode(read_file("controller_ttr_log.txt"), "\n\r")[5].string,":")[1].string
+		char min_avg_ttr_w_srvc[] = stringUtil.explode(stringUtil.explode(read_file("controller_ttr_log.txt"), "\n\r")[6].string,":")[1].string
+		
+		write_to_file(log_name,"Host identity:$host_ident")
+		write_to_file(log_name,"Container id:$c_id")
+		write_to_file(log_name,"Container ip on host:$c_ip_on_host")
+		write_to_file(log_name,"On Load Average TTR webservice:$avg_ttr_w_srvc")
+		write_to_file(log_name,"Minimum Average TTR webservice:$min_avg_ttr_w_srvc")
+	
+	}
  
-	void start_test()
+	int start_test(int tcount)
 	{
 	
 		int req_num = 10
 		int cnt = 1
-		int threadCount = 5
+		int threadCount = tcount
 		//int urls_to_check = threadCount
 		Thread myThreads[] = new Thread[threadCount]
 		String urls[] = stringUtil.explode(read_file("tst_urls.txt"), "\n\r")//only put 5 links in this file otherwise system will crash
@@ -82,9 +113,9 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 			myThreads[i].join()
 			
 		}
-		//out.println("")
 		out.println("\nTest Complete results are:")
-		gen_time_avgs_log(threadCount,req_num,min_rep_avg)
+		
+		return gen_time_avgs_log(threadCount,req_num,min_rep_avg)
 		
 	
 	}
@@ -109,7 +140,7 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 		return min_avg
 	}
  
-	void gen_time_avgs_log(int threadCount,int req_num,int min_rep_avg)
+	int gen_time_avgs_log(int threadCount,int req_num,int min_rep_avg)
 	{	
 		int avg_tme[] = new int [threadCount]
 		int final_avg = 0
@@ -132,6 +163,7 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 		write_to_file(log_name,"Final average reply time for web service test is:$(intUtl.intToString(final_avg)) ms")
 		write_to_file(log_name,"Minimum average reply time for web service test is:$(intUtl.intToString(min_rep_avg)) ms")
 		out.println(read_file(log_name))
+		return final_avg
 	}
 	
 	

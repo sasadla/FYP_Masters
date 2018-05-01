@@ -1,0 +1,43 @@
+uses time.DateTime
+component provides App requires io.Output out, data.StringUtil stringUtil,data.IntUtil intUtl,io.File, os.Run run  {
+ 
+ 
+	
+	int App:main(AppParam params[])
+	{	
+		String ips_to_check[] = stringUtil.explode(read_file("ips_to_check.txt"), "\n\r")
+		
+		for(int i=0;i<ips_to_check.arrayLength;i++)
+		{
+			out.println(ips_to_check[i].string)
+			RunStatus s = run.execute("D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\run_log_gen.bat")		
+		}
+		return 0
+	}
+	
+	
+	
+
+						
+	
+	
+	
+	void write_to_file(char f_n[],char d[])
+	{	
+		File f = new File(f_n, File.FILE_ACCESS_WRITE)
+		f.setPos(f.getSize())
+		f.write("$d\n")
+		f.close()
+	}
+	
+	char[] read_file(char f_name[])
+	{
+		File f = new File(f_name, File.FILE_ACCESS_READ)
+		char q[] = f.read(f.getSize())
+		f.close()
+		return q
+		
+	}
+	
+	
+}
