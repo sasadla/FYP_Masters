@@ -1,0 +1,34 @@
+uses ws.forms.FileFormField
+
+component provides ws.Web requires ws.FormParser fparser, io.Output out, os.SystemInfo info, os.Run run, io.File, data.StringUtil stringUtil, net.http.HTTPRequest rq, data.query.Search search{
+ 	
+	bool Web:get(char path[], DocStream s)
+		{
+		char controller_ip[] = "localhost"
+		char log_name[] = "free_ips.txt"
+		
+		char f_ip[] = stringUtil.explode(read_file("\\\\$controller_ip\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\controller\\$log_name"),"\n\r")[0].string
+		HTTPResponse r = rq.get("http://$f_ip:5000/$path", null)/*"http://127.0.0.1:5100"*/
+		char m[] =r.content
+		s.write(m)//string concatination done here
+		
+		return true
+		}
+
+	bool Web:post(char path[], char contentType[], byte content[], DocStream stream)
+		{
+		
+		
+		return true
+		}
+		
+	char[] read_file(char f_name[])
+	{
+		File f = new File(f_name, File.FILE_ACCESS_READ)
+		char q[] = f.read(f.getSize())
+		f.close()
+		return q
+		
+	}
+
+	}

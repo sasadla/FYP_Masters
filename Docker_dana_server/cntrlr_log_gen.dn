@@ -11,6 +11,9 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 		char log_path_ins[]="D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\inspect_res.txt"
 		char gt[] = "Gateway"
 		char i_p[]= "IPAddress"
+		
+		int tCount=1
+		
 		int final_avg
 		char c_details[]
 		
@@ -34,29 +37,29 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 		
 		c_details = read_file("controller_container_stats_log.txt")
 		
-		out.println("\n--------------------------------------------------")
-		out.println("Machine Stats are:")
-		out.println("$stats")
-		out.println("\n--------------------------------------------------")
-		out.println("Container details:")
-		out.println(c_details)
-		out.println("\n--------------------------------------------------")
+		//out.println("\n--------------------------------------------------")
+		//out.println("Machine Stats are:")
+		//out.println("$stats")
+		//out.println("\n--------------------------------------------------")
+		//out.println("Container details:")
+		//out.println(c_details)
+		//out.println("\n--------------------------------------------------")
 		
-		final_avg = start_test(5)
-		gen_status_table(stats,c_details)
+		final_avg = start_test(tCount)
+		gen_status_table(stats,c_details,tCount)
 
-		out.println("\n--------------------------------------------------\n")
+		//out.println("\n--------------------------------------------------\n")
 		
-		out.println(read_file("controller_table_log.txt"))
+		//out.println(read_file("controller_table_log.txt"))
 				
 		
-		out.println("\n--------------------------------------------------\n")
+	//	out.println("\n--------------------------------------------------\n")
 		
 		
 		return 0
 	}
 	
-	void gen_status_table(char stats[],char c_details[])
+	void gen_status_table(char stats[],char c_details[],int tCount)
 	{
 	// three log files:
 		//controller_container_stats_log.txt containerid,ip,gateway (c_details)
@@ -65,19 +68,47 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 		
 		char log_name[] ="controller_table_log.txt"
 		RunStatus s = run.execute("if exist $log_name break> $log_name")
-		
+		//5,6
 		char host_ident[] = stringUtil.explode(stringUtil.explode(stats, ":")[1].string,"\n\r")[1].string
 		
 		char c_id[] = stringUtil.explode(stringUtil.explode(c_details, ":")[1].string,"\n\r")[0].string
 		char c_ip_on_host[] = stringUtil.explode(stringUtil.explode(c_details, ":")[3].string,"\n\r")[0].string
-		char avg_ttr_w_srvc[] = stringUtil.explode(stringUtil.explode(read_file("controller_ttr_log.txt"), "\n\r")[5].string,":")[1].string
-		char min_avg_ttr_w_srvc[] = stringUtil.explode(stringUtil.explode(read_file("controller_ttr_log.txt"), "\n\r")[6].string,":")[1].string
+		char avg_ttr_w_srvc[] = stringUtil.explode(stringUtil.explode(read_file("controller_ttr_log.txt"), "\n\r")[tCount].string,":")[1].string
+		char min_avg_ttr_w_srvc[] = stringUtil.explode(stringUtil.explode(read_file("controller_ttr_log.txt"), "\n\r")[tCount+1].string,":")[1].string
 		
 		write_to_file(log_name,"Host identity:$host_ident")
 		write_to_file(log_name,"Container id:$c_id")
 		write_to_file(log_name,"Container ip on host:$c_ip_on_host")
 		write_to_file(log_name,"On Load Average TTR webservice:$avg_ttr_w_srvc")
 		write_to_file(log_name,"Minimum Average TTR webservice:$min_avg_ttr_w_srvc")
+		write_to_file(log_name,"WebService Status:$(get_stat(intUtl.intFromString(avg_ttr_w_srvc),intUtl.intFromString(min_avg_ttr_w_srvc)))")
+		
+	
+	}
+	
+	char[] get_stat(int avg, int min_avg){
+		int dif = avg - min_avg
+		int fail_state= 9999
+		int moderate_load = 5999
+		char stat[]
+		
+	//	out.println("ttt$(intUtl.intToString(avg)) - $(intUtl.intToString(min_avg)) = $(intUtl.intToString(dif))")
+		
+		
+		if(avg>= fail_state){
+			stat = "OVERLOADED"
+		}
+		else if(avg > min_avg && dif>min_avg && avg > moderate_load && avg < fail_state){
+			stat ="BUSY"
+		}
+		else if (avg <= min_avg){
+			stat= "FREE"	
+		}
+		else if (avg > min_avg && avg < moderate_load){
+			stat= "FREE"	
+		}
+		
+		return stat
 	
 	}
  
@@ -99,9 +130,13 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 		for (int i = 0; i < threadCount; i++)
 		{	
 			char url[]
-			if (urls[i] != null && i < urls.arrayLength)
+			if (i < urls.arrayLength)
 			{
 				url = urls[i].string
+			}
+			else
+			{
+				url = urls[3].string
 			}
 			//out.println(url)
 			myThreads[i] = asynch::rqst(url, i, req_num)

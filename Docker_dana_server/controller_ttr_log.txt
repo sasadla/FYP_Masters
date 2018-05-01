@@ -1,0 +1,3 @@
+Average reply time for thread number 1 testing the url http://localhost:5000 is:1426 ms
+Final average reply time for web service test is:1426 ms
+Minimum average reply time for web service test is:1497 ms
