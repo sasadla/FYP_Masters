@@ -9,7 +9,9 @@ component provides App requires io.Output out, data.StringUtil stringUtil,data.I
 		char log_name[] ="controller_table_log.txt"
 		char av_host[]
 		int skip 
+		
 		RunStatus s = run.execute("if exist free_ips.txt break> free_ips.txt")
+		
 		bool test_run = true
 		bool free_found = false
 		bool free_done = false
@@ -20,100 +22,122 @@ component provides App requires io.Output out, data.StringUtil stringUtil,data.I
 		
 		for(int i=0;i<ips_to_check.arrayLength;i++)
 		{
-			if(test_run)
-			{
-				s = run.execute("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\run_log_gen.bat")
-			}
 			
-			if (free_found){
-				//if(i!=skip)
-				//{
-					char dd[] = read_file("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\down_res.txt")
+			char dd[] = read_file("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\down_res.txt")
 					
 					
 					
+			if (dd.arrayLength > 0)
+			{
+				//out.println(dd)
+			//
+			}
+			else
+			{
+				if(test_run)
+				{
+					s = run.execute("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\run_log_gen.bat")
+				}
+				
+				if (free_found){
+					if(i!=skip)
+					{
+						for(int x=0;x<ips_to_check.arrayLength;x++)
+						{
+							
+							dd = read_file("\\\\$(ips_to_check[x].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\down_res.txt")
+							
+							
+							
+							if (dd.arrayLength > 0)
+							{
+								//out.println(dd)
+							//
+							}
+							else
+							{
+								
+								char f_st[] = stringUtil.explode(stringUtil.explode(read_file("\\\\$(ips_to_check[x].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\$log_name"),"\n\r")[5].string,":")[1].string
+								if(f_st == "FREE" && f_st != "BUSY" && f_st != "OVERLOADED" && (!busy_found || !ovrldd_found))
+								{
+									out.println("FREE Active")
+								//	s = run.execute("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\down_script.bat")
+								}
+							
+							
+							}
+						}
+
+					}
+					if(i>=ips_to_check.arrayLength)
+					{
+						free_done = true
+					}
+					test_run = false
+				}
+				if(busy_found)
+				{
+					dd = read_file("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\down_res.txt")
 					if (dd.arrayLength > 0)
 					{
-						//out.println(dd)
-					//
+						out.println("BUSY ACTIVE")
+						//s = run.execute("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\up_script.bat")
+						busy_found = false
+						busy_done = true
+						test_run = false
 					}
-					else
+				
+				}
+				if(ovrldd_found)
+				{
+					dd = read_file("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\down_res.txt")
+					if (dd.arrayLength > 0)
 					{
-						char f_st[] = stringUtil.explode(stringUtil.explode(read_file("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\$log_name"),"\n\r")[5].string,":")[1].string
-						if(f_st == "FREE" && f_st != "BUSY" && f_st != "OVERLOADED")
+						out.println("OVERLOADED ACTIVE")
+						//s = run.execute("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\up_script.bat")
+						if(i >= ips_to_check.arrayLength)
 						{
-							out.println("FREE Active")
-						//	s = run.execute("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\down_script.bat")
+							ovrldd_found = false
 						}
-					
-					}
-				//}
-				free_done = true
-				test_run = false
-			}
-			if(busy_found)
-			{
-				char dd[] = read_file("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\down_res.txt")
-				if (dd.arrayLength > 0)
-				{
-					out.println("BUSY ACTIVE")
-					//s = run.execute("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\up_script.bat")
-					busy_found = false
-					busy_done = true
-					test_run = false
-				}
-			
-			}
-			if(ovrldd_found)
-			{
-				char dd[] = read_file("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\down_res.txt")
-				if (dd.arrayLength > 0)
-				{
-					out.println("OVERLOADED ACTIVE")
-					//s = run.execute("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\up_script.bat")
-					if(i >= ips_to_check.arrayLength)
-					{
-						ovrldd_found = false
-					}
-					ovrldd_done = true
-					test_run = false
+						ovrldd_done = true
+						test_run = false
 
+					}
+				
 				}
-			
-			}
-			if(stringUtil.explode(stringUtil.explode(read_file("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\$log_name"),"\n\r")[5].string,":")[1].string == "FREE" && !free_done)
-			{
-				free_found = true
-			//	skip = i
-				av_host =stringUtil.explode(stringUtil.explode(read_file("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\$log_name"),"\n\r")[0].string,":")[1].string
-				test_run = false
-				i = 0
-				i--
+				if(stringUtil.explode(stringUtil.explode(read_file("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\$log_name"),"\n\r")[5].string,":")[1].string == "FREE" && !free_done)
+				{
+					free_found = true
+					skip = i
+					av_host =stringUtil.explode(stringUtil.explode(read_file("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\$log_name"),"\n\r")[0].string,":")[1].string
+					write_to_file("free_ips.txt",av_host)
+					test_run = false
+					//i = 0
+					//i--
+					
+				}
+				else if(stringUtil.explode(stringUtil.explode(read_file("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\$log_name"),"\n\r")[5].string,":")[1].string == "BUSY" && !busy_done)
+				{
+					busy_found = true
+					i = 0
+					i--
+					test_run = false
+					out.println("Launch one new instance to share the load")
+					
+				}
+				
+				else if(stringUtil.explode(stringUtil.explode(read_file("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\$log_name"),"\n\r")[5].string,":")[1].string == "OVERLOADED" && !ovrldd_done)
+				{	
+					ovrldd_found = true
+					i = 0
+					i--
+					test_run = false
+					out.println("Launch two new instance to share the load and stablize")
+				}
+				
 				
 			}
-			else if(stringUtil.explode(stringUtil.explode(read_file("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\$log_name"),"\n\r")[5].string,":")[1].string == "BUSY" && !busy_done)
-			{
-				busy_found = true
-				i = 0
-				i--
-				test_run = false
-				out.println("Launch one new instance to share the load")
-				
-			}
-			
-			else if(stringUtil.explode(stringUtil.explode(read_file("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\$log_name"),"\n\r")[5].string,":")[1].string == "OVERLOADED" && !ovrldd_done)
-			{	
-				ovrldd_found = true
-				i = 0
-				i--
-				test_run = false
-				out.println("Launch two new instance to share the load and stablize")
-			}
-			
-			write_to_file("free_ips.txt",av_host)
-			
 		}
-		
 		return 0
 	}
 	

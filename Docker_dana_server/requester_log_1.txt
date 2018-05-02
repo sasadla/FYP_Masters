@@ -1,3 +1,3 @@
 This log is for URL :http://localhost:5000/index
-Request number: 1 made to: http://localhost:5000/index with response time: 1226 ms
-Average for thread number 2:1226
+Request number: 1 made to: http://localhost:5000/index with response time: 1208 ms
+Average for thread number 2:1208
