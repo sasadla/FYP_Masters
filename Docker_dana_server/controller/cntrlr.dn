@@ -9,6 +9,9 @@ component provides App requires io.Output out, data.StringUtil stringUtil,data.I
 		char log_name[] ="controller_table_log.txt"
 		char av_host[]
 		int skip 
+		char avg_ttr_w_srvc[]
+		char min_avg_ttr_w_srvc[]
+		int tCount
 		
 		RunStatus s = run.execute("if exist free_ips.txt break> free_ips.txt")
 		
@@ -24,9 +27,9 @@ component provides App requires io.Output out, data.StringUtil stringUtil,data.I
 		{
 			
 			char dd[] = read_file("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\down_res.txt")
-					
-					
-					
+			
+			char status[]
+			
 			if (dd.arrayLength > 0)
 			{
 				//out.println(dd)
@@ -37,7 +40,19 @@ component provides App requires io.Output out, data.StringUtil stringUtil,data.I
 				if(test_run)
 				{
 					s = run.execute("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\run_log_gen.bat")
+					
+					
 				}
+				
+				tCount = intUtl.intFromString(stringUtil.explode(stringUtil.explode(read_file("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\$log_name"),"\n\r")[5].string,":")[1].string)
+				
+				
+				avg_ttr_w_srvc = stringUtil.explode(stringUtil.explode(read_file("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\controller_ttr_log.txt"), "\n\r")[tCount].string,":")[1].string
+					
+				min_avg_ttr_w_srvc = stringUtil.explode(stringUtil.explode(read_file("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\controller_ttr_log.txt"), "\n\r")[tCount+1].string,":")[1].string
+
+				status = get_stat(intUtl.intFromString(avg_ttr_w_srvc),intUtl.intFromString(min_avg_ttr_w_srvc))
+				
 				
 				if (free_found){
 					if(i!=skip)
@@ -56,9 +71,15 @@ component provides App requires io.Output out, data.StringUtil stringUtil,data.I
 							}
 							else
 							{
+								avg_ttr_w_srvc = stringUtil.explode(stringUtil.explode(read_file("\\\\$(ips_to_check[x].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\controller_ttr_log.txt"), "\n\r")[tCount].string,":")[1].string
+					
+								min_avg_ttr_w_srvc = stringUtil.explode(stringUtil.explode(read_file("\\\\$(ips_to_check[x].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\controller_ttr_log.txt"), "\n\r")[tCount+1].string,":")[1].string
+
+								status = get_stat(intUtl.intFromString(avg_ttr_w_srvc),intUtl.intFromString(min_avg_ttr_w_srvc))
 								
-								char f_st[] = stringUtil.explode(stringUtil.explode(read_file("\\\\$(ips_to_check[x].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\$log_name"),"\n\r")[5].string,":")[1].string
-								if(f_st == "FREE" && f_st != "BUSY" && f_st != "OVERLOADED" && (!busy_found || !ovrldd_found))
+								char f_st[] = status 
+								
+								if(f_st == "FREE" && f_st != "BUSY" && f_st != "OVERLOADED" && (!busy_found || !ovrldd_found) && x!=skip)
 								{
 									out.println("FREE Active")
 								//	s = run.execute("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\down_script.bat")
@@ -69,43 +90,63 @@ component provides App requires io.Output out, data.StringUtil stringUtil,data.I
 						}
 
 					}
-					if(i>=ips_to_check.arrayLength)
+					
+					if(i>=ips_to_check.arrayLength-1)
 					{
 						free_done = true
+						test_run = false
 					}
-					test_run = false
+					
 				}
+				
 				if(busy_found)
 				{
 					dd = read_file("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\down_res.txt")
-					if (dd.arrayLength > 0)
+					if(i!=skip)
 					{
-						out.println("BUSY ACTIVE")
-						//s = run.execute("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\up_script.bat")
-						busy_found = false
-						busy_done = true
-						test_run = false
+						if (dd.arrayLength > 0)
+						{
+							out.println("BUSY ACTIVE")
+							//s = run.execute("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\up_script.bat")
+							busy_found = false
+							test_run = false
+						}
+						else
+						{
+							out.println("BUSY ACTIVE ELSE")
+						}
 					}
-				
+					busy_done = true
+
 				}
+				
 				if(ovrldd_found)
 				{
 					dd = read_file("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\down_res.txt")
-					if (dd.arrayLength > 0)
+					if(i!=skip)
 					{
-						out.println("OVERLOADED ACTIVE")
-						//s = run.execute("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\up_script.bat")
-						if(i >= ips_to_check.arrayLength)
+						if (dd.arrayLength > 0)
 						{
-							ovrldd_found = false
-						}
-						ovrldd_done = true
-						test_run = false
+							out.println("OVERLOADED ACTIVE")
+							//s = run.execute("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\up_script.bat")
+							if(i >= ips_to_check.arrayLength)
+							{
+								ovrldd_found = false
+							}
+							
+							test_run = false
 
+						}
+						else
+						{
+							out.println("OVERLOADED ACTIVE ELSE")
+						}
 					}
+					ovrldd_done = true
 				
 				}
-				if(stringUtil.explode(stringUtil.explode(read_file("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\$log_name"),"\n\r")[5].string,":")[1].string == "FREE" && !free_done)
+				
+				if(status == "FREE" && !free_done)
 				{
 					free_found = true
 					skip = i
@@ -116,23 +157,25 @@ component provides App requires io.Output out, data.StringUtil stringUtil,data.I
 					//i--
 					
 				}
-				else if(stringUtil.explode(stringUtil.explode(read_file("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\$log_name"),"\n\r")[5].string,":")[1].string == "BUSY" && !busy_done)
+				else if(status == "BUSY" && !busy_done)
 				{
 					busy_found = true
+					skip = i
 					i = 0
 					i--
 					test_run = false
-					out.println("Launch one new instance to share the load")
+					out.println("BUSY:Launch one new instance to share the load")
 					
 				}
 				
-				else if(stringUtil.explode(stringUtil.explode(read_file("\\\\$(ips_to_check[i].string)\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\$log_name"),"\n\r")[5].string,":")[1].string == "OVERLOADED" && !ovrldd_done)
+				else if(status == "OVERLOADED" && !ovrldd_done)
 				{	
 					ovrldd_found = true
+					skip = i
 					i = 0
 					i--
 					test_run = false
-					out.println("Launch two new instance to share the load and stablize")
+					out.println("OVERLOADED:Launch two new instance to share the load and stablize")
 				}
 				
 				
@@ -143,7 +186,31 @@ component provides App requires io.Output out, data.StringUtil stringUtil,data.I
 	
 	
 	
-
+	char[] get_stat(int avg, int min_avg){
+		int dif = avg - min_avg
+		int fail_state= 9999
+		int moderate_load = 5999
+		char stat[]
+		
+	//	out.println("ttt$(intUtl.intToString(avg)) - $(intUtl.intToString(min_avg)) = $(intUtl.intToString(dif))")
+		
+		
+		if(avg>= fail_state){
+			stat = "OVERLOADED"
+		}
+		else if(avg > min_avg && dif>min_avg && avg > moderate_load && avg < fail_state){
+			stat ="BUSY"
+		}
+		else if (avg <= min_avg){
+			stat= "FREE"	
+		}
+		else if (avg > min_avg && avg < moderate_load){
+			stat= "FREE"	
+		}
+		
+		return stat
+	
+	}
 						
 	
 	

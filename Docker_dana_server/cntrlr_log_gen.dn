@@ -73,44 +73,21 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 		
 		char c_id[] = stringUtil.explode(stringUtil.explode(c_details, ":")[1].string,"\n\r")[0].string
 		char c_ip_on_host[] = stringUtil.explode(stringUtil.explode(c_details, ":")[3].string,"\n\r")[0].string
+		
 		char avg_ttr_w_srvc[] = stringUtil.explode(stringUtil.explode(read_file("controller_ttr_log.txt"), "\n\r")[tCount].string,":")[1].string
 		char min_avg_ttr_w_srvc[] = stringUtil.explode(stringUtil.explode(read_file("controller_ttr_log.txt"), "\n\r")[tCount+1].string,":")[1].string
+		
 		
 		write_to_file(log_name,"Host identity:$host_ident")
 		write_to_file(log_name,"Container id:$c_id")
 		write_to_file(log_name,"Container ip on host:$c_ip_on_host")
 		write_to_file(log_name,"On Load Average TTR webservice:$avg_ttr_w_srvc")
 		write_to_file(log_name,"Minimum Average TTR webservice:$min_avg_ttr_w_srvc")
-		write_to_file(log_name,"WebService Status:$(get_stat(intUtl.intFromString(avg_ttr_w_srvc),intUtl.intFromString(min_avg_ttr_w_srvc)))")
+		write_to_file(log_name,"Thread count:$(intUtl.intToString(tCount))")
 		
-	
 	}
 	
-	char[] get_stat(int avg, int min_avg){
-		int dif = avg - min_avg
-		int fail_state= 9999
-		int moderate_load = 5999
-		char stat[]
-		
-	//	out.println("ttt$(intUtl.intToString(avg)) - $(intUtl.intToString(min_avg)) = $(intUtl.intToString(dif))")
-		
-		
-		if(avg>= fail_state){
-			stat = "OVERLOADED"
-		}
-		else if(avg > min_avg && dif>min_avg && avg > moderate_load && avg < fail_state){
-			stat ="BUSY"
-		}
-		else if (avg <= min_avg){
-			stat= "FREE"	
-		}
-		else if (avg > min_avg && avg < moderate_load){
-			stat= "FREE"	
-		}
-		
-		return stat
 	
-	}
  
 	int start_test(int tcount)
 	{
@@ -167,7 +144,7 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 				url = urls[i].string
 			}
 			//out.println(url)
-			min_avg = min_avg + rqst(url, 1, 1)
+			min_avg = min_avg + rqst(url, 0, 1)
 			
 		}
 		min_avg = min_avg/5
@@ -183,7 +160,7 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 		RunStatus s = run.execute("if exist $log_name break> $log_name")
 		for (int i = 0; i < threadCount; i++)
 		{
-			char log_name_T[] = "requester_log_$(intUtl.intToString(i)).txt"
+			char log_name_T[] = "controller_log_$(intUtl.intToString(i)).txt"
 			char res[] = read_file(log_name_T)
 			char url[] = stringUtil.explode(res, "\n\r")[0].string
 			
@@ -275,7 +252,7 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 	
 	int rqst(char url[],int cnt, int reqno)
 	{
-		char log_name[] = "requester_log_$(intUtl.intToString(cnt)).txt"
+		char log_name[] = "controller_log_$(intUtl.intToString(cnt)).txt"
 		RunStatus s = run.execute("if exist $log_name break> $log_name")
 		int tme[] = new int [reqno]
 		int avg = 0

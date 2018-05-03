@@ -1,0 +1,107 @@
+uses time.DateTime
+component provides App requires io.Output out, data.StringUtil stringUtil, net.http.HTTPRequest rq, data.IntUtil intUtl,time.DateUtil dtTm,io.File, os.Run run,time.Calendar caln, data.json.JSONParser jparser  {
+ 
+ 
+	
+	int App:main(AppParam params[])
+	{	
+		
+		
+		int tCount=intUtl.intFromString(params[0].string)
+		
+		
+		start_test(tCount)
+		
+		
+		return 0
+	}
+	
+ 
+	void start_test(int tcount)
+	{
+	
+		int req_num = 10
+		int cnt = 1
+		int threadCount = tcount
+		//int urls_to_check = threadCount
+		Thread myThreads[] = new Thread[threadCount]
+		String urls[] = stringUtil.explode(read_file("tst_urls.txt"), "\n\r")//only put 5 links in this file otherwise system will crash
+		
+		out.println("\nStarting Requester service on web service with $(intUtl.intToString(threadCount)) threads\nMaking Requests now")
+		for (int i = 0; i < threadCount; i++)
+		{	
+			char url[]
+			if (i < urls.arrayLength)
+			{
+				url = urls[i].string
+			}
+			else
+			{
+				url = urls[3].string
+			}
+			//out.println(url)
+			myThreads[i] = asynch::rqst(url, i, req_num)
+			
+		}
+		
+		for (int i = 0; i < threadCount; i++)
+		{
+			myThreads[i].join()
+			
+		}
+		out.println("\nRequester Service Complete results are:")
+		
+		for (int i = 0; i < threadCount; i++)
+		{
+		
+			char log_name[] = "requester_log_$(intUtl.intToString(i)).txt"
+			out.println(read_file(log_name))
+			RunStatus s = run.execute("DEL D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\$log_name")
+		}
+		
+		
+	
+	}
+	
+	
+		
+	void rqst(char url[],int cnt, int reqno)
+	{
+		char log_name[] = "requester_log_$(intUtl.intToString(cnt)).txt"
+		RunStatus s = run.execute("if exist $log_name break> $log_name")
+		write_to_file(log_name,"This log is for URL :$url")
+		for (int i = 0; i < reqno; i++)
+		{
+			HTTPResponse r = rq.get(url, null)/*"http://127.0.0.1:5100"*/
+			
+		
+			//char resp[] =r.content
+			out.print("-")
+			
+			write_to_file(log_name,"Request number: $(intUtl.intToString(i+1)) made to: $url")
+		}
+		
+		
+		//out.println("res is: $resp")
+		
+	}
+	
+	
+	void write_to_file(char f_n[],char d[])
+	{	
+		File f = new File(f_n, File.FILE_ACCESS_WRITE)
+		f.setPos(f.getSize())
+		f.write("$d\n")
+		f.close()
+	}
+	
+	char[] read_file(char f_name[])
+	{
+		File f = new File(f_name, File.FILE_ACCESS_READ)
+		char q[] = f.read(f.getSize())
+		f.close()
+		return q
+		
+	}
+	
+}
