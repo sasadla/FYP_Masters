@@ -1,0 +1,328 @@
+uses ws.forms.FileFormField
+
+component provides ws.Web requires ws.FormParser fparser, io.Output out, os.SystemInfo info, os.Run run, io.File, data.StringUtil stringUtil,data.IntUtil intUtl,time.DateUtil dtTm, net.http.HTTPRequest rq, data.query.Search search,time.Calendar caln, data.json.JSONParser jparser{
+ 	
+	bool Web:get(char path[], DocStream s)
+		{
+		
+		char pth[] = "D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server"
+		char log[]
+		
+		char av_host[] =stringUtil.explode(stringUtil.explode(read_file("controller_table_log.txt"),"\n\r")[0].string,":")[1].string
+		
+		out.println(path)
+		if (path == "/controller_table_log.txt")
+		{
+			log = run_log_gen(pth)
+		//	out.println("Sent back: $log")
+		}
+		else if (path == "/WT_controller_table_log.txt")
+		{
+			log = read_file("controller_table_log.txt")
+			out.println("Sent back: $log")
+		}
+		else if (path == "/down")
+		{
+			log = "Bringing Webservice on on $av_host Down"
+			out.println("Sent back: $log")
+			//RunStatus s = run.execute("down_script.bat")
+		}
+		else if (path == "/up")
+		{
+			log = "Bringing Webservice on $av_host Up"
+			out.println("Sent back: $log")
+			//RunStatus s = run.execute("up_script.bat")
+		}
+		else if (path == "/down_res.txt")
+		{
+			log = read_file("down_res.txt")
+		//	out.println("Sent back: $log")
+		}
+		s.write(log)//string concatination done here
+		
+		return true
+		}
+
+	bool Web:post(char path[], char contentType[], byte content[], DocStream stream)
+		{
+		
+		
+		return true
+		}
+		
+	
+	
+	
+	char [] run_log_gen(char p[])
+	{
+	
+		String ids[] = get_cntnr_id("$p\\ids_res.txt",p)
+		int cntr=0
+		char log_path_ins[]="$p\\inspect_res.txt"
+		char gt[] = "Gateway"
+		char i_p[]= "IPAddress"
+		
+		int tCount=1
+		
+		int final_avg
+		char c_details[]
+		
+		char stats[] = get_status("$p\\status_res.txt",p)
+		RunStatus s = run.execute("if exist controller_container_stats_log.txt break> controller_container_stats_log.txt")
+		while (cntr < ids.arrayLength)
+		{
+			if (ids[cntr]==null){
+			}
+			else{
+				char id[]=ids[cntr].string
+				char path[]="$p\\d_inspect $id"
+				s = run.execute(path)
+	
+				write_to_file("$p\\controller_container_stats_log.txt","Container id is:$id")
+				write_to_file("$p\\controller_container_stats_log.txt","Gateway is:$(extract_info_on_container(log_path_ins,gt))")
+				write_to_file("$p\\controller_container_stats_log.txt","Ip address is:$(extract_info_on_container(log_path_ins,i_p))")
+			}
+			cntr++
+		}
+		
+		c_details = read_file("controller_container_stats_log.txt")
+				
+		final_avg = start_test(tCount,p)
+		gen_status_table(stats,c_details,tCount,p)
+	
+		return read_file("$p\\controller_table_log.txt")
+	}
+	
+	
+	void gen_status_table(char stats[],char c_details[],int tCount, char p[])
+	{
+	// three log files:
+		//controller_container_stats_log.txt containerid,ip,gateway (c_details)
+		//controller_ttr_log.txt //min avg max avg ttr
+		//status_res.txt host details here (stats)
+		
+		char log_name[] ="$p\\controller_table_log.txt"
+		RunStatus s = run.execute("if exist $log_name break> $log_name")
+		//5,6
+		char host_ident[] = stringUtil.explode(stringUtil.explode(stats, ":")[1].string,"\n\r")[1].string
+		
+		char c_id[] = stringUtil.explode(stringUtil.explode(c_details, ":")[1].string,"\n\r")[0].string
+		char c_ip_on_host[] = stringUtil.explode(stringUtil.explode(c_details, ":")[3].string,"\n\r")[0].string
+		
+		char avg_ttr_w_srvc[] = stringUtil.explode(stringUtil.explode(read_file("$p\\controller_ttr_log.txt"), "\n\r")[tCount].string,":")[1].string
+		char min_avg_ttr_w_srvc[] = stringUtil.explode(stringUtil.explode(read_file("$p\\controller_ttr_log.txt"), "\n\r")[tCount+1].string,":")[1].string
+		
+		
+		write_to_file(log_name,"Host identity:$host_ident")
+		write_to_file(log_name,"Container id:$c_id")
+		write_to_file(log_name,"Container ip on host:$c_ip_on_host")
+		write_to_file(log_name,"On Load Average TTR webservice:$avg_ttr_w_srvc")
+		write_to_file(log_name,"Minimum Average TTR webservice:$min_avg_ttr_w_srvc")
+		write_to_file(log_name,"Thread count:$(intUtl.intToString(tCount))")
+		
+	}
+	
+	
+ 
+	int start_test(int tcount,char p[])
+	{
+	
+		int req_num = 10
+		int cnt = 1
+		int threadCount = tcount
+		//int urls_to_check = threadCount
+		Thread myThreads[] = new Thread[threadCount]
+		String urls[] = stringUtil.explode(read_file("$p\\tst_urls.txt"), "\n\r")//only put 5 links in this file otherwise system will crash
+		
+		out.println("Getting Minimum reply time for web service")
+		
+		int min_rep_avg = get_min_reply_avg_time(urls,p)
+		
+		out.println("\nStarting time to reply test for web service with $(intUtl.intToString(threadCount)) threads\nMaking Requests now")
+		for (int i = 0; i < threadCount; i++)
+		{	
+			char url[]
+			if (i < urls.arrayLength)
+			{
+				url = urls[i].string
+			}
+			else
+			{
+				url = urls[3].string
+			}
+			//out.println(url)
+			myThreads[i] = asynch::rqst(url, i, req_num,p)
+			
+		}
+		
+		for (int i = 0; i < threadCount; i++)
+		{
+			myThreads[i].join()
+			
+		}
+		out.println("\nTest Complete results are:")
+		
+		return gen_time_avgs_log(threadCount,req_num,min_rep_avg,p)
+		
+	
+	}
+	
+	
+	int get_min_reply_avg_time(String urls[],char p[])
+	{
+		int min_avg = 0
+		for (int i = 0; i < 5; i++)
+		{	
+			char url[]
+			if (urls[i]!= null)
+			{
+				url = urls[i].string
+			}
+			//out.println(url)
+			min_avg = min_avg + rqst(url, 0, 1,p)
+			
+		}
+		min_avg = min_avg/5
+		//out.println("Minimum average reply time for web service test is: $(intUtl.intToString(min_avg)) ms")
+		return min_avg
+	}
+ 
+	int gen_time_avgs_log(int threadCount,int req_num,int min_rep_avg,char p[])
+	{	
+		int avg_tme[] = new int [threadCount]
+		int final_avg = 0
+		char log_name[] = "$p\\controller_ttr_log.txt"
+		RunStatus s = run.execute("if exist $log_name break> $log_name")
+		for (int i = 0; i < threadCount; i++)
+		{
+			char log_name_T[] = "$p\\controller_log_$(intUtl.intToString(i)).txt"
+			char res[] = read_file(log_name_T)
+			char url[] = stringUtil.explode(res, "\n\r")[0].string
+			
+			url = new char[](stringUtil.explode(res, ":")[1].string,":",stringUtil.explode(res, ":")[2].string,":",stringUtil.explode(stringUtil.explode(res, ":")[3].string,"\n\r")[0].string)
+			
+			avg_tme[i] =intUtl.intFromString(stringUtil.explode((stringUtil.explode(res, "\n\r")[req_num+1].string), ":")[1].string)
+			final_avg = final_avg + avg_tme[i]
+			write_to_file(log_name,"Average reply time for thread number $(intUtl.intToString(i+1)) testing the url $url is:$(intUtl.intToString(avg_tme[i])) ms")
+			s = run.execute("DEL $log_name_T")
+		}
+		final_avg = final_avg/ threadCount
+		write_to_file(log_name,"Final average reply time for web service test is:$(intUtl.intToString(final_avg)) ms")
+		write_to_file(log_name,"Minimum average reply time for web service test is:$(intUtl.intToString(min_rep_avg)) ms")
+		out.println(read_file(log_name))
+		return final_avg
+	}
+	
+	
+	
+	
+	
+	char[] get_status(char f_n[],char p[])
+	{
+		RunStatus s = run.execute("$p\\live_container_info")
+						
+		char res[] = read_file(f_n)
+		
+		//out.println("Status result is: $res")
+		return res
+	
+	}
+	
+	
+	String[] get_cntnr_id(char f_n[],char p[])
+	{
+		RunStatus s = run.execute("$p\\get_ids")
+						
+		char res[] = read_file(f_n)
+		String cntnr_id[]
+		
+		cntnr_id = stringUtil.explode(res, "\n\r")
+		
+		//out.println(cntnr_id[0].string)
+		
+		return cntnr_id
+	
+	}
+	
+	
+	char[] extract_info_on_container(char f_n[],char inf[])
+	{
+		char infrm[]
+		
+		char jsonArray[] = new char[]("{ \"array\":", read_file(f_n), "}")
+		//out.println(jsonArray)
+		JSONElement doc = jparser.parseDocument(jsonArray)
+		
+		JSONElement cellA = jparser.getValue(doc, "array").children[0]
+	
+		JSONElement leaf = jparser.getValue(cellA, "NetworkSettings")
+		
+		leaf = jparser.getValue(leaf, "Networks")
+		
+		leaf = jparser.getValue(leaf, "docker_dana_server_default")
+		
+		infrm = jparser.getValue(leaf, inf).value
+		
+		return infrm
+	
+	}
+	
+	
+	void write_to_file(char f_n[],char d[])
+	{	
+		File f = new File(f_n, File.FILE_ACCESS_WRITE)
+		f.setPos(f.getSize())
+		f.write("$d\n")
+		f.close()
+	}
+	
+	char[] read_file(char f_name[])
+	{
+		File f = new File(f_name, File.FILE_ACCESS_READ)
+		char q[] = f.read(f.getSize())
+		f.close()
+		return q
+		
+	}
+	
+	int rqst(char url[],int cnt, int reqno,char p[])
+	{
+		char log_name[] = "$p\\controller_log_$(intUtl.intToString(cnt)).txt"
+		RunStatus s = run.execute("if exist $log_name break> $log_name")
+		int tme[] = new int [reqno]
+		int avg = 0
+		write_to_file(log_name,"This log is for URL :$url")
+		for (int i = 0; i < reqno; i++)
+		{
+			DateTime st = caln.getTime()
+			HTTPResponse r = rq.get(url, null)/*"http://127.0.0.1:5100"*/
+			
+			DateTime end = caln.getTime()
+			
+			DateTime dif = dtTm.diff(st, end)
+			
+			int e_t =dtTm.toMilliseconds(dif)
+			tme[i]= e_t
+			//char resp[] =r.content
+			//out.println("Request number: $(intUtl.intToString(i+1)) made to: $url with response time: $(intUtl.intToString(e_t)) ms")
+			out.print("-")
+			
+			write_to_file(log_name,"Request number: $(intUtl.intToString(i+1)) made to: $url with response time: $(intUtl.intToString(e_t)) ms")
+		}
+		
+		for (int x = 0; x < reqno; x++)
+		{
+			avg = avg + tme[x]
+			
+		}
+		avg = avg/reqno
+		write_to_file(log_name,"Average for thread number $(intUtl.intToString(cnt+1)):$(intUtl.intToString(avg))")
+		//out.println("res is: $resp")
+		return avg
+	}
+	
+	
+	
+	
+	
+	}
