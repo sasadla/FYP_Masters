@@ -132,7 +132,7 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		int threadCount = tcount
 		//int urls_to_check = threadCount
 		Thread myThreads[] = new Thread[threadCount]
-		String urls[] = stringUtil.explode(read_file("$p\\tst_urls.txt"), "\n\r")//only put 5 links in this file otherwise system will crash
+		String urls[] = stringUtil.explode(read_file("$p\\tst_urls_log.txt"), "\n\r")//only put 5 links in this file otherwise system will crash
 		
 		out.println("Getting Minimum reply time for web service")
 		
