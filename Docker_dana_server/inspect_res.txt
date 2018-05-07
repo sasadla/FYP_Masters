@@ -1,7 +1,7 @@
 [
     {
-        "Id": "b6d1ac587fd9790bf44dac6c5ccf8a91eed169f4fa995b75ec3c8c14801e2c42",
-        "Created": "2018-05-04T16:16:39.5587692Z",
+        "Id": "498370001b91e4823be31242d1c2024eb519329993b7d5a5955fe02b9c656b40",
+        "Created": "2018-05-07T18:31:34.1527135Z",
         "Path": "./run.bash",
         "Args": [],
         "State": {
@@ -11,17 +11,17 @@
             "Restarting": false,
             "OOMKilled": false,
             "Dead": false,
-            "Pid": 13798,
+            "Pid": 24335,
             "ExitCode": 0,
             "Error": "",
-            "StartedAt": "2018-05-04T16:16:51.7744747Z",
-            "FinishedAt": "0001-01-01T00:00:00Z"
+            "StartedAt": "2018-05-07T19:58:51.8785078Z",
+            "FinishedAt": "2018-05-07T19:42:18.4724943Z"
         },
-        "Image": "sha256:7ade6df9d8a8a880bb14f06f989bead7489fa7ff3a9c716451f1a1be3c3d2b2f",
-        "ResolvConfPath": "/var/lib/docker/containers/b6d1ac587fd9790bf44dac6c5ccf8a91eed169f4fa995b75ec3c8c14801e2c42/resolv.conf",
-        "HostnamePath": "/var/lib/docker/containers/b6d1ac587fd9790bf44dac6c5ccf8a91eed169f4fa995b75ec3c8c14801e2c42/hostname",
-        "HostsPath": "/var/lib/docker/containers/b6d1ac587fd9790bf44dac6c5ccf8a91eed169f4fa995b75ec3c8c14801e2c42/hosts",
-        "LogPath": "/var/lib/docker/containers/b6d1ac587fd9790bf44dac6c5ccf8a91eed169f4fa995b75ec3c8c14801e2c42/b6d1ac587fd9790bf44dac6c5ccf8a91eed169f4fa995b75ec3c8c14801e2c42-json.log",
+        "Image": "sha256:38bb6e23a77e81c51cc992cf1786ecdf8813686ebddd91b6757fb878c6da9c0c",
+        "ResolvConfPath": "/var/lib/docker/containers/498370001b91e4823be31242d1c2024eb519329993b7d5a5955fe02b9c656b40/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/498370001b91e4823be31242d1c2024eb519329993b7d5a5955fe02b9c656b40/hostname",
+        "HostsPath": "/var/lib/docker/containers/498370001b91e4823be31242d1c2024eb519329993b7d5a5955fe02b9c656b40/hosts",
+        "LogPath": "/var/lib/docker/containers/498370001b91e4823be31242d1c2024eb519329993b7d5a5955fe02b9c656b40/498370001b91e4823be31242d1c2024eb519329993b7d5a5955fe02b9c656b40-json.log",
         "Name": "/docker_dana_server_dana-web-service_1",
         "RestartCount": 0,
         "Driver": "overlay2",
@@ -111,16 +111,16 @@
         },
         "GraphDriver": {
             "Data": {
-                "LowerDir": "/var/lib/docker/overlay2/472a3721e633631b4fc9cf0996d1b9dcfd2401a1ae79656a0d716c3cd3f436fb-init/diff:/var/lib/docker/overlay2/67369b3ba6d5004e90d9c27aac1e8475b316768c846ec112265fc40325276c7d/diff:/var/lib/docker/overlay2/cd2fe98cad7de91b89e60e2bbe27917dbc6438b300a56f7ab43f2a20b5862d3e/diff:/var/lib/docker/overlay2/d2931f86d42f0f73b24e37c78d0d8022121808811a0987b1ee0a0cac056df72a/diff:/var/lib/docker/overlay2/a9e3aca702279ba0164837d62e0768a001206698f1a01ca26f09179c036da355/diff:/var/lib/docker/overlay2/ea6a8ee385abde8e4a09b1bb12d7494e9eca04f1cfc88ccac555351df8a629d9/diff:/var/lib/docker/overlay2/22c363d1deafe6c1ce0338f0ab8d92a9ad9af48953f5699dc302c5eb542b9d45/diff:/var/lib/docker/overlay2/a5e257acffaf0a5ed2f5ba592ab64bd07ad4ff0345633336ae2a230cce7f9fa9/diff:/var/lib/docker/overlay2/07f290cc31fe79addbb7d8337e5f75c9c9d285d85e41406566d1e853f089143d/diff:/var/lib/docker/overlay2/e4b18d687fc2ec7a3d284f4c21e8501ba118067377a1d1879877f4397b33bf01/diff:/var/lib/docker/overlay2/2e76e97a6bf66b9f073f94ce9b1c19118238ed7acc742ee20a01808125dfec71/diff:/var/lib/docker/overlay2/d06508d0334ddcb623ee40a26c13031beec05270f3e862dbf78dce12feed5f39/diff:/var/lib/docker/overlay2/dfbac228deeb7fb5ba3b598b8184f993f40d9923d4a9aa453cd76a0e079aa3ca/diff:/var/lib/docker/overlay2/4f1aa69da70fa4e3bbd7cd23357bc203a97b4dd132673d1ff0c73ce227f78441/diff:/var/lib/docker/overlay2/8daa89826564765213e3f0466d022d7a3d2ee9e4953da85bbfcae8688ab3ddac/diff:/var/lib/docker/overlay2/d3a7883d984d090b359ec5bb9f697f3c5ed46e143347570d82d7274d0c74ff0a/diff:/var/lib/docker/overlay2/06bcb940442fc06a0d5df0ae294bc14c3b21b368ac55c435467b1c9b554c9643/diff",
-                "MergedDir": "/var/lib/docker/overlay2/472a3721e633631b4fc9cf0996d1b9dcfd2401a1ae79656a0d716c3cd3f436fb/merged",
-                "UpperDir": "/var/lib/docker/overlay2/472a3721e633631b4fc9cf0996d1b9dcfd2401a1ae79656a0d716c3cd3f436fb/diff",
-                "WorkDir": "/var/lib/docker/overlay2/472a3721e633631b4fc9cf0996d1b9dcfd2401a1ae79656a0d716c3cd3f436fb/work"
+                "LowerDir": "/var/lib/docker/overlay2/e6a6bad490bb4449d36d41b635f9dd3c3b462dabc049d2d1605f2d39c9ad37b0-init/diff:/var/lib/docker/overlay2/7103097a1e5a3499b53fb1a0638ab1188ebcf1deb207740aa2d306cbf730767e/diff:/var/lib/docker/overlay2/3b4357a7b9a66ed0a35fcba9e91a953e0d9a294d665fe39e2716a7559f9a328c/diff:/var/lib/docker/overlay2/dca35c461cba0cb7719e97e7eb4f3f64d89703ffa910cb5093e9c723374ba45e/diff:/var/lib/docker/overlay2/6e22aa2e4c72029a3dc6958d6486b2ae29fca22cd6fe0e93d7f709d87990d97c/diff:/var/lib/docker/overlay2/398f607e326bb72232d0596e063c652c7f4a724893bb3fb8aff54f6d7ed55fd1/diff:/var/lib/docker/overlay2/0794f4cd46833fabdefd2c64252fc3860c4c762892e7bdb031c98162e3479a89/diff:/var/lib/docker/overlay2/593027c77c6975d28b3281a81af911d9a5b497360b869b2a01fd8e8fc02d1eaf/diff:/var/lib/docker/overlay2/405002b3663cc8c3b6082cefe938af3eb0bd5c1cbe299f3f82e22fef2e13d26f/diff:/var/lib/docker/overlay2/d74f6208d90d1282c5c3a97a3d1b60f0606d9c9b97f5349e97576ce4de25e8b1/diff:/var/lib/docker/overlay2/49028face42c659992cd0aec06195d222a52db061019066b1c4e7cb67d4aefcf/diff:/var/lib/docker/overlay2/18691192051fe74768082b553432f36388d1fe2f47302f85b3e73f4eaf070700/diff:/var/lib/docker/overlay2/62456cac6b89eb89ca748265c0e01d8d0b2eb819f01af0c9f11c6014284618fe/diff:/var/lib/docker/overlay2/e033eb31d5897277ed8d279ee652372d555c3a8a552c7593b627473bdda2c5e0/diff:/var/lib/docker/overlay2/f132fe7f67b24863bc6cb1cb3e5f160c7535027ca719f37ae65e5518ae2cb678/diff:/var/lib/docker/overlay2/c5849aa7af70fa06ad9cc59fadb4b1908d04f98c4a52bd9efb816f115eb26541/diff:/var/lib/docker/overlay2/085b460b42fce801cd062187f2be4353c4f820917f11bf17bcec009e6d8f1846/diff",
+                "MergedDir": "/var/lib/docker/overlay2/e6a6bad490bb4449d36d41b635f9dd3c3b462dabc049d2d1605f2d39c9ad37b0/merged",
+                "UpperDir": "/var/lib/docker/overlay2/e6a6bad490bb4449d36d41b635f9dd3c3b462dabc049d2d1605f2d39c9ad37b0/diff",
+                "WorkDir": "/var/lib/docker/overlay2/e6a6bad490bb4449d36d41b635f9dd3c3b462dabc049d2d1605f2d39c9ad37b0/work"
             },
             "Name": "overlay2"
         },
         "Mounts": [],
         "Config": {
-            "Hostname": "b6d1ac587fd9",
+            "Hostname": "498370001b91",
             "Domainname": "",
             "User": "",
             "AttachStdin": false,
@@ -147,7 +147,7 @@
             "OnBuild": null,
             "Labels": {
                 "Maintainer": "Saarim Aatri Sadla",
-                "com.docker.compose.config-hash": "df410f52f8ee6bf1f9699500d26339a1a972637e23d74d2dca4d6e476542e0d9",
+                "com.docker.compose.config-hash": "ef49124a5c65e0f27170cc28fe86a66b9af4b57caa71e3931b4974081ccd03e5",
                 "com.docker.compose.container-number": "1",
                 "com.docker.compose.oneoff": "False",
                 "com.docker.compose.project": "docker_dana_server",
@@ -157,7 +157,7 @@
         },
         "NetworkSettings": {
             "Bridge": "",
-            "SandboxID": "3541d7b9b2740e51cb1875969dfa5a3d09ebaae569363ff25f854d2ebecf1fc1",
+            "SandboxID": "a80a168796c5062f372e2f91bfda5e0ebe5feb988050b8a49fe5b89a1b79316f",
             "HairpinMode": false,
             "LinkLocalIPv6Address": "",
             "LinkLocalIPv6PrefixLen": 0,
@@ -169,7 +169,7 @@
                     }
                 ]
             },
-            "SandboxKey": "/var/run/docker/netns/3541d7b9b274",
+            "SandboxKey": "/var/run/docker/netns/a80a168796c5",
             "SecondaryIPAddresses": null,
             "SecondaryIPv6Addresses": null,
             "EndpointID": "",
@@ -185,11 +185,11 @@
                     "IPAMConfig": null,
                     "Links": null,
                     "Aliases": [
-                        "dana-web-service",
-                        "b6d1ac587fd9"
+                        "498370001b91",
+                        "dana-web-service"
                     ],
-                    "NetworkID": "f4db0ee3e28a1df222b137fce68d40f9af5130df1b7a4113527ae805abbcfdd9",
-                    "EndpointID": "875022a62fde58cd10b2052412f662c3d75e64a8286821bf0141c4372a3b60aa",
+                    "NetworkID": "86fd3a0005d931872148dc65e53c3a194c7ef8c99d8bd41d40b6e5d29d116612",
+                    "EndpointID": "25a8c61478126b5620df739482732bef2a39abcbed071a15648f1f4ed15c7b54",
                     "Gateway": "172.18.0.1",
                     "IPAddress": "172.18.0.2",
                     "IPPrefixLen": 16,

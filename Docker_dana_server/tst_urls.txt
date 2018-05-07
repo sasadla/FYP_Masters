@@ -1,5 +1,5 @@
-http://localhost:5000
-http://localhost:5000/text_page
-http://localhost:5000/image_page
-http://localhost:5000/image_text_page
-http://localhost:5000/index
+http://localhost:2000
+http://localhost:2000/text_page
+http://localhost:2000/image_page
+http://localhost:2000/image_text_page
+http://localhost:2000/index

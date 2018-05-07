@@ -9,6 +9,7 @@ component provides ws.Web requires io.Output out, io.FileSystem fileSystem, ws.F
 				s.write("<head>")
 					s.write("<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">")// to avoid ERR_INVALID_CHUNKED_ENCODING in google chrome response status and content lenght needs to be updated as so
 					s.write("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">")//to make website page run on mobile devices
+					s.write("<meta charset=\"utf-8\"/>")
 					s.write("<title>Image Based Test Page</title>")
 					s.write("<link href=\"swc/css/main.css\" rel=\"stylesheet\" type=\"text/css\">")
 				s.write("</head>")
