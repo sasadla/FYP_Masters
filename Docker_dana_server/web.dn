@@ -102,6 +102,7 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		//status_res.txt host details here (stats)
 		
 		char log_name[] ="$p\\controller_table_log.txt"
+		
 		RunStatus s = run.execute("if exist $log_name break> $log_name")
 		//5,6
 		char host_ident[] = stringUtil.explode(stringUtil.explode(stats, ":")[1].string,"\n\r")[1].string

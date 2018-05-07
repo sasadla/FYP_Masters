@@ -14,7 +14,7 @@ component provides App requires io.Output out, data.StringUtil stringUtil,data.I
 		char min_avg_ttr_w_srvc[]
 		int tCount
 		int prt = 2018
-		
+		char log_name_ml[] ="ml_log.txt"
 		
 		
 		RunStatus s = run.execute("if exist free_ips.txt break> free_ips.txt")
@@ -50,11 +50,12 @@ component provides App requires io.Output out, data.StringUtil stringUtil,data.I
 				if(test_run)
 				{
 					r = rq.get("http://$(ips_to_check[i].string):2018/$log_name", null)/*"http://127.0.0.1:5100"*/	
-					log = r.content
-					out.println(log)
-					
 				}
-				
+				r = rq.get("http://$(ips_to_check[i].string):2018/WT_$log_name", null)/*"http://127.0.0.1:5100"*/	
+					log = r.content
+					//out.println(log)
+					//write_to_file(log_name_ml,log)
+					
 				tCount = intUtl.intFromString(stringUtil.explode(stringUtil.explode(log,"\n\r")[5].string,":")[1].string)
 				
 				//out.println(intUtl.intToString(tCount))
@@ -68,7 +69,7 @@ component provides App requires io.Output out, data.StringUtil stringUtil,data.I
 			//	out.println(min_avg_ttr_w_srvc)
 				
 				status = get_stat(intUtl.intFromString(avg_ttr_w_srvc),intUtl.intFromString(min_avg_ttr_w_srvc))
-				
+				write_to_file(log_name_ml,"$(log)Status is:$status")
 				
 				if (free_found){
 					if(i!=skip)
@@ -217,6 +218,7 @@ component provides App requires io.Output out, data.StringUtil stringUtil,data.I
 				
 			//}
 		}
+		out.println("file is$(read_file(log_name_ml))")
 		return 0
 	}
 	
