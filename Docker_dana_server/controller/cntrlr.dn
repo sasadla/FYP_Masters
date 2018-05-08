@@ -233,10 +233,10 @@ component provides App requires io.Output out, data.StringUtil stringUtil,data.I
 	//	out.println("ttt$(intUtl.intToString(avg)) - $(intUtl.intToString(min_avg)) = $(intUtl.intToString(dif))")
 		
 		
-		if(avg>= fail_state){
+		if(avg>= fail_state || min_avg>= fail_state){
 			stat = "OVERLOADED"
 		}
-		else if(avg > min_avg && dif>min_avg && avg > moderate_load && avg < fail_state){
+		else if(avg > min_avg && dif>min_avg && (avg > moderate_load || min_avg > moderate_load) && (avg < fail_state || (avg<min_avg && min_avg < fail_state))){
 			stat ="BUSY"
 		}
 		else if (avg <= min_avg){
