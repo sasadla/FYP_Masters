@@ -69,7 +69,8 @@ component provides App requires io.Output out, data.StringUtil stringUtil,data.I
 			//	out.println(min_avg_ttr_w_srvc)
 				
 				status = get_stat(intUtl.intFromString(avg_ttr_w_srvc),intUtl.intFromString(min_avg_ttr_w_srvc))
-				write_to_file(log_name_ml,"$(log)Status is:$status")
+			//	out.println("$(log)Status is:$status")
+				write_to_file(log_name_ml,">$(log)Status is:$status")
 				
 				if (free_found){
 					if(i!=skip)
@@ -230,16 +231,16 @@ component provides App requires io.Output out, data.StringUtil stringUtil,data.I
 		int moderate_load = 5999
 		char stat[]
 		
-	//	out.println("ttt$(intUtl.intToString(avg)) - $(intUtl.intToString(min_avg)) = $(intUtl.intToString(dif))")
+		//out.println("ttt$(intUtl.intToString(avg)) - $(intUtl.intToString(min_avg)) = $(intUtl.intToString(dif))")
 		
 		
 		if(avg>= fail_state || min_avg>= fail_state){
 			stat = "OVERLOADED"
 		}
-		else if(avg > min_avg && dif>min_avg && (avg > moderate_load || min_avg > moderate_load) && (avg < fail_state || (avg<min_avg && min_avg < fail_state))){
+		else if((avg > min_avg || avg <= min_avg) && (avg > moderate_load || (avg<=min_avg && min_avg > moderate_load)) && (avg < fail_state || (avg<=min_avg && min_avg < fail_state))){
 			stat ="BUSY"
 		}
-		else if (avg <= min_avg){
+		else if (avg <= min_avg && min_avg < moderate_load){
 			stat= "FREE"	
 		}
 		else if (avg > min_avg && avg < moderate_load){
