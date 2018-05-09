@@ -11,11 +11,11 @@
             "Restarting": false,
             "OOMKilled": false,
             "Dead": false,
-            "Pid": 29800,
+            "Pid": 33649,
             "ExitCode": 0,
             "Error": "",
-            "StartedAt": "2018-05-08T13:10:39.7954618Z",
-            "FinishedAt": "0001-01-01T00:00:00Z"
+            "StartedAt": "2018-05-09T16:56:23.5009476Z",
+            "FinishedAt": "2018-05-09T16:27:17.836285Z"
         },
         "Image": "sha256:6ec1ef29e0c0867da4da13f117e8179bba8d1a7be7bd93a0ab579d7d31aee08f",
         "ResolvConfPath": "/var/lib/docker/containers/6a07554fa952a88497b2d53806b1e5128f4879963a1c462134eb5f7add6e6fde/resolv.conf",
@@ -157,7 +157,7 @@
         },
         "NetworkSettings": {
             "Bridge": "",
-            "SandboxID": "24f9c5f7b652f4bf6f37c1d2dff09dbc289dd44d6262221e3aaa7abe4e0c52f5",
+            "SandboxID": "10a639705ba419022d46e00020c679df1b5cc944e65165bf4394481fc03749d0",
             "HairpinMode": false,
             "LinkLocalIPv6Address": "",
             "LinkLocalIPv6PrefixLen": 0,
@@ -169,7 +169,7 @@
                     }
                 ]
             },
-            "SandboxKey": "/var/run/docker/netns/24f9c5f7b652",
+            "SandboxKey": "/var/run/docker/netns/10a639705ba4",
             "SecondaryIPAddresses": null,
             "SecondaryIPv6Addresses": null,
             "EndpointID": "",
@@ -189,7 +189,7 @@
                         "dana-web-service"
                     ],
                     "NetworkID": "4cb2731e2498bef013f53aad7f14b0eb9ac2239bd3d4ebd2d250f9f995029377",
-                    "EndpointID": "2bb9932edee1ffa71711fae5e67f36b64be2a9f3115d602d5f1257daef722c85",
+                    "EndpointID": "10235c61a6eb75a8a8fba38f136d1c087eea90890aacf7b7bd23eb5333ed3c29",
                     "Gateway": "172.18.0.1",
                     "IPAddress": "172.18.0.2",
                     "IPPrefixLen": 16,

@@ -219,7 +219,7 @@ component provides App requires io.Output out, data.StringUtil stringUtil,data.I
 				
 			//}
 		}
-		out.println("file is$(read_file(log_name_ml))")
+		//out.println("file is$(read_file(log_name_ml))")
 		return 0
 	}
 	

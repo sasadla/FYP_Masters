@@ -26,6 +26,15 @@ component provides ws.Web requires io.Output out, io.FileSystem fileSystem, ws.F
 						s.write("<a href=\"image_text_page\">Text and Image based</a>")
 
 					s.write("</div>")
+					
+					s.write("<h2>Following Controller Results are Available</h2>")
+
+					s.write("<div class = \"page_options\">")
+					
+						s.write("<a href=\"ml_log\">Controller Machine Learning Log detailed .txt format</a>")
+						s.write("<a href=\"ml_log_csv\">Controller Machine Learning Log condensed .csv format</a>")
+
+					s.write("</div>")
 				s.write("</div>")
 			s.write("</body>")
 		s.write("</html>")
