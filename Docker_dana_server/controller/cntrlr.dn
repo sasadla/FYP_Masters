@@ -1,12 +1,25 @@
 uses time.DateTime
 uses ws.forms.FileFormField
-component provides App requires io.Output out, data.StringUtil stringUtil,data.IntUtil intUtl,io.File, os.Run run,net.http.HTTPRequest rq  {
+component provides App requires io.Output out,io.FileSystem fileSystem, data.StringUtil stringUtil,data.IntUtil intUtl,io.File, os.Run run,net.http.HTTPRequest rq  {
  
  
 	
 	int App:main(AppParam params[])
 	{	
-		String ips_to_check[] = stringUtil.explode(read_file("ips_to_check.txt"), "\n\r")
+		for(int i=0;i<3;i++)
+		{
+			run_cntrlr()
+			
+		}
+		out.println(read_file("reg_stats"))
+		return 0
+	}
+	
+	
+	void run_cntrlr()
+	{
+	
+	String ips_to_check[] = stringUtil.explode(read_file("ips_to_check.txt"), "\n\r")
 		char log_name[] ="controller_table_log.txt"
 		char av_host[]
 		int skip 
@@ -68,7 +81,7 @@ component provides App requires io.Output out, data.StringUtil stringUtil,data.I
 				
 			//	out.println(min_avg_ttr_w_srvc)
 				
-				status = get_stat(intUtl.intFromString(avg_ttr_w_srvc),intUtl.intFromString(min_avg_ttr_w_srvc))
+				status = get_stat(intUtl.intFromString(avg_ttr_w_srvc),intUtl.intFromString(min_avg_ttr_w_srvc),true)
 			//	out.println("$(log)Status is:$status")
 				write_to_file(log_name_ml,">$(log)Status is:$status")
 				
@@ -96,7 +109,7 @@ component provides App requires io.Output out, data.StringUtil stringUtil,data.I
 					
 								min_avg_ttr_w_srvc = stringUtil.explode(stringUtil.explode(log, "\n\r")[4].string,":")[1].string
 
-								status = get_stat(intUtl.intFromString(avg_ttr_w_srvc),intUtl.intFromString(min_avg_ttr_w_srvc))
+								status = get_stat(intUtl.intFromString(avg_ttr_w_srvc),intUtl.intFromString(min_avg_ttr_w_srvc),false)
 								
 								char f_st[] = status 
 								
@@ -220,32 +233,91 @@ component provides App requires io.Output out, data.StringUtil stringUtil,data.I
 			//}
 		}
 		//out.println("file is$(read_file(log_name_ml))")
-		return 0
+	
+	
 	}
 	
 	
-	
-	char[] get_stat(int avg, int min_avg){
+	char[] get_stat(int avg, int min_avg,bool add){
 		int dif = avg - min_avg
 		int fail_state= 9999
 		int moderate_load = 5999
+		int st_free = 0
+		int st_busy = 0
+		int st_ovrld = 0
+		int stat_free = 0
+		int stat_busy = 0
+		int stat_ovrld = 0
 		char stat[]
-		
-		//out.println("ttt$(intUtl.intToString(avg)) - $(intUtl.intToString(min_avg)) = $(intUtl.intToString(dif))")
-		
 		
 		if(avg>= fail_state || min_avg>= fail_state){
 			stat = "OVERLOADED"
+			if(add)
+			{
+				write_to_file("reg_stats",intUtl.intToString(2))
+			}
 		}
 		else if((avg > min_avg || avg <= min_avg) && (avg > moderate_load || (avg<=min_avg && min_avg > moderate_load)) && (avg < fail_state || (avg<=min_avg && min_avg < fail_state))){
 			stat ="BUSY"
+			if(add)
+			{
+			write_to_file("reg_stats",intUtl.intToString(1))
+			}
 		}
 		else if (avg <= min_avg && min_avg < moderate_load){
-			stat= "FREE"	
+			stat= "FREE"
+			if(add)
+			{
+			write_to_file("reg_stats",intUtl.intToString(0))
+			}
 		}
 		else if (avg > min_avg && avg < moderate_load){
-			stat= "FREE"	
+			stat= "FREE"
+			if(add)
+			{
+				write_to_file("reg_stats",intUtl.intToString(0))
+			}
 		}
+		
+		
+		
+		
+		char st_c[] = read_file("reg_stats")
+		
+		String sts[] =stringUtil.explode(st_c,"\n\r")
+		out.println("arraysuze:$(intUtl.intToString(sts.arrayLength))")
+		
+		if(st_c.arrayLength >= 3)
+		{
+			for(int i = 0;i < sts.arrayLength;i++)
+			{
+				out.println("index:$(intUtl.intToString(i))")
+				out.println(sts[i].string)
+			
+				if(sts[i].string=="0")
+				{
+					st_free++
+				}
+				else if(sts[i].string=="1")
+				{
+					st_busy++
+				}
+				else if(sts[i].string=="2")
+				{
+					st_ovrld++
+				}
+			}
+			
+			stat_free = st_free/st_c.arrayLength
+			stat_busy = st_busy/st_c.arrayLength
+			stat_ovrld = st_ovrld/st_c.arrayLength
+			
+			out.println("$(intUtl.intToString(st_free))==>$(intUtl.intToString(stat_free)),$(intUtl.intToString(st_busy))==>$(intUtl.intToString(stat_busy)),$(intUtl.intToString(st_ovrld))==>$(intUtl.intToString(stat_ovrld))")
+			
+			RunStatus s = run.execute("if exist reg_stats break> reg_stats")
+			
+		}
+		
 		
 		return stat
 	
@@ -264,10 +336,14 @@ component provides App requires io.Output out, data.StringUtil stringUtil,data.I
 	
 	char[] read_file(char f_name[])
 	{
-		File f = new File(f_name, File.FILE_ACCESS_READ)
-		char q[] = f.read(f.getSize())
-		f.close()
-		return q
+		if (fileSystem.exists(f_name))
+		{
+			File f = new File(f_name, File.FILE_ACCESS_READ)
+			char q[] = f.read(f.getSize())
+			f.close()
+			return q
+		}
+		return null
 		
 	}
 	
