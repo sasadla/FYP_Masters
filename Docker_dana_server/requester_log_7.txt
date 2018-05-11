@@ -1,0 +1,5 @@
+This log is for URL :http://localhost:2000/image_text_page
+Request number: 1 made to: http://localhost:2000/image_text_page
+Request number: 2 made to: http://localhost:2000/image_text_page
+Request number: 3 made to: http://localhost:2000/image_text_page
+Request number: 4 made to: http://localhost:2000/image_text_page
