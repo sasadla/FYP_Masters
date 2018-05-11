@@ -5,4 +5,4 @@ And im running following conainer ids:
 _ 
 docker status is: 
 CONTAINER ID        IMAGE                     COMMAND             CREATED             STATUS              PORTS                    NAMES
-97cec090d151        dana-web-service:latest   "./run.bash"        4 hours ago         Up 7 minutes        0.0.0.0:5000->2018/tcp   docker_dana_server_dana-web-service_1
+97cec090d151        dana-web-service:latest   "./run.bash"        5 hours ago         Up 13 minutes       0.0.0.0:5000->2018/tcp   docker_dana_server_dana-web-service_1

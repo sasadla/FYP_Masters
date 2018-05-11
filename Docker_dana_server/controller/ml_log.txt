@@ -697,28 +697,28 @@ Container ip on host:172.18.0.2
 On Load Average TTR webservice:1435 ms
 Minimum Average TTR webservice:1605 ms
 Thread count:1
-Status is:
+Status is:FREE
 >Host identity:Saarim-Surface-Pro
 Container id:a38584d0bdc0
 Container ip on host:172.18.0.2
 On Load Average TTR webservice:13779 ms
 Minimum Average TTR webservice:1613 ms
 Thread count:1
-Status is:
+Status is:OVERLOADED
 >Host identity:Saarim-Surface-Pro
 Container id:a38584d0bdc0
 Container ip on host:172.18.0.2
 On Load Average TTR webservice:5518 ms
 Minimum Average TTR webservice:2779 ms
 Thread count:1
-Status is:
+Status is:FREE
 >Host identity:Saarim-Surface-Pro
 Container id:a38584d0bdc0
 Container ip on host:172.18.0.2
 On Load Average TTR webservice:1588 ms
 Minimum Average TTR webservice:1551 ms
 Thread count:1
-Status is:
+Status is:FREE
 >Host identity:Saarim-Surface-Pro
 Container id:a38584d0bdc0
 Container ip on host:172.18.0.2
@@ -739,7 +739,7 @@ Container ip on host:172.18.0.2
 On Load Average TTR webservice:1631 ms
 Minimum Average TTR webservice:1303 ms
 Thread count:1
-Status is:
+Status is:FREE
 >Host identity:Saarim-Surface-Pro
 Container id:a38584d0bdc0
 Container ip on host:172.18.0.2
@@ -760,28 +760,28 @@ Container ip on host:172.18.0.2
 On Load Average TTR webservice:4502 ms
 Minimum Average TTR webservice:7676 ms
 Thread count:1
-Status is:
+Status is:BUSY
 >Host identity:Saarim-Surface-Pro
 Container id:a38584d0bdc0
 Container ip on host:172.18.0.2
 On Load Average TTR webservice:11715 ms
 Minimum Average TTR webservice:6607 ms
 Thread count:1
-Status is:
+Status is:OVERLOADED
 >Host identity:Saarim-Surface-Pro
 Container id:a38584d0bdc0
 Container ip on host:172.18.0.2
 On Load Average TTR webservice:1566 ms
 Minimum Average TTR webservice:1589 ms
 Thread count:1
-Status is:
+Status is:FREE
 >Host identity:Saarim-Surface-Pro
 Container id:a38584d0bdc0
 Container ip on host:172.18.0.2
 On Load Average TTR webservice:1818 ms
 Minimum Average TTR webservice:1698 ms
 Thread count:1
-Status is:
+Status is:FREE
 >Host identity:Saarim-Surface-Pro
 Container id:a38584d0bdc0
 Container ip on host:172.18.0.2
@@ -802,42 +802,42 @@ Container ip on host:172.18.0.2
 On Load Average TTR webservice:1456 ms
 Minimum Average TTR webservice:1609 ms
 Thread count:1
-Status is:
+Status is:FREE
 >Host identity:Saarim-Surface-Pro
 Container id:a38584d0bdc0
 Container ip on host:172.18.0.2
 On Load Average TTR webservice:1697 ms
 Minimum Average TTR webservice:1282 ms
 Thread count:1
-Status is:
+Status is:FREE
 >Host identity:Saarim-Surface-Pro
 Container id:a38584d0bdc0
 Container ip on host:172.18.0.2
 On Load Average TTR webservice:1650 ms
 Minimum Average TTR webservice:1329 ms
 Thread count:1
-Status is:
+Status is:FREE
 >Host identity:Saarim-Surface-Pro
 Container id:a38584d0bdc0
 Container ip on host:172.18.0.2
 On Load Average TTR webservice:1644 ms
 Minimum Average TTR webservice:1756 ms
 Thread count:1
-Status is:
+Status is:FREE
 >Host identity:Saarim-Surface-Pro
 Container id:a38584d0bdc0
 Container ip on host:172.18.0.2
 On Load Average TTR webservice:1584 ms
 Minimum Average TTR webservice:1343 ms
 Thread count:1
-Status is:
+Status is:FREE
 >Host identity:Saarim-Surface-Pro
 Container id:a38584d0bdc0
 Container ip on host:172.18.0.2
 On Load Average TTR webservice:1609 ms
 Minimum Average TTR webservice:1456 ms
 Thread count:1
-Status is:
+Status is:FREE
 >Host identity:Saarim-Surface-Pro
 Container id:a38584d0bdc0
 Container ip on host:172.18.0.2
@@ -1781,5 +1781,40 @@ Container id:97cec090d151
 Container ip on host:172.18.0.2
 On Load Average TTR webservice:1487 ms
 Minimum Average TTR webservice:1602 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:97cec090d151
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2065 ms
+Minimum Average TTR webservice:9405 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:97cec090d151
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2065 ms
+Minimum Average TTR webservice:9405 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:97cec090d151
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3275 ms
+Minimum Average TTR webservice:9529 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:97cec090d151
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3275 ms
+Minimum Average TTR webservice:9529 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:97cec090d151
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1443 ms
+Minimum Average TTR webservice:1370 ms
 Thread count:1
 Status is:FREE
