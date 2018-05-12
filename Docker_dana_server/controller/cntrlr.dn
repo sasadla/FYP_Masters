@@ -12,14 +12,14 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 		{
 			RunStatus s = run.execute("DEL $f_name")
 		}
-		for(int i=0;i<3;i++)
+		for(int i=0;i<15;i++)
 		{
 			run_cntrlr()
 			
 		}
 		
-		out.println("Moderate load new:$(intUtl.intToString(moderate_load_adjusted))")
-		out.println("fails state new:$(intUtl.intToString(fail_state_adjusted))")
+	//	out.println("Moderate load new:$(intUtl.intToString(moderate_load_adjusted))")
+	//	out.println("fails state new:$(intUtl.intToString(fail_state_adjusted))")
 		return 0
 	}
 	
@@ -301,9 +301,9 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 		char st_c[] = read_file(f_nme)
 		
 		String sts[] =stringUtil.explode(st_c,"\n\r")
-		out.println("arraysuze:$(intUtl.intToString(sts.arrayLength))")
+		out.println("arraysize:$(intUtl.intToString(sts.arrayLength))")
 		
-		if(sts.arrayLength >= 3)
+		if(sts.arrayLength >= 15)
 		{
 			do_regression(sts,f_nme)
 		}
@@ -416,8 +416,8 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 				else if(stat_ovrld >= 0.6)
 				{
 					
-						dec ml_dec = 0.9*moderate_load_adjusted
-					dec fl_dec = 0.9*fail_state_adjusted
+					dec ml_dec = 0.8*moderate_load_adjusted
+					dec fl_dec = 0.8*fail_state_adjusted
 					int ml_adjust = intUtl.intFromString(stringUtil.explode(decUtil.decToString(ml_dec),".")[0].string)
 					int fl_adjust = intUtl.intFromString(stringUtil.explode(decUtil.decToString(fl_dec),".")[0].string)
 					
@@ -444,7 +444,8 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 					
 					out.println("Overloaded found greater than or equals to 60% of the time with value:$(decUtil.decToString(stat_ovrld))")
 				}
-			
+		out.println("Moderate load new:$(intUtl.intToString(moderate_load_adjusted))")
+		out.println("fails state new:$(intUtl.intToString(fail_state_adjusted))")
 	
 	}
 	
