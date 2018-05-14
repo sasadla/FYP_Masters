@@ -33,6 +33,7 @@ component provides ws.Web requires io.Output out, io.FileSystem fileSystem, ws.F
 					
 						s.write("<a href=\"ml_log\">Controller Machine Learning Log detailed .txt format</a>")
 						s.write("<a href=\"ml_log_csv\">Controller Machine Learning Log condensed .csv format</a>")
+						s.write("<a href=\"ml_log_size\">Controller Machine Learning Log record size</a>")
 
 					s.write("</div>")
 				s.write("</div>")

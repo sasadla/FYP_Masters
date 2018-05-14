@@ -193,6 +193,7 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 		{
 		char c[] =stringUtil.explode(command,"/")[0].string
 		char path[]
+		bool dat_set = false
 		
 		if(c == "ml_log")
 		{
@@ -203,8 +204,22 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 			run_csv_gen()
 			path = "$c.csv"
 		}
+		else if (c == "ml_log_size")
+		{
+			RunStatus st = run.execute("if exist ml_log_size break> ml_log_size")
+			run_csv_gen()
+			path = "ml_log_csv.csv"
+			char temp[] = read_file(path)
+			String ss[] = stringUtil.explode(temp, "\n\r")
+			temp = intUtil.intToString(ss.arrayLength)
+			out.println("temp:$temp")
+			write_to_file("ml_log_size",temp)
+			path = "ml_log_size"
+		}
+			
 		
-		if (fileSystem.exists(path))
+		
+		if (fileSystem.exists(path) && !dat_set)
 			{
 			File fd = new File(path, File.FILE_ACCESS_READ)
 			
@@ -218,10 +233,12 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 			
 			fd.close()
 			
+			
 			s.send(dat)
 			
 			return true
 			}
+			
 		
 		return false
 		}
@@ -272,7 +289,7 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 		
 		
 		out.println(cmd.resource)
-		if(cmd.resource == "/ml_log" || cmd.resource == "/ml_log_csv")
+		if(cmd.resource == "/ml_log" || cmd.resource == "/ml_log_csv" || cmd.resource == "/ml_log_size")
 		{
 			sendFile(cmd.resource,s,cnt_pth,ds)
 		}
