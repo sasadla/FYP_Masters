@@ -212,7 +212,7 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 			char temp[] = read_file(path)
 			String ss[] = stringUtil.explode(temp, "\n\r")
 			temp = intUtil.intToString(ss.arrayLength)
-			out.println("temp:$temp")
+			//out.println("temp:$temp")
 			write_to_file("ml_log_size",temp)
 			path = "ml_log_size"
 		}
