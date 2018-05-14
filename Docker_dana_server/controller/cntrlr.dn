@@ -17,7 +17,7 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 	int overloaded_trained_min_avg
 	
 	//cntrlr running variables
-	int times =45
+	int times = 45
 	
 	int App:main(AppParam params[])
 	{	
@@ -287,7 +287,7 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 				write_to_file(f_nme,intUtl.intToString(2))
 			}
 		}
-		else if((avg > min_avg || avg <= min_avg) && (avg > moderate_load_adjusted || (avg<=min_avg && min_avg > moderate_load_adjusted)) && (avg < fail_state_adjusted || (avg<=min_avg && min_avg < fail_state_adjusted))){
+		else if((avg >= min_avg || avg <= min_avg) && (avg >= moderate_load_adjusted || (avg<=min_avg && min_avg >= moderate_load_adjusted)) && (avg <= fail_state_adjusted || (avg<=min_avg && min_avg <= fail_state_adjusted))){
 			stat ="BUSY"
 			if(add)
 			{
@@ -301,7 +301,7 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 			write_to_file(f_nme,intUtl.intToString(0))
 			}
 		}
-		else if (avg > min_avg && avg < moderate_load_adjusted){
+		else if (avg >= min_avg && avg < moderate_load_adjusted){
 			stat= "FREE"
 			if(add)
 			{
