@@ -242,7 +242,7 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 					test_run = false
 					//i = 0
 					//i--
-					out.println("FREE: All is well")
+					out.println("FREE: All is well, Pull down allbut current one")
 					
 				}
 				else if(status == "BUSY" && !busy_done)
