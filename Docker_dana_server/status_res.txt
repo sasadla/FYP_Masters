@@ -1,8 +1,8 @@
 My Identity is: 
 Saarim-Surface-Pro
 And im running following conainer ids: 
-646a4f7754da
+ea7f50789964
 _ 
 docker status is: 
 CONTAINER ID        IMAGE                     COMMAND             CREATED             STATUS              PORTS                    NAMES
-646a4f7754da        dana-web-service:latest   "./run.bash"        4 hours ago         Up About an hour    0.0.0.0:5000->2018/tcp   docker_dana_server_dana-web-service_1
+ea7f50789964        dana-web-service:latest   "./run.bash"        6 hours ago         Up About an hour    0.0.0.0:5000->2018/tcp   docker_dana_server_dana-web-service_1

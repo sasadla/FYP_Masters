@@ -4373,3 +4373,2901 @@ On Load Average TTR webservice:1574 ms
 Minimum Average TTR webservice:1391 ms
 Thread count:1
 Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1784 ms
+Minimum Average TTR webservice:1741 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:8729 ms
+Minimum Average TTR webservice:10582 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:8729 ms
+Minimum Average TTR webservice:10582 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7246 ms
+Minimum Average TTR webservice:12619 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7246 ms
+Minimum Average TTR webservice:12619 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7750 ms
+Minimum Average TTR webservice:13287 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7750 ms
+Minimum Average TTR webservice:13287 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6416 ms
+Minimum Average TTR webservice:1402 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6416 ms
+Minimum Average TTR webservice:1402 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:13860 ms
+Minimum Average TTR webservice:3150 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:13860 ms
+Minimum Average TTR webservice:3150 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:11908 ms
+Minimum Average TTR webservice:1598 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:11908 ms
+Minimum Average TTR webservice:1598 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:9886 ms
+Minimum Average TTR webservice:9529 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:9886 ms
+Minimum Average TTR webservice:9529 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:14064 ms
+Minimum Average TTR webservice:1356 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:14064 ms
+Minimum Average TTR webservice:1356 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:13892 ms
+Minimum Average TTR webservice:1594 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:13892 ms
+Minimum Average TTR webservice:1594 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1576 ms
+Minimum Average TTR webservice:1585 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:8951 ms
+Minimum Average TTR webservice:11482 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:8951 ms
+Minimum Average TTR webservice:11482 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1497 ms
+Minimum Average TTR webservice:1367 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1406 ms
+Minimum Average TTR webservice:1649 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2467 ms
+Minimum Average TTR webservice:2144 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:8744 ms
+Minimum Average TTR webservice:15192 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:8744 ms
+Minimum Average TTR webservice:15192 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4978 ms
+Minimum Average TTR webservice:11133 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4978 ms
+Minimum Average TTR webservice:11133 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4407 ms
+Minimum Average TTR webservice:7596 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4407 ms
+Minimum Average TTR webservice:7596 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2145 ms
+Minimum Average TTR webservice:5901 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2145 ms
+Minimum Average TTR webservice:5901 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2155 ms
+Minimum Average TTR webservice:5842 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2155 ms
+Minimum Average TTR webservice:5842 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2151 ms
+Minimum Average TTR webservice:6792 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2151 ms
+Minimum Average TTR webservice:6792 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6508 ms
+Minimum Average TTR webservice:2143 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6508 ms
+Minimum Average TTR webservice:2143 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5977 ms
+Minimum Average TTR webservice:2005 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5977 ms
+Minimum Average TTR webservice:2005 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6034 ms
+Minimum Average TTR webservice:2087 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6034 ms
+Minimum Average TTR webservice:2087 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6383 ms
+Minimum Average TTR webservice:2398 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6383 ms
+Minimum Average TTR webservice:2398 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6692 ms
+Minimum Average TTR webservice:2105 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6692 ms
+Minimum Average TTR webservice:2105 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4432 ms
+Minimum Average TTR webservice:6439 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4432 ms
+Minimum Average TTR webservice:6439 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7275 ms
+Minimum Average TTR webservice:13063 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7275 ms
+Minimum Average TTR webservice:13063 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2617 ms
+Minimum Average TTR webservice:2069 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2188 ms
+Minimum Average TTR webservice:2082 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2196 ms
+Minimum Average TTR webservice:6348 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2196 ms
+Minimum Average TTR webservice:6348 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2147 ms
+Minimum Average TTR webservice:6446 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2147 ms
+Minimum Average TTR webservice:6446 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5357 ms
+Minimum Average TTR webservice:4889 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5357 ms
+Minimum Average TTR webservice:4889 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:8573 ms
+Minimum Average TTR webservice:3345 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:8573 ms
+Minimum Average TTR webservice:3345 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4946 ms
+Minimum Average TTR webservice:2136 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4946 ms
+Minimum Average TTR webservice:2136 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6108 ms
+Minimum Average TTR webservice:7715 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6108 ms
+Minimum Average TTR webservice:7715 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4032 ms
+Minimum Average TTR webservice:2901 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4032 ms
+Minimum Average TTR webservice:2901 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2197 ms
+Minimum Average TTR webservice:5203 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2197 ms
+Minimum Average TTR webservice:5203 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4680 ms
+Minimum Average TTR webservice:2266 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4680 ms
+Minimum Average TTR webservice:2266 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5058 ms
+Minimum Average TTR webservice:2598 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5058 ms
+Minimum Average TTR webservice:2598 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5100 ms
+Minimum Average TTR webservice:4179 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5100 ms
+Minimum Average TTR webservice:4179 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2345 ms
+Minimum Average TTR webservice:4050 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2345 ms
+Minimum Average TTR webservice:4050 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6313 ms
+Minimum Average TTR webservice:8019 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6313 ms
+Minimum Average TTR webservice:8019 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:8471 ms
+Minimum Average TTR webservice:2582 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:8471 ms
+Minimum Average TTR webservice:2582 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2211 ms
+Minimum Average TTR webservice:2253 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:8638 ms
+Minimum Average TTR webservice:2206 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:8638 ms
+Minimum Average TTR webservice:2206 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6344 ms
+Minimum Average TTR webservice:2917 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6344 ms
+Minimum Average TTR webservice:2917 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6278 ms
+Minimum Average TTR webservice:2733 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6278 ms
+Minimum Average TTR webservice:2733 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2250 ms
+Minimum Average TTR webservice:2514 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7148 ms
+Minimum Average TTR webservice:6375 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7148 ms
+Minimum Average TTR webservice:6375 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5845 ms
+Minimum Average TTR webservice:9069 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5845 ms
+Minimum Average TTR webservice:9069 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5441 ms
+Minimum Average TTR webservice:9138 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5441 ms
+Minimum Average TTR webservice:9138 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5912 ms
+Minimum Average TTR webservice:1902 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5912 ms
+Minimum Average TTR webservice:1902 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5706 ms
+Minimum Average TTR webservice:1521 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5706 ms
+Minimum Average TTR webservice:1521 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7529 ms
+Minimum Average TTR webservice:1972 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7529 ms
+Minimum Average TTR webservice:1972 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7471 ms
+Minimum Average TTR webservice:1666 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7471 ms
+Minimum Average TTR webservice:1666 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1777 ms
+Minimum Average TTR webservice:1260 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1447 ms
+Minimum Average TTR webservice:1687 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1637 ms
+Minimum Average TTR webservice:1815 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1676 ms
+Minimum Average TTR webservice:1686 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1684 ms
+Minimum Average TTR webservice:1405 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1520 ms
+Minimum Average TTR webservice:1527 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1467 ms
+Minimum Average TTR webservice:1683 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:8994 ms
+Minimum Average TTR webservice:1641 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:8994 ms
+Minimum Average TTR webservice:1641 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1655 ms
+Minimum Average TTR webservice:1830 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1687 ms
+Minimum Average TTR webservice:1723 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1747 ms
+Minimum Average TTR webservice:1390 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1767 ms
+Minimum Average TTR webservice:1708 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1681 ms
+Minimum Average TTR webservice:1684 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1699 ms
+Minimum Average TTR webservice:1414 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1509 ms
+Minimum Average TTR webservice:1768 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1515 ms
+Minimum Average TTR webservice:1650 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1718 ms
+Minimum Average TTR webservice:1644 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1717 ms
+Minimum Average TTR webservice:1711 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1717 ms
+Minimum Average TTR webservice:1557 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1685 ms
+Minimum Average TTR webservice:1684 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1690 ms
+Minimum Average TTR webservice:1685 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1660 ms
+Minimum Average TTR webservice:1834 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1462 ms
+Minimum Average TTR webservice:1677 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1702 ms
+Minimum Average TTR webservice:1716 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1715 ms
+Minimum Average TTR webservice:1301 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7567 ms
+Minimum Average TTR webservice:1735 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7567 ms
+Minimum Average TTR webservice:1735 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1687 ms
+Minimum Average TTR webservice:1419 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1452 ms
+Minimum Average TTR webservice:1694 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1600 ms
+Minimum Average TTR webservice:1698 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1677 ms
+Minimum Average TTR webservice:1666 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1765 ms
+Minimum Average TTR webservice:1744 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1470 ms
+Minimum Average TTR webservice:1672 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:14589 ms
+Minimum Average TTR webservice:6685 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:14589 ms
+Minimum Average TTR webservice:6685 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1508 ms
+Minimum Average TTR webservice:1721 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7592 ms
+Minimum Average TTR webservice:13367 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7592 ms
+Minimum Average TTR webservice:13367 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7488 ms
+Minimum Average TTR webservice:13563 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7488 ms
+Minimum Average TTR webservice:13563 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:12099 ms
+Minimum Average TTR webservice:1576 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:12099 ms
+Minimum Average TTR webservice:1576 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:8693 ms
+Minimum Average TTR webservice:11848 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:8693 ms
+Minimum Average TTR webservice:11848 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:10691 ms
+Minimum Average TTR webservice:1258 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:10691 ms
+Minimum Average TTR webservice:1258 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:8520 ms
+Minimum Average TTR webservice:1588 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:8520 ms
+Minimum Average TTR webservice:1588 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:10383 ms
+Minimum Average TTR webservice:2605 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:10383 ms
+Minimum Average TTR webservice:2605 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:10442 ms
+Minimum Average TTR webservice:1603 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:10442 ms
+Minimum Average TTR webservice:1603 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5975 ms
+Minimum Average TTR webservice:11110 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5975 ms
+Minimum Average TTR webservice:11110 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3724 ms
+Minimum Average TTR webservice:6078 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3724 ms
+Minimum Average TTR webservice:6078 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1567 ms
+Minimum Average TTR webservice:3415 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:9722 ms
+Minimum Average TTR webservice:1543 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:9722 ms
+Minimum Average TTR webservice:1543 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5828 ms
+Minimum Average TTR webservice:2001 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5828 ms
+Minimum Average TTR webservice:2001 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1479 ms
+Minimum Average TTR webservice:1718 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1761 ms
+Minimum Average TTR webservice:1673 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4005 ms
+Minimum Average TTR webservice:6601 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4005 ms
+Minimum Average TTR webservice:6601 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4042 ms
+Minimum Average TTR webservice:6383 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4042 ms
+Minimum Average TTR webservice:6383 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3861 ms
+Minimum Average TTR webservice:6318 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3861 ms
+Minimum Average TTR webservice:6318 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5838 ms
+Minimum Average TTR webservice:1658 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5838 ms
+Minimum Average TTR webservice:1658 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6282 ms
+Minimum Average TTR webservice:1668 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6282 ms
+Minimum Average TTR webservice:1668 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5793 ms
+Minimum Average TTR webservice:1769 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5793 ms
+Minimum Average TTR webservice:1769 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6205 ms
+Minimum Average TTR webservice:1698 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6205 ms
+Minimum Average TTR webservice:1698 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3937 ms
+Minimum Average TTR webservice:6102 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3937 ms
+Minimum Average TTR webservice:6102 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5785 ms
+Minimum Average TTR webservice:1649 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5785 ms
+Minimum Average TTR webservice:1649 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1580 ms
+Minimum Average TTR webservice:1229 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1572 ms
+Minimum Average TTR webservice:1226 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1575 ms
+Minimum Average TTR webservice:1277 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1632 ms
+Minimum Average TTR webservice:1440 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1596 ms
+Minimum Average TTR webservice:1258 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1656 ms
+Minimum Average TTR webservice:1222 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1562 ms
+Minimum Average TTR webservice:1284 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1560 ms
+Minimum Average TTR webservice:1307 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1457 ms
+Minimum Average TTR webservice:1455 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1549 ms
+Minimum Average TTR webservice:1381 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1398 ms
+Minimum Average TTR webservice:1670 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1414 ms
+Minimum Average TTR webservice:1599 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1453 ms
+Minimum Average TTR webservice:1623 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1378 ms
+Minimum Average TTR webservice:1592 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1465 ms
+Minimum Average TTR webservice:1403 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4323 ms
+Minimum Average TTR webservice:4888 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4323 ms
+Minimum Average TTR webservice:4888 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6080 ms
+Minimum Average TTR webservice:1497 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6080 ms
+Minimum Average TTR webservice:1497 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5145 ms
+Minimum Average TTR webservice:8910 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5145 ms
+Minimum Average TTR webservice:8910 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7446 ms
+Minimum Average TTR webservice:1323 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7446 ms
+Minimum Average TTR webservice:1323 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4840 ms
+Minimum Average TTR webservice:1218 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4840 ms
+Minimum Average TTR webservice:1218 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1215 ms
+Minimum Average TTR webservice:1216 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1214 ms
+Minimum Average TTR webservice:1195 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4303 ms
+Minimum Average TTR webservice:7130 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4303 ms
+Minimum Average TTR webservice:7130 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4233 ms
+Minimum Average TTR webservice:7184 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4233 ms
+Minimum Average TTR webservice:7184 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6126 ms
+Minimum Average TTR webservice:3636 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6126 ms
+Minimum Average TTR webservice:3636 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4264 ms
+Minimum Average TTR webservice:7367 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4264 ms
+Minimum Average TTR webservice:7367 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7686 ms
+Minimum Average TTR webservice:1184 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7686 ms
+Minimum Average TTR webservice:1184 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:8911 ms
+Minimum Average TTR webservice:1401 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:8911 ms
+Minimum Average TTR webservice:1401 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:8869 ms
+Minimum Average TTR webservice:1218 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:8869 ms
+Minimum Average TTR webservice:1218 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7721 ms
+Minimum Average TTR webservice:1205 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7721 ms
+Minimum Average TTR webservice:1205 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6406 ms
+Minimum Average TTR webservice:5776 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6406 ms
+Minimum Average TTR webservice:5776 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4917 ms
+Minimum Average TTR webservice:8639 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4917 ms
+Minimum Average TTR webservice:8639 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:8512 ms
+Minimum Average TTR webservice:1209 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:8512 ms
+Minimum Average TTR webservice:1209 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1259 ms
+Minimum Average TTR webservice:1192 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1222 ms
+Minimum Average TTR webservice:1236 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1207 ms
+Minimum Average TTR webservice:1194 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1198 ms
+Minimum Average TTR webservice:1202 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1198 ms
+Minimum Average TTR webservice:1198 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1226 ms
+Minimum Average TTR webservice:1202 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1188 ms
+Minimum Average TTR webservice:1187 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1194 ms
+Minimum Average TTR webservice:1193 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1207 ms
+Minimum Average TTR webservice:1185 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1198 ms
+Minimum Average TTR webservice:1205 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1205 ms
+Minimum Average TTR webservice:1208 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1191 ms
+Minimum Average TTR webservice:1204 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1195 ms
+Minimum Average TTR webservice:1195 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3003 ms
+Minimum Average TTR webservice:4773 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3003 ms
+Minimum Average TTR webservice:4773 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4979 ms
+Minimum Average TTR webservice:1216 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4979 ms
+Minimum Average TTR webservice:1216 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1191 ms
+Minimum Average TTR webservice:1210 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1203 ms
+Minimum Average TTR webservice:1208 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1189 ms
+Minimum Average TTR webservice:1225 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2997 ms
+Minimum Average TTR webservice:4807 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2997 ms
+Minimum Average TTR webservice:4807 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2737 ms
+Minimum Average TTR webservice:4739 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2737 ms
+Minimum Average TTR webservice:4739 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3519 ms
+Minimum Average TTR webservice:5932 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3519 ms
+Minimum Average TTR webservice:5932 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6086 ms
+Minimum Average TTR webservice:1225 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6086 ms
+Minimum Average TTR webservice:1225 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6061 ms
+Minimum Average TTR webservice:1503 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6061 ms
+Minimum Average TTR webservice:1503 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6016 ms
+Minimum Average TTR webservice:1221 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6016 ms
+Minimum Average TTR webservice:1221 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6097 ms
+Minimum Average TTR webservice:1236 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6097 ms
+Minimum Average TTR webservice:1236 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6135 ms
+Minimum Average TTR webservice:1231 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6135 ms
+Minimum Average TTR webservice:1231 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3050 ms
+Minimum Average TTR webservice:4807 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3050 ms
+Minimum Average TTR webservice:4807 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1206 ms
+Minimum Average TTR webservice:1204 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1220 ms
+Minimum Average TTR webservice:1232 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4851 ms
+Minimum Average TTR webservice:4710 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4851 ms
+Minimum Average TTR webservice:4710 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1457 ms
+Minimum Average TTR webservice:5100 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1457 ms
+Minimum Average TTR webservice:5100 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1301 ms
+Minimum Average TTR webservice:1246 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1190 ms
+Minimum Average TTR webservice:1215 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7069 ms
+Minimum Average TTR webservice:8937 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7069 ms
+Minimum Average TTR webservice:8937 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6093 ms
+Minimum Average TTR webservice:10868 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6093 ms
+Minimum Average TTR webservice:10868 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6076 ms
+Minimum Average TTR webservice:10980 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6076 ms
+Minimum Average TTR webservice:10980 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6072 ms
+Minimum Average TTR webservice:10939 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6072 ms
+Minimum Average TTR webservice:10939 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:10935 ms
+Minimum Average TTR webservice:1235 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:10935 ms
+Minimum Average TTR webservice:1235 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:10046 ms
+Minimum Average TTR webservice:1196 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:10046 ms
+Minimum Average TTR webservice:1196 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:10914 ms
+Minimum Average TTR webservice:1945 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:10914 ms
+Minimum Average TTR webservice:1945 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:9526 ms
+Minimum Average TTR webservice:1205 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:9526 ms
+Minimum Average TTR webservice:1205 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7138 ms
+Minimum Average TTR webservice:10402 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7138 ms
+Minimum Average TTR webservice:10402 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5958 ms
+Minimum Average TTR webservice:11003 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5958 ms
+Minimum Average TTR webservice:11003 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1196 ms
+Minimum Average TTR webservice:1199 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1198 ms
+Minimum Average TTR webservice:1197 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1215 ms
+Minimum Average TTR webservice:1208 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1200 ms
+Minimum Average TTR webservice:1209 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1203 ms
+Minimum Average TTR webservice:1194 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4132 ms
+Minimum Average TTR webservice:5027 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4132 ms
+Minimum Average TTR webservice:5027 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1735 ms
+Minimum Average TTR webservice:5922 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1735 ms
+Minimum Average TTR webservice:5922 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1704 ms
+Minimum Average TTR webservice:5159 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1704 ms
+Minimum Average TTR webservice:5159 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5533 ms
+Minimum Average TTR webservice:1235 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5533 ms
+Minimum Average TTR webservice:1235 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5522 ms
+Minimum Average TTR webservice:1204 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5522 ms
+Minimum Average TTR webservice:1204 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6022 ms
+Minimum Average TTR webservice:1223 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6022 ms
+Minimum Average TTR webservice:1223 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6308 ms
+Minimum Average TTR webservice:1252 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6308 ms
+Minimum Average TTR webservice:1252 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3615 ms
+Minimum Average TTR webservice:5961 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3615 ms
+Minimum Average TTR webservice:5961 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3522 ms
+Minimum Average TTR webservice:5963 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3522 ms
+Minimum Average TTR webservice:5963 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1294 ms
+Minimum Average TTR webservice:1827 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4728 ms
+Minimum Average TTR webservice:1565 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4728 ms
+Minimum Average TTR webservice:1565 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4651 ms
+Minimum Average TTR webservice:4717 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4651 ms
+Minimum Average TTR webservice:4717 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4763 ms
+Minimum Average TTR webservice:4637 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4763 ms
+Minimum Average TTR webservice:4637 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4733 ms
+Minimum Average TTR webservice:4717 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4733 ms
+Minimum Average TTR webservice:4717 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2095 ms
+Minimum Average TTR webservice:4682 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2095 ms
+Minimum Average TTR webservice:4682 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1240 ms
+Minimum Average TTR webservice:1253 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1240 ms
+Minimum Average TTR webservice:1231 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1221 ms
+Minimum Average TTR webservice:1250 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1217 ms
+Minimum Average TTR webservice:1249 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1225 ms
+Minimum Average TTR webservice:1236 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1223 ms
+Minimum Average TTR webservice:1243 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1225 ms
+Minimum Average TTR webservice:1211 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1226 ms
+Minimum Average TTR webservice:1227 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1223 ms
+Minimum Average TTR webservice:1228 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1222 ms
+Minimum Average TTR webservice:1328 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1228 ms
+Minimum Average TTR webservice:1229 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1245 ms
+Minimum Average TTR webservice:1225 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1257 ms
+Minimum Average TTR webservice:1454 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1228 ms
+Minimum Average TTR webservice:1239 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1235 ms
+Minimum Average TTR webservice:1852 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1370 ms
+Minimum Average TTR webservice:1271 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1228 ms
+Minimum Average TTR webservice:1232 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1242 ms
+Minimum Average TTR webservice:1377 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1308 ms
+Minimum Average TTR webservice:1230 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1222 ms
+Minimum Average TTR webservice:1265 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1233 ms
+Minimum Average TTR webservice:1244 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1224 ms
+Minimum Average TTR webservice:1229 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1214 ms
+Minimum Average TTR webservice:1228 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1227 ms
+Minimum Average TTR webservice:1243 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1279 ms
+Minimum Average TTR webservice:1370 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7167 ms
+Minimum Average TTR webservice:7809 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7167 ms
+Minimum Average TTR webservice:7809 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1877 ms
+Minimum Average TTR webservice:1381 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1212 ms
+Minimum Average TTR webservice:1246 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1297 ms
+Minimum Average TTR webservice:1241 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1231 ms
+Minimum Average TTR webservice:1249 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3707 ms
+Minimum Average TTR webservice:6046 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3707 ms
+Minimum Average TTR webservice:6046 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1749 ms
+Minimum Average TTR webservice:6098 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1749 ms
+Minimum Average TTR webservice:6098 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1722 ms
+Minimum Average TTR webservice:6047 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1722 ms
+Minimum Average TTR webservice:6047 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6136 ms
+Minimum Average TTR webservice:1231 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6136 ms
+Minimum Average TTR webservice:1231 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6136 ms
+Minimum Average TTR webservice:1277 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6136 ms
+Minimum Average TTR webservice:1277 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6152 ms
+Minimum Average TTR webservice:1247 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6152 ms
+Minimum Average TTR webservice:1247 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1718 ms
+Minimum Average TTR webservice:6067 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1718 ms
+Minimum Average TTR webservice:6067 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1706 ms
+Minimum Average TTR webservice:4162 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2160 ms
+Minimum Average TTR webservice:6917 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2160 ms
+Minimum Average TTR webservice:6917 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7564 ms
+Minimum Average TTR webservice:1590 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:7564 ms
+Minimum Average TTR webservice:1590 ms
+Thread count:1
+Status is:BUSY
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1549 ms
+Minimum Average TTR webservice:1306 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1517 ms
+Minimum Average TTR webservice:1478 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1511 ms
+Minimum Average TTR webservice:1528 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1542 ms
+Minimum Average TTR webservice:1539 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1368 ms
+Minimum Average TTR webservice:1518 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2810 ms
+Minimum Average TTR webservice:11318 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2810 ms
+Minimum Average TTR webservice:11318 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2785 ms
+Minimum Average TTR webservice:10900 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2785 ms
+Minimum Average TTR webservice:10900 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2645 ms
+Minimum Average TTR webservice:13048 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2645 ms
+Minimum Average TTR webservice:13048 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:14587 ms
+Minimum Average TTR webservice:1279 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:14587 ms
+Minimum Average TTR webservice:1279 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:10195 ms
+Minimum Average TTR webservice:1547 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:10195 ms
+Minimum Average TTR webservice:1547 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:9688 ms
+Minimum Average TTR webservice:1320 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:9688 ms
+Minimum Average TTR webservice:1320 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2557 ms
+Minimum Average TTR webservice:10338 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2557 ms
+Minimum Average TTR webservice:10338 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2377 ms
+Minimum Average TTR webservice:9781 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:2377 ms
+Minimum Average TTR webservice:9781 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:11260 ms
+Minimum Average TTR webservice:1608 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:11260 ms
+Minimum Average TTR webservice:1608 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1632 ms
+Minimum Average TTR webservice:1749 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1599 ms
+Minimum Average TTR webservice:1590 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1598 ms
+Minimum Average TTR webservice:1573 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1631 ms
+Minimum Average TTR webservice:1564 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1623 ms
+Minimum Average TTR webservice:1392 ms
+Thread count:1
+Status is:FREE
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:11519 ms
+Minimum Average TTR webservice:1621 ms
+Thread count:1
+Status is:OVERLOADED
+>Host identity:Saarim-Surface-Pro
+Container id:ea7f50789964
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:11519 ms
+Minimum Average TTR webservice:1621 ms
+Thread count:1
+Status is:OVERLOADED
