@@ -26,17 +26,17 @@ sudo echo "$IPT -A INPUT -s $LANCASTER_v4 -p tcp --dport 5000 --syn -m conntrack
 sudo echo "$IPT -A INPUT -s $LANCASTER_v4 -p tcp --dport 2000 --syn -m conntrack --ctstate NEW -j ACCEPT" >> /etc/firewall/host_rules
 
 # dana configs
-WORKDIR /FYP_Masters/dana_ubu64_[219]
+cd /FYP_Masters/dana_ubu64_[219]
 
 sudo chmod +x dana dnc
 
 sudo echo 'DANA_HOME=/FYP_Masters/dana_ubu64_[219]' >> ~/.bashrc
 sudo echo 'PATH=$PATH:$DANA_HOME' >> ~/.bashrc
-sudo source ~/.bashrc
+source ~/.bashrc
 
 sudo echo 'DANA_HOME=/FYP_Masters/dana_ubu64_[219]' >> /etc/bash.bashrc
 sudo echo 'PATH=$PATH:$DANA_HOME' >> /etc/bash.bashrc
-sudo source /etc/bash.bashrc
+source /etc/bash.bashrc
 
 
 #compile ws.core_mod file in dana directory
