@@ -279,7 +279,7 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 		char m[]
 		char cnt_pth[] = "D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\controller\\"
 		
-		DocStream ds = new DocStream(s, cmd.headers)
+		DocStream ds = new DocStream(s, cmd.headers,true)
 		bool success = false
 		
 		char f_ip[] = "localhost"//stringUtil.explode(read_file("\\\\$controller_ip\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\controller\\$log_name"),"\n\r")[0].string
@@ -344,7 +344,7 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 			}
 			else if ((handler = getHandler(resource)) != null)
 			{
-			DocStream ds = new DocStream(s, cmd.headers)
+			DocStream ds = new DocStream(s, cmd.headers,true)
 			
 			if (cmd.type == Command.GET)
 				{

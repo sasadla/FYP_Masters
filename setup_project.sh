@@ -32,7 +32,12 @@ sudo chmod +x dana dnc
 
 sudo echo 'DANA_HOME=/FYP_Masters/dana_ubu64_[219]' >> ~/.bashrc
 sudo echo 'PATH=$PATH:$DANA_HOME' >> ~/.bashrc
-sudo /bin/bash -c "source ~/.bashrc"
+sudo source ~/.bashrc
+
+sudo echo 'DANA_HOME=/FYP_Masters/dana_ubu64_[219]' >> /etc/bash.bashrc
+sudo echo 'PATH=$PATH:$DANA_HOME' >> /etc/bash.bashrc
+sudo source /etc/bash.bashrc
+
 
 #compile ws.core_mod file in dana directory
 dnc /FYP_Masters/dana_ubu64_[219]/components/ws/core_mod.dn
@@ -44,6 +49,6 @@ dnc /FYP_Masters/Docker_dana_server/web.dn
 #compile controller files
 dnc /FYP_Masters/Docker_dana_server/controller/cntrlr.dn
 dnc /FYP_Masters/Docker_dana_server/controller/gen_csv.dn
-dnc /FYP_Masters/Docker_dana_server/controller/gen_csv.dn
+dnc /FYP_Masters/Docker_dana_server/controller/ts.dn
 
 
