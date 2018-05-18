@@ -12,7 +12,7 @@ When the located web component is invoked, we pass into its "path" parameter any
 Invocations on web components are serialised, so no concurrency control is necessary to gain mutual exclusion.
 */
 
-uses Web
+uses ws.Web
 
 const char SWC_PATH[] = "/swc/"
 const int LISTEN_PORT = 2000
