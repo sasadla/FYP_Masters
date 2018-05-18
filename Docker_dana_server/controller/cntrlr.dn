@@ -22,13 +22,16 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 	int App:main(AppParam params[])
 	{	
 		char f_name[] = "reg_stats.txt"
+		
+		RunStatus s = run.execute("RUN chmod +x ./run_fe.sh")
+		s = run.execute("RUN ./run_fe.sh")
 		if (fileSystem.exists(f_name))
 		{
-			RunStatus s = run.execute("DEL $f_name")
+			RunStatus st = run.execute("DEL $f_name")
 		}
 		for(int i=0;i<times;i++)
 		{
-			run_cntrlr()
+	//		run_cntrlr()
 			
 		}
 		
