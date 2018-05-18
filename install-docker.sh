@@ -25,8 +25,25 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo echo "$IPT -A INPUT -s $LANCASTER_v4 -p tcp --dport 5000 --syn -m conntrack --ctstate NEW -j ACCEPT" >> /etc/firewall/host_rules
 sudo echo "$IPT -A INPUT -s $LANCASTER_v4 -p tcp --dport 2000 --syn -m conntrack --ctstate NEW -j ACCEPT" >> /etc/firewall/host_rules
 
-# Copy ma code
-git clone https://github.com/<USERNAME>/<REPO>.git
-cd <REPO>
+# dana configs
+WORKDIR /FYP_Masters/dana_ubu64_[219]
+
+sudo RUN chmod +x dana dnc
+
+sudo RUN echo 'DANA_HOME=/FYP_Masters/dana_ubu64_[219]' >> ~/.bashrc
+sudo RUN echo 'PATH=$PATH:$DANA_HOME' >> ~/.bashrc
+sudo RUN /bin/bash -c "source ~/.bashrc"
+
+#compile ws.core_mod file in dana directory
+dnc /FYP_Masters/dana_ubu64_[219]/components/ws/core_mod.dn
+
+#compile controller supprot files
+dnc /FYP_Masters/Docker_dana_server/requester.dn
+dnc /FYP_Masters/Docker_dana_server/web.dn
+
+#compile controller files
+dnc /FYP_Masters/Docker_dana_server/controller/cntrlr.dn
+dnc /FYP_Masters/Docker_dana_server/controller/gen_csv.dn
+dnc /FYP_Masters/Docker_dana_server/controller/gen_csv.dn
 
 
