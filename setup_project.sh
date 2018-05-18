@@ -28,11 +28,11 @@ sudo echo "$IPT -A INPUT -s $LANCASTER_v4 -p tcp --dport 2000 --syn -m conntrack
 # dana configs
 WORKDIR /FYP_Masters/dana_ubu64_[219]
 
-sudo RUN chmod +x dana dnc
+sudo chmod +x dana dnc
 
-sudo RUN echo 'DANA_HOME=/FYP_Masters/dana_ubu64_[219]' >> ~/.bashrc
-sudo RUN echo 'PATH=$PATH:$DANA_HOME' >> ~/.bashrc
-sudo RUN /bin/bash -c "source ~/.bashrc"
+sudo echo 'DANA_HOME=/FYP_Masters/dana_ubu64_[219]' >> ~/.bashrc
+sudo echo 'PATH=$PATH:$DANA_HOME' >> ~/.bashrc
+sudo /bin/bash -c "source ~/.bashrc"
 
 #compile ws.core_mod file in dana directory
 dnc /FYP_Masters/dana_ubu64_[219]/components/ws/core_mod.dn
