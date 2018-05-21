@@ -24,6 +24,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 sudo echo "$IPT -A INPUT -s $LANCASTER_v4 -p tcp --dport 5000 --syn -m conntrack --ctstate NEW -j ACCEPT" >> /etc/firewall/host_rules
 sudo echo "$IPT -A INPUT -s $LANCASTER_v4 -p tcp --dport 2000 --syn -m conntrack --ctstate NEW -j ACCEPT" >> /etc/firewall/host_rules
+sudo echo "$IPT -A INPUT -s $LANCASTER_v4 -p tcp --dport 2018 --syn -m conntrack --ctstate NEW -j ACCEPT" >> /etc/firewall/host_rules
 
 # dana configs
 
@@ -61,6 +62,6 @@ dnc cntrlr.dn
 dnc gen_csv.dn
 dnc ts.dn
 #make bash scripts runable
-sudo chmod +x ./run_controller_fe.sh
-sudo chmod +x ./run_fe.sh
+sudo chmod +x run_controller_fe.sh
+sudo chmod +x run_fe.sh
 
