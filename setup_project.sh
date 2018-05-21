@@ -26,8 +26,6 @@ sudo echo "$IPT -A INPUT -s $LANCASTER_v4 -p tcp --dport 5000 --syn -m conntrack
 sudo echo "$IPT -A INPUT -s $LANCASTER_v4 -p tcp --dport 2000 --syn -m conntrack --ctstate NEW -j ACCEPT" >> /etc/firewall/host_rules
 
 # dana configs
-cd home/lancs/sadla/FYP_Masters/dana_ubu64_[219]
-
 sudo chmod +x dana dnc
 
 sudo echo 'DANA_HOME=home/lancs/sadla/FYP_Masters/dana_ubu64_[219]' >> ~/.bashrc
@@ -38,25 +36,30 @@ sudo echo 'DANA_HOME=home/lancs/sadla/FYP_Masters/dana_ubu64_[219]' >> /etc/bash
 sudo echo 'PATH=$PATH:$DANA_HOME' >> /etc/bash.bashrc
 source /etc/bash.bashrc
 
-
+cd dana_ubu64_[219]
 #compile ws.core_mod file in dana directory
-dnc home/lancs/sadla/FYP_Masters/dana_ubu64_[219]/components/ws/core_mod.dn
+dnc components/ws/core_mod.dn
 
+cd ..
+cd ..
+cd ..
+cd Docker_dana_server
 #compile controller supprot files
-dnc home/lancs/sadla/FYP_Masters/Docker_dana_server/requester.dn
-dnc home/lancs/sadla/FYP_Masters/Docker_dana_server/web.dn
+dnc requester.dn
+dnc web.dn
 #make bash scripts runable
-sudo chmod +x home/lancs/sadla/FYP_Masters/Docker_dana_server/d_inspect.bash
-sudo chmod +x home/lancs/sadla/FYP_Masters/Docker_dana_server/down_script.bash
-sudo chmod +x home/lancs/sadla/FYP_Masters/Docker_dana_server/up_script.bash
-sudo chmod +x home/lancs/sadla/FYP_Masters/Docker_dana_server/get_ids.bash
-sudo chmod +x home/lancs/sadla/FYP_Masters/Docker_dana_server/live_container_info.bash
+sudo chmod +x d_inspect.bash
+sudo chmod +x down_script.bash
+sudo chmod +x up_script.bash
+sudo chmod +x get_ids.bash
+sudo chmod +x live_container_info.bash
 
+cd controller
 #compile controller files
-dnc home/lancs/sadla/FYP_Masters/Docker_dana_server/controller/cntrlr.dn
-dnc home/lancs/sadla/FYP_Masters/Docker_dana_server/controller/gen_csv.dn
-dnc home/lancs/sadla/FYP_Masters/Docker_dana_server/controller/ts.dn
+dnc cntrlr.dn
+dnc gen_csv.dn
+dnc ts.dn
 #make bash scripts runable
-sudo chmod +x home/lancs/sadla/FYP_Masters/Docker_dana_server/controller/run_controller_fe.sh
-sudo chmod +x home/lancs/sadla/FYP_Masters/Docker_dana_server/controller/run_fe.sh
+sudo chmod +x ./run_controller_fe.sh
+sudo chmod +x ./run_fe.sh
 
