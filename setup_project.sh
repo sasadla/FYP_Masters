@@ -28,11 +28,11 @@ sudo echo "$IPT -A INPUT -s $LANCASTER_v4 -p tcp --dport 2018 --syn -m conntrack
 
 # dana configs
 
-sudo echo 'DANA_HOME=/home/lancs/sadla/FYP_Masters/dana_ubu64_[219]' >> ~/.bashrc
+sudo echo 'export DANA_HOME=/home/lancs/sadla/FYP_Masters/dana_ubu64_[219]' >> ~/.bashrc
 sudo echo 'PATH=$PATH:$DANA_HOME' >> ~/.bashrc
 source ~/.bashrc
 
-sudo echo 'DANA_HOME=/home/lancs/sadla/FYP_Masters/dana_ubu64_[219]' >> /etc/bash.bashrc
+sudo echo 'export DANA_HOME=/home/lancs/sadla/FYP_Masters/dana_ubu64_[219]' >> /etc/bash.bashrc
 sudo echo 'PATH=$PATH:$DANA_HOME' >> /etc/bash.bashrc
 source /etc/bash.bashrc
 
