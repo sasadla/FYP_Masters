@@ -38,8 +38,11 @@ source /etc/bash.bashrc
 cd dana_ubu64_[219]
 #compile ws.core_mod file in dana directory
 sudo chmod +x dana dnc
-dnc components/ws/core_mod.dn
+cd components/ws
+dnc core_mod.dn
 
+cd ..
+cd ..
 cd ..
 cd Docker_dana_server
 #compile controller supprot files
