@@ -277,12 +277,12 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 		char log_name[] = "free_ips.txt"
 		char failed_at[]
 		char m[]
-		char cnt_pth[] = "FYP_Masters/controller/"
+		char cnt_pth[] = "home\\lancs\\sadla\\FYP_Masters\\controller"
 		
 		DocStream ds = new DocStream(s, cmd.headers)
 		bool success = false
 		
-		char f_ip[] = "localhost"//stringUtil.explode(read_file("FYP_Masters/controller/$log_name"),"\n\r")[0].string
+		char f_ip[] = stringUtil.explode(read_file("$(cnt_pth)\\$log_name"),"\n\r")[0].string
 		//out.println(f_ip)
 		
 		HTTPResponse r = requester.get("http://$f_ip:5000/$(cmd.resource)", null)/*"http://127.0.0.1:5100"*/
