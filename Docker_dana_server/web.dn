@@ -5,7 +5,7 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 	bool Web:get(char path[], DocStream s)
 		{
 		
-		char pth[] = "home\\lancs\\sadla\\FYP_Masters\\Docker_dana_server"
+		char pth[] = "/home/lancs/sadla/FYP_Masters/Docker_dana_server"
 		char log[]
 		
 		char av_host[] =stringUtil.explode(stringUtil.explode(read_file("controller_table_log.txt"),"\n\r")[0].string,":")[1].string

@@ -278,110 +278,118 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 		char failed_at[]
 		char m[]
 		char cnt_pth[] = "/home/lancs/sadla/FYP_Masters/controller"
-		
-		DocStream ds = new DocStream(s, cmd.headers,true)
-		bool success = false
-		
-		char f_ip[] = stringUtil.explode(read_file("$(cnt_pth)\\$log_name"),"\n\r")[0].string
-		//out.println(f_ip)
-		
-		HTTPResponse r = requester.get("http://$f_ip:5000/$(cmd.resource)", null)/*"http://127.0.0.1:5100"*/
-		
-		
-		out.println(cmd.resource)
-		if(cmd.resource == "/ml_log" || cmd.resource == "/ml_log_csv" || cmd.resource == "/ml_log_size")
+		DocStream ds = null
+		if(fileSystem.exists(cnt_pth))
 		{
-			sendFile(cmd.resource,s,cnt_pth,ds)
-		}
-		else 
-		{
-			if (r == null)
+			ds = new DocStream(s, cmd.headers)
+			bool success = false
+			
+			char f_ip[] = stringUtil.explode(read_file("$(cnt_pth)\\$log_name"),"\n\r")[0].string
+			//out.println(f_ip)
+			
+			HTTPResponse r = requester.get("http://$f_ip:5000/$(cmd.resource)", null)/*"http://127.0.0.1:5100"*/
+			
+			
+			out.println(cmd.resource)
+			if(cmd.resource == "/ml_log" || cmd.resource == "/ml_log_csv" || cmd.resource == "/ml_log_size")
 			{
-				success = false
-				failed_at = "Unable to send request to webservice from frontend\n"
+				sendFile(cmd.resource,s,cnt_pth,ds)
 			}
 			else 
 			{
-				success = true
-				m =r.content
-				//out.println(m)
-			
-			}
-		}
-		
-		if (staticFile(cmd.resource))
-		{
-			success = false
-			success = serveFile(cmd.resource, s)
-		}
-		else
-		{
-			failed_at = "Unable to serve resource from webservice on frontend\n Or Unable to send request from frontend to webservice\n"
-		}
-		
-		if (!success)
-		{
-			ds.write("Webservice offline: $failed_at")
-			
-		}
-		else
-		{
-			ds.write(m)
-		}
-		
-		
-		
-		
-		/*
-		String resource = new String(cmd.resource)
-		char handler[]
-		
-		bool success = false
-		
-		if (staticFile(cmd.resource))
-			{
-			success = serveFile(cmd.resource, s)
-			}
-			else if ((handler = getHandler(resource)) != null)
-			{
-			DocStream ds = new DocStream(s, cmd.headers)
-			
-			if (cmd.type == Command.GET)
+				if (r == null)
 				{
-				success = serveFunction_GET(ds, handler, resource.string)
+					success = false
+					failed_at = "Unable to send request to webservice from frontend\n"
 				}
-				else if (cmd.type == Command.POST)
+				else 
 				{
-				//read the payload first
-				char ctype[] = getHeaderValue(cmd, "content-type")
-				int plen = intUtil.intFromString(getHeaderValue(cmd, "content-length"))
-				byte payload[] = s.recv(plen)
+					success = true
+					m =r.content
+					//out.println(m)
 				
-				success = serveFunction_POST(ds, handler, resource.string, ctype, payload)
+				}
+			}
+			
+			if (staticFile(cmd.resource))
+			{
+				success = false
+				success = serveFile(cmd.resource, s)
+			}
+			else
+			{
+				failed_at = "Unable to serve resource from webservice on frontend\n Or Unable to send request from frontend to webservice\n"
+			}
+			
+			if (!success)
+			{
+				ds.write("Webservice offline: $failed_at")
+				
+			}
+			else
+			{
+				ds.write(m)
+			}
+			
+			
+			
+			
+			/*
+			String resource = new String(cmd.resource)
+			char handler[]
+			
+			bool success = false
+			
+			if (staticFile(cmd.resource))
+				{
+				success = serveFile(cmd.resource, s)
+				}
+				else if ((handler = getHandler(resource)) != null)
+				{
+				DocStream ds = new DocStream(s, cmd.headers)
+				
+				if (cmd.type == Command.GET)
+					{
+					success = serveFunction_GET(ds, handler, resource.string)
+					}
+					else if (cmd.type == Command.POST)
+					{
+					//read the payload first
+					char ctype[] = getHeaderValue(cmd, "content-type")
+					int plen = intUtil.intFromString(getHeaderValue(cmd, "content-length"))
+					byte payload[] = s.recv(plen)
+					
+					success = serveFunction_POST(ds, handler, resource.string, ctype, payload)
+					}
+				
+				if (success) ds.endStream()
 				}
 			
-			if (success) ds.endStream()
-			}
-		
-		*/
-		if (!success)
-			{
-			ds.write("Webservice offline: $failed_at")
+			*/
+			if (!success)
+				{
+				ds.write("Webservice offline: $failed_at")
+				
+				}
 			
-			}
-		
+					}
+		else
+		{
+			ds.write("Controller path is wrong")
+		}
 		ds.endStream()
 		s.disconnect()
-		}
+
+	}
 		
-		char[] read_file(char f_name[])
-		{
+	char[] read_file(char f_name[])
+	{
 		File f = new File(f_name, File.FILE_ACCESS_READ)
 		char q[] = f.read(f.getSize())
 		f.close()
 		return q
 		
-		}
+	}
 		
 		
 	void run_csv_gen()
@@ -389,7 +397,7 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 	
 		char ml_log_csv[] = "ml_log_csv.csv"
 		char cnt_pth[] = "/home/lancs/sadla/FYP_Masters/controller"
-		char log_name_ml[] ="$cnt_pth\\ml_log.txt"
+		char log_name_ml[] ="$cnt_pth/ml_log.txt"
 		char d[]
 		String tmp[]
 		char avg_ttr[]
