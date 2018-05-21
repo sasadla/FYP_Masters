@@ -12,7 +12,7 @@ When the located web component is invoked, we pass into its "path" parameter any
 Invocations on web components are serialised, so no concurrency control is necessary to gain mutual exclusion.
 */
 
-uses ws.Web
+uses Web
 
 const char SWC_PATH[] = "/swc/"
 const int LISTEN_PORT = 2000
@@ -277,12 +277,12 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 		char log_name[] = "free_ips.txt"
 		char failed_at[]
 		char m[]
-		char cnt_pth[] = "D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\controller\\"
+		char cnt_pth[] = "FYP_Masters/controller/"
 		
-		DocStream ds = new DocStream(s, cmd.headers,true)
+		DocStream ds = new DocStream(s, cmd.headers)
 		bool success = false
 		
-		char f_ip[] = "localhost"//stringUtil.explode(read_file("\\\\$controller_ip\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\controller\\$log_name"),"\n\r")[0].string
+		char f_ip[] = "localhost"//stringUtil.explode(read_file("FYP_Masters/controller/$log_name"),"\n\r")[0].string
 		//out.println(f_ip)
 		
 		HTTPResponse r = requester.get("http://$f_ip:5000/$(cmd.resource)", null)/*"http://127.0.0.1:5100"*/
@@ -344,7 +344,7 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 			}
 			else if ((handler = getHandler(resource)) != null)
 			{
-			DocStream ds = new DocStream(s, cmd.headers,true)
+			DocStream ds = new DocStream(s, cmd.headers)
 			
 			if (cmd.type == Command.GET)
 				{

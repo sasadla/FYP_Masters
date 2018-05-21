@@ -13,7 +13,7 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 	int busy_trained_min_avg = 0
 	int overloaded_trained_min_avg = 0
 	
-	int min_a =5899 //busy above 5899 ,overloades above 10752
+	int min_a =10752 //busy above 5899 ,overloades above 10752
 	int a = 1345//busy above 4576 ,overloades above 11363
 	
 		

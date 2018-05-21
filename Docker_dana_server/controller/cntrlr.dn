@@ -17,14 +17,14 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 	int overloaded_trained_min_avg
 	
 	//cntrlr running variables
-	int times = 1
+	bool times = true
 	
 	int App:main(AppParam params[])
 	{	
 		char f_name[] = "reg_stats.txt"
 		
-	//	RunStatus s = run.execute("chmod +x ./run_fe.sh")
-	//	s = run.execute("./run_fe.sh")
+		RunStatus s = run.execute("sudo chmod +x ./run_fe.sh")
+		s = run.execute("./run_fe.sh")
 		if (fileSystem.exists(f_name))
 		{
 			RunStatus st = run.execute("DEL $f_name")
@@ -35,9 +35,9 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 		
 		do_knn_calculations()
 		
-		for(int i=0;i<times;i++)
+		while(times)
 		{
-	//		run_cntrlr()
+			run_cntrlr()
 			
 		}
 		
@@ -91,10 +91,10 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 			//}
 			//else
 			//{
-			//if(i!=skip)
-			//{
-			//	test_run = true
-			//}
+			if(i!=skip)
+			{
+				test_run = true
+			}
 			
 				if(test_run)
 				{
