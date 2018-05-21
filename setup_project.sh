@@ -22,9 +22,11 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 # Add port 5000 and 2000 to firewall
 
-sudo echo "$IPT -A INPUT -s $LANCASTER_v4 -p tcp --dport 5000 --syn -m conntrack --ctstate NEW -j ACCEPT" >> /etc/firewall/host_rules
-sudo echo "$IPT -A INPUT -s $LANCASTER_v4 -p tcp --dport 2000 --syn -m conntrack --ctstate NEW -j ACCEPT" >> /etc/firewall/host_rules
-sudo echo "$IPT -A INPUT -s $LANCASTER_v4 -p tcp --dport 2018 --syn -m conntrack --ctstate NEW -j ACCEPT" >> /etc/firewall/host_rules
+sudo echo '$IPT -A INPUT -s $LANCASTER_v4 -p tcp --dport 5000 --syn -m conntrack --ctstate NEW -j ACCEPT' >> /etc/firewall/host_rules
+
+sudo echo '$IPT -A INPUT -s $LANCASTER_v4 -p tcp --dport 2000 --syn -m conntrack --ctstate NEW -j ACCEPT' >> /etc/firewall/host_rules
+
+sudo echo '$IPT -A INPUT -s $LANCASTER_v4 -p tcp --dport 2018 --syn -m conntrack --ctstate NEW -j ACCEPT' >> /etc/firewall/host_rules
 
 # dana configs
 

@@ -279,7 +279,7 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 		char m[]
 		char cnt_pth[] = "home\\lancs\\sadla\\FYP_Masters\\controller"
 		
-		DocStream ds = new DocStream(s, cmd.headers)
+		DocStream ds = new DocStream(s, cmd.headers,true)
 		bool success = false
 		
 		char f_ip[] = stringUtil.explode(read_file("$(cnt_pth)\\$log_name"),"\n\r")[0].string
