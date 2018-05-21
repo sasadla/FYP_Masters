@@ -281,7 +281,7 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 		DocStream ds = null
 		if(fileSystem.exists(cnt_pth))
 		{
-			ds = new DocStream(s, cmd.headers)
+			ds = new DocStream(s, cmd.headers,false)
 			bool success = false
 			
 			char f_ip[] = stringUtil.explode(read_file("$(cnt_pth)\\$log_name"),"\n\r")[0].string
