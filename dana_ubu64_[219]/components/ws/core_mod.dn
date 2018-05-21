@@ -12,7 +12,7 @@ When the located web component is invoked, we pass into its "path" parameter any
 Invocations on web components are serialised, so no concurrency control is necessary to gain mutual exclusion.
 */
 
-uses Web
+uses ws.Web
 
 const char SWC_PATH[] = "/swc/"
 const int LISTEN_PORT = 2000
@@ -277,7 +277,7 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 		char log_name[] = "free_ips.txt"
 		char failed_at[]
 		char m[]
-		char cnt_pth[] = "home\\lancs\\sadla\\FYP_Masters\\controller"
+		char cnt_pth[] = "/home/lancs/sadla/FYP_Masters/controller"
 		
 		DocStream ds = new DocStream(s, cmd.headers,true)
 		bool success = false
@@ -388,7 +388,7 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 	{
 	
 		char ml_log_csv[] = "ml_log_csv.csv"
-		char cnt_pth[] = "D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\controller"
+		char cnt_pth[] = "/home/lancs/sadla/FYP_Masters/controller"
 		char log_name_ml[] ="$cnt_pth\\ml_log.txt"
 		char d[]
 		String tmp[]
