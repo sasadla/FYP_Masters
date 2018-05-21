@@ -26,7 +26,6 @@ sudo echo "$IPT -A INPUT -s $LANCASTER_v4 -p tcp --dport 5000 --syn -m conntrack
 sudo echo "$IPT -A INPUT -s $LANCASTER_v4 -p tcp --dport 2000 --syn -m conntrack --ctstate NEW -j ACCEPT" >> /etc/firewall/host_rules
 
 # dana configs
-sudo chmod +x dana dnc
 
 sudo echo 'DANA_HOME=home/lancs/sadla/FYP_Masters/dana_ubu64_[219]' >> ~/.bashrc
 sudo echo 'PATH=$PATH:$DANA_HOME' >> ~/.bashrc
@@ -38,6 +37,7 @@ source /etc/bash.bashrc
 
 cd dana_ubu64_[219]
 #compile ws.core_mod file in dana directory
+sudo chmod +x dana dnc
 dnc components/ws/core_mod.dn
 
 cd ..
