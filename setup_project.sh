@@ -27,11 +27,11 @@ sudo echo "$IPT -A INPUT -s $LANCASTER_v4 -p tcp --dport 2000 --syn -m conntrack
 
 # dana configs
 
-sudo echo 'DANA_HOME=home/lancs/sadla/FYP_Masters/dana_ubu64_[219]' >> ~/.bashrc
+sudo echo 'DANA_HOME=/home/lancs/sadla/FYP_Masters/dana_ubu64_[219]' >> ~/.bashrc
 sudo echo 'PATH=$PATH:$DANA_HOME' >> ~/.bashrc
 source ~/.bashrc
 
-sudo echo 'DANA_HOME=home/lancs/sadla/FYP_Masters/dana_ubu64_[219]' >> /etc/bash.bashrc
+sudo echo 'DANA_HOME=/home/lancs/sadla/FYP_Masters/dana_ubu64_[219]' >> /etc/bash.bashrc
 sudo echo 'PATH=$PATH:$DANA_HOME' >> /etc/bash.bashrc
 source /etc/bash.bashrc
 
@@ -40,8 +40,6 @@ cd dana_ubu64_[219]
 sudo chmod +x dana dnc
 dnc components/ws/core_mod.dn
 
-cd ..
-cd ..
 cd ..
 cd Docker_dana_server
 #compile controller supprot files
