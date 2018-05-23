@@ -56,9 +56,9 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 	char [] run_log_gen(char p[])
 	{
 	
-		String ids[] = get_cntnr_id("$p\\ids_res.txt",p)
+		String ids[] = get_cntnr_id("$p/ids_res.txt",p)
 		int cntr=0
-		char log_path_ins[]="$p\\inspect_res.txt"
+		char log_path_ins[]="$p/inspect_res.txt"
 		char gt[] = "Gateway"
 		char i_p[]= "IPAddress"
 		
@@ -67,7 +67,7 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		int final_avg
 		char c_details[]
 		
-		char stats[] = get_status("$p\\status_res.txt",p)
+		char stats[] = get_status("$p/status_res.txt",p)
 		RunStatus s = run.execute("if exist controller_container_stats_log.txt break> controller_container_stats_log.txt")
 		while (cntr < ids.arrayLength)
 		{
@@ -75,7 +75,7 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 			}
 			else{
 				char id[]=ids[cntr].string
-				char path[]="$p\\d_inspect $id"
+				char path[]="$/d_inspect $id"
 				s = run.execute(path)
 	
 				write_to_file("$p\\controller_container_stats_log.txt","Container id is:$id")
