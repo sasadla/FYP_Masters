@@ -68,7 +68,7 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		char c_details[]
 		
 		char stats[] = get_status("status_res.txt",p)
-		RunStatus s = run.execute("if exist controller_container_stats_log.txt then break> controller_container_stats_log.txt")
+		RunStatus s = run.execute("./clear_file.bash controller_container_stats_log.txt")
 		while (cntr < ids.arrayLength)
 		{
 			if (ids[cntr]==null){
@@ -103,7 +103,7 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		
 		char log_name[] ="controller_table_log.txt"
 		
-		RunStatus s = run.execute("if exist $log_name then break> $log_name")
+		RunStatus s = run.execute("./clear_file.bash $log_name")
 		//5,6
 		char host_ident[] = stringUtil.explode(stringUtil.explode(stats, ":")[1].string,"\n\r")[1].string
 		
@@ -193,7 +193,7 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		int avg_tme[] = new int [threadCount]
 		int final_avg = 0
 		char log_name[] = "controller_ttr_log.txt"
-		RunStatus s = run.execute("if exist $log_name then break> $log_name")
+		RunStatus s = run.execute("./clear_file.bash $log_name")
 		for (int i = 0; i < threadCount; i++)
 		{
 			char log_name_T[] = "controller_log_$(intUtl.intToString(i)).txt"
@@ -289,7 +289,7 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 	int rqst(char url[],int cnt, int reqno,char p[])
 	{
 		char log_name[] = "controller_log_$(intUtl.intToString(cnt)).txt"
-		RunStatus s = run.execute("if exist $log_name then break> $log_name")
+		RunStatus s = run.execute("./clear_file.bash $log_name")
 		int tme[] = new int [reqno]
 		int avg = 0
 		write_to_file(log_name,"This log is for URL :$url")
