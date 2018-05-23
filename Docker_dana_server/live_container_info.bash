@@ -1,5 +1,5 @@
 #!/bin/bash
-file="./status_res.txt"
+file="status_res.txt"
 if [ -f "$file" ]
 then
 	> ./status_res.txt

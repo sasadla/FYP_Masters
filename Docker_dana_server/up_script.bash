@@ -1,5 +1,6 @@
 #!/bin/bash
-if [-f ./down_res.txt ]; then
+if [-f ./down_res.txt ] 
+then
 	rm -r -f down_res.txt
 fi
 

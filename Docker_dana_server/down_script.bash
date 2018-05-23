@@ -1,5 +1,5 @@
 #!/bin/bash
-file="./down_res.txt"
+file="down_res.txt"
 if [ -f "$file" ]
 then
 	> ./down_res.txt

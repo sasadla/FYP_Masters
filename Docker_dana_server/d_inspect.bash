@@ -1,5 +1,5 @@
 #!/bin/bash
-file="./inspect_res.txt"
+file="inspect_res.txt"
 if [ -f "$file" ]
 then
 	> ./inspect_res.txt

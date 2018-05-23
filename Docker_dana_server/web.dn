@@ -56,9 +56,9 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 	char [] run_log_gen(char p[])
 	{
 	
-		String ids[] = get_cntnr_id("$p/ids_res.txt",p)
+		String ids[] = get_cntnr_id("ids_res.txt",p)
 		int cntr=0
-		char log_path_ins[]="$p/inspect_res.txt"
+		char log_path_ins[]="inspect_res.txt"
 		char gt[] = "Gateway"
 		char i_p[]= "IPAddress"
 		
@@ -67,7 +67,7 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		int final_avg
 		char c_details[]
 		
-		char stats[] = get_status("$p/status_res.txt",p)
+		char stats[] = get_status("status_res.txt",p)
 		RunStatus s = run.execute("if exist controller_container_stats_log.txt break> controller_container_stats_log.txt")
 		while (cntr < ids.arrayLength)
 		{
@@ -78,9 +78,9 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 				char path[]="./d_inspect.bash $id"
 				s = run.execute(path)
 	
-				write_to_file("$p/controller_container_stats_log.txt","Container id is:$id")
-				write_to_file("$p/controller_container_stats_log.txt","Gateway is:$(extract_info_on_container(log_path_ins,gt))")
-				write_to_file("$p/controller_container_stats_log.txt","Ip address is:$(extract_info_on_container(log_path_ins,i_p))")
+				write_to_file("controller_container_stats_log.txt","Container id is:$id")
+				write_to_file("controller_container_stats_log.txt","Gateway is:$(extract_info_on_container(log_path_ins,gt))")
+				write_to_file("controller_container_stats_log.txt","Ip address is:$(extract_info_on_container(log_path_ins,i_p))")
 			}
 			cntr++
 		}
@@ -90,7 +90,7 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		final_avg = start_test(tCount,p)
 		gen_status_table(stats,c_details,tCount,p)
 	
-		return read_file("$p/controller_table_log.txt")
+		return read_file("controller_table_log.txt")
 	}
 	
 	
@@ -101,7 +101,7 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		//controller_ttr_log.txt //min avg max avg ttr
 		//status_res.txt host details here (stats)
 		
-		char log_name[] ="$p/controller_table_log.txt"
+		char log_name[] ="controller_table_log.txt"
 		
 		RunStatus s = run.execute("if exist $log_name break> $log_name")
 		//5,6
@@ -110,8 +110,8 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		char c_id[] = stringUtil.explode(stringUtil.explode(c_details, ":")[1].string,"\n\r")[0].string
 		char c_ip_on_host[] = stringUtil.explode(stringUtil.explode(c_details, ":")[3].string,"\n\r")[0].string
 		
-		char avg_ttr_w_srvc[] = stringUtil.explode(stringUtil.explode(read_file("$p/controller_ttr_log.txt"), "\n\r")[tCount].string,":")[1].string
-		char min_avg_ttr_w_srvc[] = stringUtil.explode(stringUtil.explode(read_file("$p/controller_ttr_log.txt"), "\n\r")[tCount+1].string,":")[1].string
+		char avg_ttr_w_srvc[] = stringUtil.explode(stringUtil.explode(read_file("controller_ttr_log.txt"), "\n\r")[tCount].string,":")[1].string
+		char min_avg_ttr_w_srvc[] = stringUtil.explode(stringUtil.explode(read_file("controller_ttr_log.txt"), "\n\r")[tCount+1].string,":")[1].string
 		
 		
 		write_to_file(log_name,"Host identity:$host_ident")
@@ -133,7 +133,7 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		int threadCount = tcount
 		//int urls_to_check = threadCount
 		Thread myThreads[] = new Thread[threadCount]
-		String urls[] = stringUtil.explode(read_file("$p/tst_urls_log.txt"), "\n\r")//only put 5 links in this file otherwise system will crash
+		String urls[] = stringUtil.explode(read_file("tst_urls_log.txt"), "\n\r")//only put 5 links in this file otherwise system will crash
 		
 		out.println("Getting Minimum reply time for web service")
 		
@@ -192,11 +192,11 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 	{	
 		int avg_tme[] = new int [threadCount]
 		int final_avg = 0
-		char log_name[] = "$p/controller_ttr_log.txt"
+		char log_name[] = "controller_ttr_log.txt"
 		RunStatus s = run.execute("if exist $log_name break> $log_name")
 		for (int i = 0; i < threadCount; i++)
 		{
-			char log_name_T[] = "$p/controller_log_$(intUtl.intToString(i)).txt"
+			char log_name_T[] = "controller_log_$(intUtl.intToString(i)).txt"
 			char res[] = read_file(log_name_T)
 			char url[] = stringUtil.explode(res, "\n\r")[0].string
 			
@@ -288,7 +288,7 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 	
 	int rqst(char url[],int cnt, int reqno,char p[])
 	{
-		char log_name[] = "$p/controller_log_$(intUtl.intToString(cnt)).txt"
+		char log_name[] = "controller_log_$(intUtl.intToString(cnt)).txt"
 		RunStatus s = run.execute("if exist $log_name break> $log_name")
 		int tme[] = new int [reqno]
 		int avg = 0

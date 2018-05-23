@@ -1,5 +1,5 @@
 #!/bin/bash
-file="./ids_res.txt"
+file="ids_res.txt"
 if [ -f "$file" ]
 then
 	> ./ids_res.txt
