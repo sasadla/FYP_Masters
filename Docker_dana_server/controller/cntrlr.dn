@@ -23,8 +23,8 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 	{	
 		char f_name[] = "reg_stats.txt"
 		
-		RunStatus s = run.execute("sudo chmod +x ./run_fe.sh")
-		s = run.execute("./run_fe.sh")
+		//RunStatus s = run.execute("sudo chmod +x ./run_fe.sh")
+		//s = run.execute("./run_fe.sh")
 		if (fileSystem.exists(f_name))
 		{
 			RunStatus st = run.execute("DEL $f_name")
