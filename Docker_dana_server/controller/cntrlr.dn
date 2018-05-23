@@ -50,7 +50,7 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 	void run_cntrlr()
 	{
 	
-	String ips_to_check[] = stringUtil.explode(read_file("ips_to_check.txt"), "\n\r")
+		String ips_to_check[] = stringUtil.explode(read_file("ips_to_check.txt"), "\n\r")
 		char log_name[] ="controller_table_log.txt"
 		char av_host[]
 		int skip 
@@ -61,7 +61,7 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 		char log_name_ml[] ="ml_log.txt"
 		
 		
-		RunStatus s = run.execute("if exist free_ips.txt break> free_ips.txt")
+		RunStatus s = run.execute("./clear_file.bash free_ips.txt")
 		
 		bool test_run = true
 		bool free_found = false
@@ -631,20 +631,12 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 				busy_trained_min_avg_temp = busy_trained_min_avg_temp + intUtl.intFromString(stringUtil.explode(stringUtil.explode(fl_data,"\n\r")[i].string,",")[1].string)
 				
 				busy_count = busy_count + 1
-
-				
-				
-				
 			}
 			else if(stringUtil.explode(stringUtil.explode(fl_data,"\n\r")[i].string,",")[2].string =="OVERLOADED")
 			{
-				
-				
 				overloaded_trained_avg_temp = overloaded_trained_avg_temp + intUtl.intFromString(stringUtil.explode(stringUtil.explode(fl_data,"\n\r")[i].string,",")[0].string)
-				overloaded_trained_min_avg_temp = overloaded_trained_min_avg_temp + intUtl.intFromString(stringUtil.explode(stringUtil.explode(fl_data,"\n\r")[i].string,",")[1].string)
-				
+				overloaded_trained_min_avg_temp = overloaded_trained_min_avg_temp + intUtl.intFromString(stringUtil.explode(stringUtil.explode(fl_data,"\n\r")[i].string,",")[1].string)	
 				overloaded_count = overloaded_count + 1
-
 				
 			}
 			
@@ -658,15 +650,16 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 		overloaded_trained_avg_temp = overloaded_trained_avg_temp / overloaded_count
 		overloaded_trained_min_avg_temp = overloaded_trained_min_avg_temp / overloaded_count
 		
-		
-		
 		free_trained_avg = intUtl.intFromString(stringUtil.explode(decUtil.decToString(free_trained_avg_temp),".")[0].string)
+		
 		free_trained_min_avg = intUtl.intFromString(stringUtil.explode(decUtil.decToString(free_trained_min_avg_temp),".")[0].string)
 		
 		busy_trained_avg = intUtl.intFromString(stringUtil.explode(decUtil.decToString(busy_trained_avg_temp),".")[0].string)
+		
 		busy_trained_min_avg = intUtl.intFromString(stringUtil.explode(decUtil.decToString(busy_trained_min_avg_temp),".")[0].string)
 		
 		overloaded_trained_avg = intUtl.intFromString(stringUtil.explode(decUtil.decToString(overloaded_trained_avg_temp),".")[0].string)
+		
 		overloaded_trained_min_avg = intUtl.intFromString(stringUtil.explode(decUtil.decToString(overloaded_trained_min_avg_temp),".")[0].string)
 		
 		if(intUtl.intFromString(stringUtil.explode(decUtil.decToString(free_trained_avg_temp),".")[1].string[0])>=5)
@@ -702,6 +695,7 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 	
 	
 		char avg_vals[]="$(intUtl.intToString(free_trained_avg)),$(intUtl.intToString(busy_trained_avg)),$(intUtl.intToString(overloaded_trained_avg)),"
+		
 		char min_avg_vals[]="$(intUtl.intToString(free_trained_min_avg)),$(intUtl.intToString(busy_trained_min_avg)),$(intUtl.intToString(overloaded_trained_min_avg)),"
 			
 		write_to_file("knn_trained_vals",avg_vals)

@@ -12,7 +12,7 @@ When the located web component is invoked, we pass into its "path" parameter any
 Invocations on web components are serialised, so no concurrency control is necessary to gain mutual exclusion.
 */
 
-uses ws.Web
+uses Web
 
 const char SWC_PATH[] = "/swc/"
 const int LISTEN_PORT = 2000
@@ -206,7 +206,7 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 		}
 		else if (c == "ml_log_size")
 		{
-			RunStatus st = run.execute("if exist ml_log_size break> ml_log_size")
+			RunStatus st = run.execute("./clear_file.bash ml_log_size")
 			run_csv_gen()
 			path = "ml_log_csv.csv"
 			char temp[] = read_file(path)
@@ -277,14 +277,14 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 		char log_name[] = "free_ips.txt"
 		char failed_at[]
 		char m[]
-		char cnt_pth[] = "/home/lancs/sadla/FYP_Masters/controller"
+		char cnt_pth[] = "/home/lancs/sadla/FYP_Masters/Docker_dana_server/controller"
 		DocStream ds = null
 		if(fileSystem.exists(cnt_pth))
 		{
 			ds = new DocStream(s, cmd.headers,false)
 			bool success = false
 			
-			char f_ip[] = stringUtil.explode(read_file("$(cnt_pth)\\$log_name"),"\n\r")[0].string
+			char f_ip[] = stringUtil.explode(read_file("$(cnt_pth)/$log_name"),"\n\r")[0].string
 			//out.println(f_ip)
 			
 			HTTPResponse r = requester.get("http://$f_ip:5000/$(cmd.resource)", null)/*"http://127.0.0.1:5100"*/
@@ -396,7 +396,7 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 	{
 	
 		char ml_log_csv[] = "ml_log_csv.csv"
-		char cnt_pth[] = "/home/lancs/sadla/FYP_Masters/controller"
+		char cnt_pth[] = "/home/lancs/sadla/FYP_Masters/Docker_dana_server/controller"
 		char log_name_ml[] ="$cnt_pth/ml_log.txt"
 		char d[]
 		String tmp[]
@@ -404,7 +404,7 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 		char min_avg_ttr[]
 		char stat[]
 		
-		RunStatus s = run.execute("if exist $ml_log_csv break> $ml_log_csv")
+		RunStatus s = run.execute("./clear_file.bash $ml_log_csv")
 		
 		d = read_file(log_name_ml)
 		tmp = stringUtil.explode(d,">")
