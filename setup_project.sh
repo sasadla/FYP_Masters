@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 sudo apt update
 sudo apt install \
@@ -27,11 +27,11 @@ sudo echo '#RULE TO ALLOW IN PORTS' >> /etc/firewall/host_rules
 sudo echo 'for s in $PORTS_v4' >> /etc/firewall/host_rules
 sudo echo 'do' >> /etc/firewall/host_rules
 
-sudo echo '$IPT -A INPUT -s $s -p tcp --dport 5000 --syn -m conntrack --ctstate NEW -j ACCEPT' >> /etc/firewall/host_rules
+sudo echo '	$IPT -A INPUT -s $s -p tcp --dport 5000 --syn -m conntrack --ctstate NEW -j ACCEPT' >> /etc/firewall/host_rules
 
-sudo echo '$IPT -A INPUT -s $s -p tcp --dport 2000 --syn -m conntrack --ctstate NEW -j ACCEPT' >> /etc/firewall/host_rules
+sudo echo '	$IPT -A INPUT -s $s -p tcp --dport 2000 --syn -m conntrack --ctstate NEW -j ACCEPT' >> /etc/firewall/host_rules
 
-sudo echo '$IPT -A INPUT -s $s -p tcp --dport 2018 --syn -m conntrack --ctstate NEW -j ACCEPT' >> /etc/firewall/host_rules
+sudo echo '	$IPT -A INPUT -s $s -p tcp --dport 2018 --syn -m conntrack --ctstate NEW -j ACCEPT' >> /etc/firewall/host_rules
 
 sudo echo 'done' >> /etc/firewall/host_rules
 
