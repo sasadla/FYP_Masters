@@ -193,11 +193,11 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 		{
 		char c[] =stringUtil.explode(command,"/")[0].string
 		char path[]
-		bool dat_set = false
-		
 		if(c == "ml_log")
 		{
-			path = "$cntrlr_path$c.txt"
+			
+			path = "$cntrlr_path/$c.txt"
+			out.print(path)
 		}
 		else if(c == "ml_log_csv")
 		{
@@ -219,10 +219,9 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 			
 		
 		
-		if (fileSystem.exists(path) && !dat_set)
+		if (fileSystem.exists(path))
 			{
 			File fd = new File(path, File.FILE_ACCESS_READ)
-			
 			byte dat[] = fd.read(fd.getSize())
 			
 			s.send("HTTP/1.1 200 OK\r\n")
@@ -279,7 +278,7 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 		char m[]
 		char cnt_pth[] = "/home/lancs/sadla/FYP_Masters/Docker_dana_server/controller"
 		DocStream ds = null
-		if(fileSystem.exists(cnt_pth))
+		if(fileSystem.exists("$cnt_pth/$log_name"))
 		{
 			ds = new DocStream(s, cmd.headers,false)
 			bool success = false
@@ -372,7 +371,7 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 				
 				}
 			
-					}
+		}
 		else
 		{
 			ds.write("Controller path is wrong")
