@@ -370,11 +370,15 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 				ds.write("Webservice offline: $failed_at")
 				
 				}
+			ds.endStream()
+			s.disconnect()
 			
 		}
 		else
 		{
 			ds.write("Controller path is wrong")
+			ds.endStream()
+		s.disconnect()
 		}
 		ds.endStream()
 		s.disconnect()
