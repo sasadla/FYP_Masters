@@ -100,6 +100,7 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 				{
 					r = rq.get("http://$(ips_to_check[i].string):2018/$log_name", null)/*"http://127.0.0.1:5100"*/	
 				}
+				out.println(ips_to_check[i].string)
 				r = rq.get("http://$(ips_to_check[i].string):2018/WT_$log_name", null)/*"http://127.0.0.1:5100"*/	
 					log = r.content
 					//out.println(log)
