@@ -279,7 +279,7 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 		char m[]
 		char cnt_pth[] = "/home/lancs/sadla/FYP_Masters/Docker_dana_server/controller"
 		DocStream ds = null
-		if(fileSystem.exists(cnt_pth/$log_name))
+		if(fileSystem.exists("cnt_pth/$log_name"))
 		{
 			ds = new DocStream(s, cmd.headers,false)
 			bool success = false
