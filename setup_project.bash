@@ -29,5 +29,5 @@ dnc gen_csv.dn
 dnc ts.dn
 #make bash scripts runable
 sudo chmod +x clear_file.bash
-sudo chmod +x run_controller_fe.sh
-sudo chmod +x run_fe.sh
+sudo chmod +x run_controller.sh
+
