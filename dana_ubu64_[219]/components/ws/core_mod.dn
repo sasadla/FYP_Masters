@@ -193,12 +193,11 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 		{
 		char c[] =stringUtil.explode(command,"/")[0].string
 		char path[]
-		bool dat_set = false
 		out.print("3")
 		if(c == "ml_log")
 		{
 			out.print("2")
-			path = "$c.txt"
+			path = "ml_log.txt"
 			out.print(path)
 		}
 		else if(c == "ml_log_csv")
@@ -221,7 +220,7 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 			
 		
 		
-		if (fileSystem.exists(path) && !dat_set)
+		if (fileSystem.exists(path))
 			{
 			File fd = new File(path, File.FILE_ACCESS_READ)
 			out.print("4")
