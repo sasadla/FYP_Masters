@@ -247,7 +247,7 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 					//out.println(log)
 					av_host =stringUtil.explode(stringUtil.explode(log,"\n\r")[0].string,":")[1].string
 					
-					String f_ip[] = stringUtil.explode(read_file("free_ips.txt"),"\n\r")[0]
+					String f_ip[] = stringUtil.explode(read_file("free_ips.txt"),"\n\r")
 					int remove
 					for(int f = 0 ; f< f_ip.arrayLength ; f++){
 						if(f_ip[f].string == ips_to_check[i].string)
