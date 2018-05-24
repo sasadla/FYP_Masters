@@ -194,9 +194,10 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 		char c[] =stringUtil.explode(command,"/")[0].string
 		char path[]
 		bool dat_set = false
-		
+		out.print("3")
 		if(c == "ml_log")
 		{
+			out.print("2")
 			path = "$c.txt"
 		}
 		else if(c == "ml_log_csv")
@@ -293,6 +294,7 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 			out.println(cmd.resource)
 			if(cmd.resource == "/ml_log" || cmd.resource == "/ml_log_csv" || cmd.resource == "/ml_log_size")
 			{
+				out.print("1")
 				sendFile(cmd.resource,s,cnt_pth,ds)
 			}
 			else 
