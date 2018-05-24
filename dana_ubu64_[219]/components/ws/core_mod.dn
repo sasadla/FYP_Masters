@@ -199,6 +199,7 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 		{
 			out.print("2")
 			path = "$c.txt"
+			out.print(path)
 		}
 		else if(c == "ml_log_csv")
 		{
@@ -223,7 +224,7 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 		if (fileSystem.exists(path) && !dat_set)
 			{
 			File fd = new File(path, File.FILE_ACCESS_READ)
-			
+			out.print("4")
 			byte dat[] = fd.read(fd.getSize())
 			
 			s.send("HTTP/1.1 200 OK\r\n")
