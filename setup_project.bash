@@ -1,5 +1,8 @@
 #!/bin/bash
-cd dana_ubu64_[219]/components/ws
+cd dana_ubu64_[219]
+#compile ws.core_mod file in dana directory
+sudo chmod +x dana dnc
+cd /components/ws
 #compile ws.core_mod file in dana directory
 dnc core_mod.dn
 
