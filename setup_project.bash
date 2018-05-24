@@ -2,7 +2,7 @@
 cd dana_ubu64_[219]
 #compile ws.core_mod file in dana directory
 sudo chmod +x dana dnc
-cd /components/ws
+cd components/ws
 #compile ws.core_mod file in dana directory
 dnc core_mod.dn
 
@@ -20,6 +20,7 @@ sudo chmod +x up_script.bash
 sudo chmod +x get_ids.bash
 sudo chmod +x clear_file.bash
 sudo chmod +x live_container_info.bash
+sudo chmod +x up_container.bash
 
 cd controller
 #compile controller files

@@ -14,7 +14,7 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		if (path == "/controller_table_log.txt")
 		{
 			log = run_log_gen(pth)
-		//	out.println("Sent back: $log")
+			out.println("Sent back: $log")
 		}
 		else if (path == "/WT_controller_table_log.txt")
 		{
@@ -23,15 +23,15 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		}
 		else if (path == "/down")
 		{
-			log = "Bringing Webservice on on $av_host Down"
+			log = "Webservice on on $av_host Down"
 			out.println("Sent back: $log")
-			RunStatus s = run.execute("./down_script.bash")
+			RunStatus st = run.execute("./down_script.bash")
 		}
 		else if (path == "/up")
 		{
-			log = "Bringing Webservice on $av_host Up"
+			log = "Webservice on $av_host Up"
 			out.println("Sent back: $log")
-			RunStatus s = run.execute("./up_container.bash")
+			RunStatus st = run.execute("./up_container.bash")
 		}
 		else if (path == "/down_res.txt")
 		{

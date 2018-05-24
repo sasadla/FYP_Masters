@@ -1,7 +1,7 @@
 #!/bin/bash
-if [-f ./down_res.txt ] 
+if [ -e down_res.txt ] 
 then
-	rm -r -f down_res.txt
+	> ./down_res.txt
 fi
 
 file="./up_res.txt"
