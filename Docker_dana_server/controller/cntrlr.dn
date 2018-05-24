@@ -23,7 +23,7 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 	{	
 		char f_name[] = "reg_stats.txt"
 		
-		RunStatus s = run.execute("dana ws.core_mod &")
+		//RunStatus s = run.execute("dana ws.core_mod &")
 		if (fileSystem.exists(f_name))
 		{
 			RunStatus st = run.execute("DEL $f_name")
@@ -60,7 +60,6 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 		char log_name_ml[] ="ml_log.txt"
 		
 		
-		RunStatus s = run.execute("./clear_file.bash free_ips.txt")
 		
 		bool test_run = true
 		bool free_found = false
@@ -247,7 +246,28 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 					log = r.content
 					//out.println(log)
 					av_host =stringUtil.explode(stringUtil.explode(log,"\n\r")[0].string,":")[1].string
-					write_to_file("free_ips.txt",av_host)
+					
+					String f_ip[] = stringUtil.explode(read_file("free_ips.txt"),"\n\r")[0]
+					int remove
+					for(int f = 0 ; f< f_ip[].arrayLength ; f++){
+						if(f_ip[f].string == ips_to_check[i])
+						{
+							remove = f
+							RunStatus s = run.execute("./clear_file.bash free_ips.txt")
+						}
+					}
+					
+					for(int w = 0 ; w< f_ip[].arrayLength ; w++){
+						if(w == remove)
+						{
+							write_to_file("free_ips.txt","$av_host.lancs.ac.uk")
+						}
+						else
+						{
+							write_to_file("free_ips.txt",f_ip[w])
+						}
+					}
+					
 					test_run = false
 					//i = 0
 					//i--
