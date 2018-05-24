@@ -1,3 +1,1 @@
-Sccpg-sadla2.lancs.ac.uk
-Sccpg-sadla3.lancs.ac.uk
-Sccpg-sadla4.lancs.ac.uk
+Sccpg-sadla1.lancs.ac.uk
