@@ -31,6 +31,3 @@ dnc ts.dn
 sudo chmod +x clear_file.bash
 sudo chmod +x run_controller_fe.sh
 sudo chmod +x run_fe.sh
-
-cd front_end
-sudo chmod +x clear_file.bash
