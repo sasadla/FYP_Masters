@@ -1,5 +1,5 @@
-http://localhost:2000
-http://localhost:2000/text_page
-http://localhost:2000/image_page
-http://localhost:2000/image_text_page
-http://localhost:2000/index
+http://sccpg-sadla1.lancs.ac.uk:2000
+http://sccpg-sadla1.lancs.ac.uk:2000/text_page
+http://sccpg-sadla1.lancs.ac.uk:2000/image_page
+http://sccpg-sadla1.lancs.ac.uk:2000/image_text_page
+http://sccpg-sadla1.lancs.ac.uk:2000/index

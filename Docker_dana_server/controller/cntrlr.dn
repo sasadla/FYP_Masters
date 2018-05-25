@@ -247,27 +247,13 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 					//out.println(log)
 					av_host =stringUtil.explode(stringUtil.explode(log,"\n\r")[0].string,":")[1].string
 					
-					String f_ip[] = stringUtil.explode(read_file("free_ips.txt"),"\n\r")
-					int remove
-					for(int f = 0 ; f< f_ip.arrayLength ; f++){
-						if(f_ip[f].string == ips_to_check[i].string)
-						{
-							remove = f
-							RunStatus s = run.execute("./clear_file.bash free_ips.txt")
-						}
+					char f_ip[] = stringUtil.explode(read_file("free_ips.txt"),"\n\r")[0].string
+
+					if(!(f_ip == ips_to_check[i].string))
+					{
+						RunStatus s = run.execute("./clear_file.bash free_ips.txt")
+						write_to_file("free_ips.txt","$av_host.lancs.ac.uk")
 					}
-					
-					for(int w = 0 ; w< f_ip.arrayLength ; w++){
-						if(w == remove)
-						{
-							write_to_file("free_ips.txt","$av_host.lancs.ac.uk")
-						}
-						else
-						{
-							write_to_file("free_ips.txt",f_ip[w].string)
-						}
-					}
-					
 					test_run = false
 					//i = 0
 					//i--
