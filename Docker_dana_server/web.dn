@@ -23,7 +23,7 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		}
 		else if (path == "/down")
 		{
-			log = "Webservice on on $av_host Down"
+			log = "Webservice on $av_host Down"
 			out.println("Sent back: $log")
 			RunStatus st = run.execute("./down_script.bash")
 		}
