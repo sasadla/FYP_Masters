@@ -21,6 +21,8 @@ sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-c
 sudo chmod +x /usr/local/bin/docker-compose
 
 # Add port 5000 and 2000 to firewall
+sudo echo 'PORTS_v4="$LANCASTER_v4"' >> /etc/firewall/host_rules
+
 
 sudo echo '#RULE TO ALLOW IN PORTS' >> /etc/firewall/host_rules
 
