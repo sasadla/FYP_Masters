@@ -14,9 +14,20 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		
 		out.println(path)
 		if (path == "/controller_table_log.txt")
-		{
-			log = run_log_gen(pth)
-			out.println("Sent back: $log")
+		{	
+			ssst = run.execute("./clear_file.bash check.txt")
+			ssst = run.execute("docker ps -q -a >> check.txt")
+			char ch[] = read_file("check.txt")
+			
+			if(ch.arrayLength <= 0)
+			{
+				log = "Webservice down Cannot run test"
+			}
+			else
+			{
+				log = run_log_gen(pth)
+				out.println("Sent back: $log")
+			}
 		}
 		else if (path == "/WT_controller_table_log.txt")
 		{
@@ -31,9 +42,9 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		}
 		else if (path == "/up")
 		{
-			log = "Webservice on $av_host Up"
-			out.println("Sent back: $log")
 			RunStatus st = run.execute("./up_container.bash")
+			log = "Webservice on $av_host Up\n$(run_log_gen(pth))"
+			out.println("Sent back: $log")
 		}
 		else if (path == "/down_res.txt")
 		{

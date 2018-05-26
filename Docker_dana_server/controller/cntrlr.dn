@@ -77,11 +77,11 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 			
 			r = rq.get("http://$(ips_to_check[i].string):2018/down_res.txt", null)/*"http://127.0.0.1:5100"*/
 			
-			char ddf[] = r.content
+			char dd[] = r.content
 			out.println("ddf: $dd")
 			char status[]
 			
-			if (ddf.arrayLength > 0 && (!free_found && !busy_found && !ovrldd_found))
+			if (dd.arrayLength > 0 && (!free_found && !busy_found && !ovrldd_found))
 			{
 				out.println("Container Down on $(ips_to_check[i].string)")
 			
@@ -89,10 +89,8 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 			else
 			{
 			
-				r = rq.get("http://$(ips_to_check[i].string):2018/down_res.txt", null)/*"http://127.0.0.1:5100"*/
-			
-				ddf = r.content
-				if(i!=skip || !(ddf.arrayLength > 0))
+				
+				if(i!=skip && dd.arrayLength <=0)
 				{
 					test_run = true
 				}
@@ -103,22 +101,25 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 					}
 					out.println(ips_to_check[i].string)
 					r = rq.get("http://$(ips_to_check[i].string):2018/WT_$log_name", null)/*"http://127.0.0.1:5100"*/	
-						log = r.content
+						
+					log = r.content
 						//out.println(log)
 						//write_to_file(log_name_ml,log)
-						out.println("WT_$(log_name) log: $log")
-					tCount = intUtl.intFromString(stringUtil.explode(stringUtil.explode(log,"\n\r")[5].string,":")[1].string)
-					
-					//out.println(intUtl.intToString(tCount))
-					
-					avg_ttr_w_srvc = stringUtil.explode(stringUtil.explode(log, "\n\r")[3].string,":")[1].string
-					
-				//	out.println(avg_ttr_w_srvc)
-					
-					min_avg_ttr_w_srvc = stringUtil.explode(stringUtil.explode(log, "\n\r")[4].string,":")[1].string
-					
-				//	out.println(min_avg_ttr_w_srvc)
-				
+					out.println("WT_$(log_name) log: $log")
+					if (!(log == "Webservice down Cannot run test"))
+					{
+						tCount = intUtl.intFromString(stringUtil.explode(stringUtil.explode(log,"\n\r")[5].string,":")[1].string)
+						
+						//out.println(intUtl.intToString(tCount))
+						
+						avg_ttr_w_srvc = stringUtil.explode(stringUtil.explode(log, "\n\r")[3].string,":")[1].string
+						
+					//	out.println(avg_ttr_w_srvc)
+						
+						min_avg_ttr_w_srvc = stringUtil.explode(stringUtil.explode(log, "\n\r")[4].string,":")[1].string
+						
+					//	out.println(min_avg_ttr_w_srvc)
+					}
 					bool ad
 					if(!test_run)
 					{
