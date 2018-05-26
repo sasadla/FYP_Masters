@@ -91,7 +91,7 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 			
 				r = rq.get("http://$(ips_to_check[i].string):2018/down_res.txt", null)/*"http://127.0.0.1:5100"*/
 			
-				char ddf = r.content
+				ddf = r.content
 				if(i!=skip || !(ddf.arrayLength > 0))
 				{
 					test_run = true
