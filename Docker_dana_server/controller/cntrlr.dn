@@ -102,7 +102,7 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 						log = r.content
 						//out.println(log)
 						//write_to_file(log_name_ml,log)
-						out.println("$(/WT_controller_table_log.txt) log: $log")
+						out.println("WT_$($log_name) log: $log")
 					tCount = intUtl.intFromString(stringUtil.explode(stringUtil.explode(log,"\n\r")[5].string,":")[1].string)
 					
 					//out.println(intUtl.intToString(tCount))
