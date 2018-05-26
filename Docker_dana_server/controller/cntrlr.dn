@@ -23,7 +23,6 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 	{	
 		char f_name[] = "reg_stats.txt"
 		
-		//RunStatus s = run.execute("dana ws.core_mod &")
 		if (fileSystem.exists(f_name))
 		{
 			RunStatus st = run.execute("DEL $f_name")
@@ -82,7 +81,7 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 			out.println("ddf: $dd")
 			char status[]
 			
-			if (dd.arrayLength > 0)
+			if (dd.arrayLength > 0 && (!free_found && !busy_found && !ovrldd_found))
 			{
 				out.println("Container Down on $(ips_to_check[i].string)")
 			
@@ -103,7 +102,7 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 						log = r.content
 						//out.println(log)
 						//write_to_file(log_name_ml,log)
-						out.println("log: $log")
+						out.println("$(/WT_controller_table_log.txt) log: $log")
 					tCount = intUtl.intFromString(stringUtil.explode(stringUtil.explode(log,"\n\r")[5].string,":")[1].string)
 					
 					//out.println(intUtl.intToString(tCount))
@@ -251,7 +250,8 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 
 						if(!(f_ip == ips_to_check[i].string))
 						{
-							RunStatus s = run.execute("./clear_file.bash free_ips.txt")
+							//RunStatus s = run.execute("./clear_file.bash free_ips.txt")
+							RunStatus s = run.execute("DEL free_ips.txt")
 							write_to_file("free_ips.txt","$av_host.lancs.ac.uk")
 						}
 						test_run = false

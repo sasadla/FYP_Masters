@@ -10,14 +10,14 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 		int tCount=intUtl.intFromString(params[0].string)
 		
 		
-		start_test(tCount)
+		start_test(tCount,params[1].string)
 		
 		
 		return 0
 	}
 	
  
-	void start_test(int tcount)
+	void start_test(int tcount,char machine[])
 	{
 	
 		int req_num = 10
@@ -33,11 +33,11 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 			char url[]
 			if (i < urls.arrayLength)
 			{
-				url = urls[i].string
+				url = "http://$(machine):5000/$(urls[i].string)"
 			}
 			else
 			{
-				url = urls[3].string
+				url = "http://$(machine):5000/$(urls[3].string)"
 			}
 			//out.println(url)
 			myThreads[i] = asynch::rqst(url, i, req_num)

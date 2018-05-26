@@ -7,8 +7,10 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		
 		char pth[] = "/home/lancs/sadla/FYP_Masters/Docker_dana_server"
 		char log[]
+		RunStatus ssst = run.execute("./clear_file.bash iam.txt")
+		ssst = run.execute("hostname >> iam.txt")
 		
-		char av_host[] =stringUtil.explode(stringUtil.explode(read_file("controller_table_log.txt"),"\n\r")[0].string,":")[1].string
+		char av_host[] =stringUtil.explode(read_file("iam.txt"),"\n\r")[0].string
 		
 		out.println(path)
 		if (path == "/controller_table_log.txt")
@@ -205,7 +207,7 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 			avg_tme[i] =intUtl.intFromString(stringUtil.explode((stringUtil.explode(res, "\n\r")[req_num+1].string), ":")[1].string)
 			final_avg = final_avg + avg_tme[i]
 			write_to_file(log_name,"Average reply time for thread number $(intUtl.intToString(i+1)) testing the url $url is:$(intUtl.intToString(avg_tme[i])) ms")
-			s = run.execute("DEL $log_name_T")
+			s = run.execute("rm -r -f $log_name_T")
 		}
 		final_avg = final_avg/ threadCount
 		write_to_file(log_name,"Final average reply time for web service test is:$(intUtl.intToString(final_avg)) ms")
