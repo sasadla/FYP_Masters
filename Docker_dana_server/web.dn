@@ -41,10 +41,22 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 			RunStatus st = run.execute("./down_script.bash")
 		}
 		else if (path == "/up")
-		{
-			RunStatus st = run.execute("./up_container.bash")
-			log = "Webservice on $av_host Up\n$(run_log_gen(pth))"
-			out.println("Sent back: $log")
+		{	
+			ssst = run.execute("./clear_file.bash check.txt")
+			ssst = run.execute("docker ps -q -a >> check.txt")
+			char cht[] = read_file("check.txt")
+			
+			if(cht.arrayLength <= 0)
+			{
+				RunStatus st = run.execute("./up_container.bash")
+				log = "Webservice on $av_host Up\n$(run_log_gen(pth))"
+				out.println("Sent back: $log")
+			}
+			else
+			{
+				log = "Webservice on $av_host already Up\n$(read_file("controller_table_log.txt"))"
+				out.println("Sent back: $log")
+			}
 		}
 		else if (path == "/down_res.txt")
 		{
