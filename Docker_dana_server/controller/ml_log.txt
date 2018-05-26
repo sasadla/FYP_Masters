@@ -8615,3 +8615,1100 @@ On Load Average TTR webservice:998 ms
 Minimum Average TTR webservice:1001 ms
 Thread count:1
 Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:3966ccb531df
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1493 ms
+Minimum Average TTR webservice:999 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla3
+Container id:b43a1ae01c42
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1103 ms
+Minimum Average TTR webservice:1108 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla4
+Container id:494fe532aa14
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1105 ms
+Minimum Average TTR webservice:1110 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:1be9932ff3b7
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1001 ms
+Minimum Average TTR webservice:1002 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla3
+Container id:b43a1ae01c42
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1103 ms
+Minimum Average TTR webservice:1108 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla4
+Container id:494fe532aa14
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1105 ms
+Minimum Average TTR webservice:1110 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:b6aa7b1314a8
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1000 ms
+Minimum Average TTR webservice:1001 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla3
+Container id:b43a1ae01c42
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1103 ms
+Minimum Average TTR webservice:1108 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla4
+Container id:494fe532aa14
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1105 ms
+Minimum Average TTR webservice:1110 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:6467e5613ab1
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:997 ms
+Minimum Average TTR webservice:1008 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla3
+Container id:b43a1ae01c42
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1103 ms
+Minimum Average TTR webservice:1108 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla4
+Container id:494fe532aa14
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1105 ms
+Minimum Average TTR webservice:1110 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:84ab97c3a97e
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:998 ms
+Minimum Average TTR webservice:1007 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla3
+Container id:b43a1ae01c42
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1103 ms
+Minimum Average TTR webservice:1108 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla4
+Container id:494fe532aa14
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1105 ms
+Minimum Average TTR webservice:1110 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:02173b4f736f
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1005 ms
+Minimum Average TTR webservice:1000 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla3
+Container id:b43a1ae01c42
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1103 ms
+Minimum Average TTR webservice:1108 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla4
+Container id:494fe532aa14
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1105 ms
+Minimum Average TTR webservice:1110 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:ce69a3d10aa0
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:999 ms
+Minimum Average TTR webservice:1005 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla3
+Container id:b43a1ae01c42
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1103 ms
+Minimum Average TTR webservice:1108 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla4
+Container id:494fe532aa14
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1105 ms
+Minimum Average TTR webservice:1110 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:558df496705d
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:993 ms
+Minimum Average TTR webservice:994 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla3
+Container id:b43a1ae01c42
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1103 ms
+Minimum Average TTR webservice:1108 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla4
+Container id:494fe532aa14
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1105 ms
+Minimum Average TTR webservice:1110 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:fb87963e329f
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:998 ms
+Minimum Average TTR webservice:1000 ms
+Thread count:1
+Status is:FREE
+>Webservice down Cannot run testStatus is:FREE
+>Webservice down Cannot run testStatus is:FREE
+>Host identity:sccpg-sadla2
+Container id:c601fa2731b6
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:996 ms
+Minimum Average TTR webservice:1000 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:c601fa2731b6
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:999 ms
+Minimum Average TTR webservice:1010 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:c601fa2731b6
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1002 ms
+Minimum Average TTR webservice:1006 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:c601fa2731b6
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:999 ms
+Minimum Average TTR webservice:999 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1001 ms
+Minimum Average TTR webservice:1006 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1001 ms
+Minimum Average TTR webservice:1006 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1001 ms
+Minimum Average TTR webservice:1006 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1001 ms
+Minimum Average TTR webservice:1006 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1001 ms
+Minimum Average TTR webservice:1006 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1001 ms
+Minimum Average TTR webservice:1006 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1000 ms
+Minimum Average TTR webservice:1015 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1000 ms
+Minimum Average TTR webservice:1015 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1000 ms
+Minimum Average TTR webservice:1015 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1000 ms
+Minimum Average TTR webservice:1015 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1000 ms
+Minimum Average TTR webservice:1015 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1000 ms
+Minimum Average TTR webservice:1015 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1000 ms
+Minimum Average TTR webservice:1015 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:996 ms
+Minimum Average TTR webservice:1013 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:996 ms
+Minimum Average TTR webservice:1013 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:996 ms
+Minimum Average TTR webservice:1013 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:996 ms
+Minimum Average TTR webservice:1013 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1001 ms
+Minimum Average TTR webservice:1000 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1001 ms
+Minimum Average TTR webservice:1000 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1001 ms
+Minimum Average TTR webservice:1000 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1008 ms
+Minimum Average TTR webservice:1007 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:998 ms
+Minimum Average TTR webservice:999 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1001 ms
+Minimum Average TTR webservice:1000 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:998 ms
+Minimum Average TTR webservice:1000 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1004 ms
+Minimum Average TTR webservice:1006 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1000 ms
+Minimum Average TTR webservice:1004 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4178 ms
+Minimum Average TTR webservice:6897 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4178 ms
+Minimum Average TTR webservice:6897 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4178 ms
+Minimum Average TTR webservice:6897 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4178 ms
+Minimum Average TTR webservice:6897 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4178 ms
+Minimum Average TTR webservice:6897 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4178 ms
+Minimum Average TTR webservice:6897 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4178 ms
+Minimum Average TTR webservice:6897 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1002 ms
+Minimum Average TTR webservice:1011 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3993 ms
+Minimum Average TTR webservice:6854 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3993 ms
+Minimum Average TTR webservice:6854 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3993 ms
+Minimum Average TTR webservice:6854 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3993 ms
+Minimum Average TTR webservice:6854 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3993 ms
+Minimum Average TTR webservice:6854 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3993 ms
+Minimum Average TTR webservice:6854 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1007 ms
+Minimum Average TTR webservice:1606 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3794 ms
+Minimum Average TTR webservice:6925 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3794 ms
+Minimum Average TTR webservice:6925 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3794 ms
+Minimum Average TTR webservice:6925 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3794 ms
+Minimum Average TTR webservice:6925 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3794 ms
+Minimum Average TTR webservice:6925 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1003 ms
+Minimum Average TTR webservice:1007 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3814 ms
+Minimum Average TTR webservice:6858 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3814 ms
+Minimum Average TTR webservice:6858 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3814 ms
+Minimum Average TTR webservice:6858 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1007 ms
+Minimum Average TTR webservice:1009 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3808 ms
+Minimum Average TTR webservice:6989 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3808 ms
+Minimum Average TTR webservice:6989 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3808 ms
+Minimum Average TTR webservice:6989 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3808 ms
+Minimum Average TTR webservice:6989 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3905 ms
+Minimum Average TTR webservice:6973 ms
+Thread count:1
+Status is:BUSY
+>Webservice down Cannot run testStatus is:BUSY
+>Webservice down Cannot run testStatus is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3905 ms
+Minimum Average TTR webservice:6973 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3396 ms
+Minimum Average TTR webservice:6909 ms
+Thread count:1
+Status is:BUSY
+>Webservice down Cannot run testStatus is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1004 ms
+Minimum Average TTR webservice:1007 ms
+Thread count:1
+Status is:FREE
+>Webservice down Cannot run testStatus is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5187 ms
+Minimum Average TTR webservice:4591 ms
+Thread count:1
+Status is:BUSY
+>Webservice down Cannot run testStatus is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1002 ms
+Minimum Average TTR webservice:1003 ms
+Thread count:1
+Status is:FREE
+>Webservice down Cannot run testStatus is:FREE
+>Webservice down Cannot run testStatus is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1002 ms
+Minimum Average TTR webservice:1000 ms
+Thread count:1
+Status is:FREE
+>Webservice down Cannot run testStatus is:FREE
+>Webservice down Cannot run testStatus is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1000 ms
+Minimum Average TTR webservice:1001 ms
+Thread count:1
+Status is:FREE
+>Webservice down Cannot run testStatus is:FREE
+>Webservice down Cannot run testStatus is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5895 ms
+Minimum Average TTR webservice:10943 ms
+Thread count:1
+Status is:OVERLOADED
+>Webservice down Cannot run testStatus is:OVERLOADED
+>Webservice down Cannot run testStatus is:OVERLOADED
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1001 ms
+Minimum Average TTR webservice:1000 ms
+Thread count:1
+Status is:FREE
+>Webservice down Cannot run testStatus is:FREE
+>Webservice down Cannot run testStatus is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1003 ms
+Minimum Average TTR webservice:1010 ms
+Thread count:1
+Status is:FREE
+>Webservice down Cannot run testStatus is:FREE
+>Webservice down Cannot run testStatus is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1005 ms
+Minimum Average TTR webservice:1009 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:5895 ms
+Minimum Average TTR webservice:10904 ms
+Thread count:1
+Status is:OVERLOADED
+>Webservice down Cannot run testStatus is:OVERLOADED
+>Webservice down Cannot run testStatus is:OVERLOADED
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1002 ms
+Minimum Average TTR webservice:1008 ms
+Thread count:1
+Status is:FREE
+>Webservice down Cannot run testStatus is:FREE
+>Webservice down Cannot run testStatus is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3988 ms
+Minimum Average TTR webservice:10771 ms
+Thread count:1
+Status is:OVERLOADED
+>Webservice down Cannot run testStatus is:OVERLOADED
+>Webservice down Cannot run testStatus is:OVERLOADED
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:998 ms
+Minimum Average TTR webservice:1006 ms
+Thread count:1
+Status is:FREE
+>Webservice down Cannot run testStatus is:FREE
+>Webservice down Cannot run testStatus is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1001 ms
+Minimum Average TTR webservice:1009 ms
+Thread count:1
+Status is:FREE
+>Webservice down Cannot run testStatus is:FREE
+>Webservice down Cannot run testStatus is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:6987 ms
+Minimum Average TTR webservice:8999 ms
+Thread count:1
+Status is:OVERLOADED
+>Webservice down Cannot run testStatus is:OVERLOADED
+>Webservice down Cannot run testStatus is:OVERLOADED
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1002 ms
+Minimum Average TTR webservice:1004 ms
+Thread count:1
+Status is:FREE
+>Webservice down Cannot run testStatus is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4783 ms
+Minimum Average TTR webservice:2196 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla3
+Container id:cbc39e15a5d3
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1100 ms
+Minimum Average TTR webservice:1112 ms
+Thread count:1
+Status is:FREE
+>Webservice down Cannot run testStatus is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3908 ms
+Minimum Average TTR webservice:5804 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla3
+Container id:cbc39e15a5d3
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1100 ms
+Minimum Average TTR webservice:1112 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla4
+Container id:494fe532aa14
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1105 ms
+Minimum Average TTR webservice:1110 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3908 ms
+Minimum Average TTR webservice:5804 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla3
+Container id:cbc39e15a5d3
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1100 ms
+Minimum Average TTR webservice:1112 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla4
+Container id:494fe532aa14
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1105 ms
+Minimum Average TTR webservice:1110 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3908 ms
+Minimum Average TTR webservice:5804 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla3
+Container id:cbc39e15a5d3
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1100 ms
+Minimum Average TTR webservice:1112 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla4
+Container id:494fe532aa14
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1105 ms
+Minimum Average TTR webservice:1110 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3908 ms
+Minimum Average TTR webservice:5804 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla3
+Container id:cbc39e15a5d3
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1100 ms
+Minimum Average TTR webservice:1112 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla4
+Container id:494fe532aa14
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1105 ms
+Minimum Average TTR webservice:1110 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3908 ms
+Minimum Average TTR webservice:5804 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla3
+Container id:cbc39e15a5d3
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1100 ms
+Minimum Average TTR webservice:1112 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla4
+Container id:494fe532aa14
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1105 ms
+Minimum Average TTR webservice:1110 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3908 ms
+Minimum Average TTR webservice:5804 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla3
+Container id:cbc39e15a5d3
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1100 ms
+Minimum Average TTR webservice:1112 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1005 ms
+Minimum Average TTR webservice:1008 ms
+Thread count:1
+Status is:FREE
+>Webservice down Cannot run testStatus is:FREE
+>Webservice down Cannot run testStatus is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:4592 ms
+Minimum Average TTR webservice:5792 ms
+Thread count:1
+Status is:BUSY
+>Webservice down Cannot run testStatus is:BUSY
+>Webservice down Cannot run testStatus is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1003 ms
+Minimum Average TTR webservice:1003 ms
+Thread count:1
+Status is:FREE
+>Webservice down Cannot run testStatus is:FREE
+>Webservice down Cannot run testStatus is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1007 ms
+Minimum Average TTR webservice:1007 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3914 ms
+Minimum Average TTR webservice:6989 ms
+Thread count:1
+Status is:BUSY
+>Webservice down Cannot run testStatus is:BUSY
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1002 ms
+Minimum Average TTR webservice:1010 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:276fddf379ac
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1002 ms
+Minimum Average TTR webservice:1010 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:5329b6d1a181
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3896 ms
+Minimum Average TTR webservice:6913 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla3
+Container id:2acf17d38682
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1092 ms
+Minimum Average TTR webservice:1100 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:5329b6d1a181
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:996 ms
+Minimum Average TTR webservice:1013 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla3
+Container id:2acf17d38682
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1090 ms
+Minimum Average TTR webservice:1094 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:5329b6d1a181
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1001 ms
+Minimum Average TTR webservice:1007 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla3
+Container id:2acf17d38682
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1112 ms
+Minimum Average TTR webservice:1095 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:5329b6d1a181
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1001 ms
+Minimum Average TTR webservice:1000 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla3
+Container id:2acf17d38682
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1093 ms
+Minimum Average TTR webservice:1099 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:5329b6d1a181
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:999 ms
+Minimum Average TTR webservice:1009 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla3
+Container id:2acf17d38682
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1105 ms
+Minimum Average TTR webservice:1101 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:5329b6d1a181
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1008 ms
+Minimum Average TTR webservice:997 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla3
+Container id:2acf17d38682
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1094 ms
+Minimum Average TTR webservice:1097 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:5329b6d1a181
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1005 ms
+Minimum Average TTR webservice:1005 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla3
+Container id:2acf17d38682
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1091 ms
+Minimum Average TTR webservice:1097 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:5329b6d1a181
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1003 ms
+Minimum Average TTR webservice:1002 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla3
+Container id:2acf17d38682
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1107 ms
+Minimum Average TTR webservice:1102 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:5329b6d1a181
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1006 ms
+Minimum Average TTR webservice:1003 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:5329b6d1a181
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:996 ms
+Minimum Average TTR webservice:1000 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:5329b6d1a181
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:996 ms
+Minimum Average TTR webservice:1003 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:5329b6d1a181
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:3914 ms
+Minimum Average TTR webservice:6933 ms
+Thread count:1
+Status is:BUSY
+>Host identity:sccpg-sadla2
+Container id:5329b6d1a181
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1001 ms
+Minimum Average TTR webservice:1007 ms
+Thread count:1
+Status is:FREE
+>Host identity:sccpg-sadla2
+Container id:5329b6d1a181
+Container ip on host:172.18.0.2
+On Load Average TTR webservice:1002 ms
+Minimum Average TTR webservice:1005 ms
+Thread count:1
+Status is:FREE

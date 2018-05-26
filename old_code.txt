@@ -1,0 +1,28 @@
+	
+/*	void busy_found (int i, int skip, String ips_to_check[], char dd[],HTTPResponse r,char log[])
+	{
+			
+						r = rq.get("http://$(ips_to_check[i].string):2018/down_res.txt", null)/*"http://127.0.0.1:5100"*/
+						
+						dd = r.content
+						
+						if(i!=skip)
+						{
+							if (dd.arrayLength > 0)
+							{
+								out.println("BUSY ACTIVE")
+								r = rq.get("http://$(ips_to_check[i].string):2018/up", null)/*"http://127.0.0.1:5100"*/	
+								log = r.content
+								out.println(log)
+								busy_found = false
+								test_run = true
+							}
+							else
+							{
+								out.println("BUSY ACTIVE ELSE")
+							}
+							busy_done = true
+							skip_assigned = false
+						}
+						
+	}*/

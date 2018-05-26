@@ -19,6 +19,16 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 	//cntrlr running variables
 	bool times = true
 	
+	//controller control varibales
+	bool test_run = true
+	bool free_found = false
+	bool free_done = false
+	bool busy_found = false
+	bool busy_done = false
+	bool ovrldd_found = false
+	bool ovrldd_done = false
+	bool skip_assigned = false
+	
 	int App:main(AppParam params[])
 	{	
 		char f_name[] = "reg_stats.txt"
@@ -50,23 +60,16 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 	
 		String ips_to_check[] = stringUtil.explode(read_file("ips_to_check.txt"), "\n\r")
 		char log_name[] ="controller_table_log.txt"
-		char av_host[]
-		int skip 
+		char av_host[] 
 		char avg_ttr_w_srvc[]
 		char min_avg_ttr_w_srvc[]
 		int tCount
 		int prt = 2018
 		char log_name_ml[] ="ml_log.txt"
+		int skip
 		
 		
 		
-		bool test_run = true
-		bool free_found = false
-		bool free_done = false
-		bool busy_found = false
-		bool busy_done = false
-		bool ovrldd_found = false
-		bool ovrldd_done = false
 		
 		for(int i=0;i<ips_to_check.arrayLength;i++)
 		{
@@ -81,7 +84,7 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 			out.println("ddf: $dd")
 			char status[]
 			
-			if (dd.arrayLength > 0 && (!free_found && !busy_found && !ovrldd_found))
+			if (dd.arrayLength > 0)
 			{
 				out.println("Container Down on $(ips_to_check[i].string)")
 			
@@ -90,17 +93,22 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 			{
 			
 				
-				if(i!=skip && dd.arrayLength <=0)
-				{
-					test_run = true
-				}
+				//if(i!=skip)
+				//{
+				//	test_run = true
+				//}
 				
 					if(test_run)
 					{
 						r = rq.get("http://$(ips_to_check[i].string):2018/$log_name", null)/*"http://127.0.0.1:5100"*/	
 					}
+					else
+					{
+						r = rq.get("http://$(ips_to_check[i].string):2018/WT_$log_name", null)/*"http://127.0.0.1:5100"*/
+					}
 					out.println(ips_to_check[i].string)
-					r = rq.get("http://$(ips_to_check[i].string):2018/WT_$log_name", null)/*"http://127.0.0.1:5100"*/	
+					
+						
 						
 					log = r.content
 						//out.println(log)
@@ -108,7 +116,7 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 					
 					if (!(log == "Webservice down Cannot run test") || !(log.arrayLength > 0))
 					{	
-						out.println("WT_$(log_name) log: $log")
+						out.println("log: $log")
 						tCount = intUtl.intFromString(stringUtil.explode(stringUtil.explode(log,"\n\r")[5].string,":")[1].string)
 						
 						//out.println(intUtl.intToString(tCount))
@@ -120,6 +128,10 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 						min_avg_ttr_w_srvc = stringUtil.explode(stringUtil.explode(log, "\n\r")[4].string,":")[1].string
 						
 					//	out.println(min_avg_ttr_w_srvc)
+					}
+					else
+					{
+						
 					}
 					bool ad
 					if(!test_run)
@@ -135,87 +147,95 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 				//	out.println("$(log)Status is:$status")
 					write_to_file(log_name_ml,">$(log)Status is:$status")
 					
-					if (free_found){
-						if(i!=skip)
-						{
-							for(int x=0;x<ips_to_check.arrayLength;x++)
-							{
-								
-								r = rq.get("http://$(ips_to_check[x].string):2018/down_res.txt", null)/*"http://127.0.0.1:5100"*/
-								dd = r.content
-								
-								r = rq.get("http://$(ips_to_check[x].string):2018/WT_$log_name", null)/*"http://127.0.0.1:5100"*/	
-								
-								log = r.content
-								
-								if (dd.arrayLength > 0 && x!=skip)
-								{
-									out.println("Container Not Active On: $(ips_to_check[x].string)")
-								//
-								}
-								else
-								{
-									avg_ttr_w_srvc = stringUtil.explode(stringUtil.explode(log, "\n\r")[3].string,":")[1].string
+//					if (free_found){
 						
-									min_avg_ttr_w_srvc = stringUtil.explode(stringUtil.explode(log, "\n\r")[4].string,":")[1].string
-
-									status = get_stat(intUtl.intFromString(avg_ttr_w_srvc),intUtl.intFromString(min_avg_ttr_w_srvc),false)
-									
-									char f_st[] = status 
-									
-									if(f_st == "FREE" && f_st != "BUSY" && f_st != "OVERLOADED" && (!busy_found || !ovrldd_found) && x!=skip)
-									{
-										out.println("FREE Active")
-										r = rq.get("http://$(ips_to_check[x].string):2018/down", null)/*"http://127.0.0.1:5100"*/	
-										log = r.content
-										out.println(log)
-									}
-								
-								
-								}
-							}
-
-						}
 						
-						if(i>=ips_to_check.arrayLength-1)
+//					}
+					
+//					if(busy_found)
+//					{
+						
+
+//					}
+					
+//					if(ovrldd_found)
+//					{
+						
+						
+					
+//					}
+					
+					if(status == "FREE" && !free_done)
+					{
+						free_found = true
+						if(!skip_assigned)
 						{
-							free_done = true
-							test_run = false
+							skip = i
+							skip_assigned = true
 						}
+						r = rq.get("http://$(ips_to_check[i].string):2018/WT_controller_table_log.txt", null)/*"http://127.0.0.1:5100"*/	
+						log = r.content
+						//out.println(log)
+						av_host =stringUtil.explode(stringUtil.explode(log,"\n\r")[0].string,":")[1].string
+						
+						char f_ip[] = stringUtil.explode(read_file("free_ips.txt"),"\n\r")[0].string
+
+						if(!(f_ip == ips_to_check[i].string))
+						{
+							//RunStatus s = run.execute("./clear_file.bash free_ips.txt")
+							RunStatus s = run.execute("DEL free_ips.txt")
+							write_to_file("free_ips.txt","$av_host.lancs.ac.uk")
+						}
+						test_run = false
+						out.println("FREE: All is well, Pull down all replicas but current one")
+						free_found(i, skip,ips_to_check,dd,r,log,log_name)
+						//i = 0
+						//i--
+												
+					}
+					else if(status == "BUSY" && !busy_done)
+					{
+						busy_found = true
+						if(!skip_assigned)
+						{
+							skip = i
+							skip_assigned = true
+						}
+						test_run = false
+						out.println("BUSY:Launch one new instance to share the load")
+						busy_found(i,skip,ips_to_check,dd,r,log,log_name)
+						
 						
 					}
 					
-					if(busy_found)
-					{
-						r = rq.get("http://$(ips_to_check[i].string):2018/down_res.txt", null)/*"http://127.0.0.1:5100"*/
-						
-						dd = r.content
-						
-						if(i!=skip)
+					else if(status == "OVERLOADED" && !ovrldd_done)
+					{	
+						ovrldd_found = true
+						if(!skip_assigned)
 						{
-							if (dd.arrayLength > 0)
-							{
-								out.println("BUSY ACTIVE")
-								r = rq.get("http://$(ips_to_check[i].string):2018/up", null)/*"http://127.0.0.1:5100"*/	
-								log = r.content
-								out.println(log)
-								busy_found = false
-								test_run = false
-							}
-							else
-							{
-								out.println("BUSY ACTIVE ELSE")
-							}
+							skip = i
+							skip_assigned = true
 						}
-						busy_done = true
-
+						//i = 0
+						//i--
+						test_run = false
+						out.println("OVERLOADED:Launch two new instance to share the load and stablize")
+						overloaded_found(i, skip,ips_to_check,dd,r,log)
+						
 					}
 					
-					if(ovrldd_found)
-					{
-						
-						r = rq.get("http://$(ips_to_check[i].string):2018/down_res.txt", null)/*"http://127.0.0.1:5100"*/
-						
+				
+			}
+		}
+		//out.println("file is$(read_file(log_name_ml))")
+	
+	
+	}
+	
+	void overloaded_found(int i, int skip, String ips_to_check[], char dd[], HTTPResponse r,char log[])
+	{
+			r = rq.get("http://$(ips_to_check[i].string):2018/down_res.txt", null)/*"http://127.0.0.1:5100"*/
+						out.println("in busy i is : $(intUtl.intToString(i)) an skip is: $(intUtl.intToString(skip))")
 						dd = r.content
 						
 						if(i!=skip)
@@ -231,8 +251,8 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 									ovrldd_found = false
 								}
 								
-								test_run = false
-
+								test_run = true
+								skip_assigned = false
 							}
 							else
 							{
@@ -240,61 +260,107 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 							}
 						}
 						ovrldd_done = true
-					
-					}
-					
-					if(status == "FREE" && !free_done)
-					{
-						free_found = true
-						skip = i
-						r = rq.get("http://$(ips_to_check[i].string):2018/WT_controller_table_log.txt", null)/*"http://127.0.0.1:5100"*/	
-						log = r.content
-						//out.println(log)
-						av_host =stringUtil.explode(stringUtil.explode(log,"\n\r")[0].string,":")[1].string
-						
-						char f_ip[] = stringUtil.explode(read_file("free_ips.txt"),"\n\r")[0].string
+	}
 
-						if(!(f_ip == ips_to_check[i].string))
-						{
-							//RunStatus s = run.execute("./clear_file.bash free_ips.txt")
-							RunStatus s = run.execute("DEL free_ips.txt")
-							write_to_file("free_ips.txt","$av_host.lancs.ac.uk")
-						}
-						test_run = false
-						//i = 0
-						//i--
-						out.println("FREE: All is well, Pull down all replicas but current one")
+	
+	void busy_found(int i, int skip, String ips_to_check[],char dd[],HTTPResponse r,char log[],char log_name[])
+	{
+		
+		for(int x=0;x<ips_to_check.arrayLength;x++)
+		{
+			out.println("in busy x is : $(intUtl.intToString(x)) an skip is: $(intUtl.intToString(skip))")
+								
+			r = rq.get("http://$(ips_to_check[x].string):2018/down_res.txt", null)/*"http://127.0.0.1:5100"*/
+			dd = r.content
+								
+			r = rq.get("http://$(ips_to_check[x].string):2018/WT_$log_name", null)/*"http://127.0.0.1:5100"*/	
+								
+			log = r.content
+								
+			if (!(dd.arrayLength > 0) && x!=skip)
+			{
+				out.println("BUSY CHECK: Container Active On: $(ips_to_check[x].string)")
+			
+			}
+			else
+			{
+				char avg_ttr_w_srvc[] = stringUtil.explode(stringUtil.explode(log, "\n\r")[3].string,":")[1].string
 						
-					}
-					else if(status == "BUSY" && !busy_done)
-					{
-						busy_found = true
-						skip = i
-						i = 0
-						i--
-						test_run = false
-						out.println("BUSY:Launch one new instance to share the load")
-						
-					}
+				char min_avg_ttr_w_srvc[] = stringUtil.explode(stringUtil.explode(log, "\n\r")[4].string,":")[1].string
+
+				char status[] = get_stat(intUtl.intFromString(avg_ttr_w_srvc),intUtl.intFromString(min_avg_ttr_w_srvc),false)
+									
+				char f_st[] = status 
+									
+				if((!free_found || !ovrldd_found) && x!=skip && !busy_done)
+				{
+					out.println("BUSY Active x is: $(intUtl.intToString(x)) and i is : $(intUtl.intToString(i)) an skip is: $(intUtl.intToString(skip))")
 					
-					else if(status == "OVERLOADED" && !ovrldd_done)
-					{	
-						ovrldd_found = true
-						skip = i
-						i = 0
-						i--
-						test_run = false
-						out.println("OVERLOADED:Launch two new instance to share the load and stablize")
-					}
+					r = rq.get("http://$(ips_to_check[x].string):2018/up", null)/*"http://127.0.0.1:5100"*/	
 					
+					log = r.content
+					
+					out.println(log)
+					busy_done = true
+					busy_found = false
+				}
+								
 				
 			}
 		}
-		//out.println("file is$(read_file(log_name_ml))")
-	
-	
+		busy_done = true
+		test_run = true
+		skip_assigned = false
+
 	}
 	
+	
+	
+	void free_found(int i, int skip, String ips_to_check[],char dd[],HTTPResponse r,char log[],char log_name[])
+	{
+		
+		for(int x=0;x<ips_to_check.arrayLength;x++)
+		{
+								
+			r = rq.get("http://$(ips_to_check[x].string):2018/down_res.txt", null)/*"http://127.0.0.1:5100"*/
+								dd = r.content
+								
+			r = rq.get("http://$(ips_to_check[x].string):2018/WT_$log_name", null)/*"http://127.0.0.1:5100"*/	
+								
+			log = r.content
+								
+			if (dd.arrayLength > 0 && x!=skip)
+			{
+				out.println("FREE CHECK: Container Not Active On: $(ips_to_check[x].string)")
+			
+			}
+			else
+			{
+				char avg_ttr_w_srvc[] = stringUtil.explode(stringUtil.explode(log, "\n\r")[3].string,":")[1].string
+						
+				char min_avg_ttr_w_srvc[] = stringUtil.explode(stringUtil.explode(log, "\n\r")[4].string,":")[1].string
+
+				char status[] = get_stat(intUtl.intFromString(avg_ttr_w_srvc),intUtl.intFromString(min_avg_ttr_w_srvc),false)
+									
+				char f_st[] = status 
+									
+				if(f_st == "FREE" && f_st != "BUSY" && f_st != "OVERLOADED" && (!busy_found || !ovrldd_found) && x!=skip)
+				{
+					out.println("FREE Active x is: $(intUtl.intToString(x)) and i is : $(intUtl.intToString(i)) an skip is: $(intUtl.intToString(skip))")
+					r = rq.get("http://$(ips_to_check[x].string):2018/down", null)/*"http://127.0.0.1:5100"*/	
+					log = r.content
+					out.println(log)
+				}
+								
+				
+			}
+		}
+		free_done = true
+		free_found = false
+		test_run = true
+		skip_assigned = false
+
+	}
 	
 	char[] get_stat(int avg, int min_avg,bool add){
 		
