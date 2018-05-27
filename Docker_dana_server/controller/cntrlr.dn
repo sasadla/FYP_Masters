@@ -220,7 +220,7 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 						//i--
 						test_run = false
 						out.println("OVERLOADED:Launch two new instance to share the load and stablize")
-						overloaded_found(i, skip,ips_to_check,dd,r,log)
+						overloaded_found(i,skip,ips_to_check,dd,r,log,log_name)
 						
 					}
 					
@@ -232,7 +232,7 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 	
 	}
 	
-	void overloaded_found(int i, int skip, String ips_to_check[], char dd[], HTTPResponse r,char log[])
+	void overloaded_found(int i, int skip, String ips_to_check[],char dd[],HTTPResponse r,char log[],char log_name[])
 	{
 		
 		for(int x=0;x<ips_to_check.arrayLength;x++)
@@ -271,13 +271,14 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 					
 					out.println(log)
 					//activated_busy = true
-					ovrldd_found = false
+					
 				}
 								
 				
 			}
 		}
 		//ovrldd_done = true
+		ovrldd_found = false
 		test_run = true
 		skip_assigned = false
 		
