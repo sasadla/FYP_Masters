@@ -26,7 +26,6 @@ cd controller
 #compile controller files
 dnc cntrlr.dn
 dnc gen_csv.dn
-dnc ts.dn
 #make bash scripts runable
 sudo chmod +x clear_file.bash
 sudo chmod +x run_controller.sh
