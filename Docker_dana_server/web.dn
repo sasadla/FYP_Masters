@@ -1,9 +1,23 @@
 uses ws.forms.FileFormField
 
+//this component is a webservice that talks to the controller and gives details and information on running docker contianers, it further is able to bring down or power up a docker container if the controller issues the command to do so.
+
+//it makes use of bash scripts to perform its functions as it is deployed in a ubuntu envoirnment.
 component provides ws.Web requires ws.FormParser fparser, io.Output out, os.SystemInfo info, os.Run run, io.File, data.StringUtil stringUtil,data.IntUtil intUtl,time.DateUtil dtTm, net.http.HTTPRequest rq, data.query.Search search,time.Calendar caln, data.json.JSONParser jparser{
  	
+	/**
+	*this function is used by the ws.core module of dana to listen on the specified port for incomming get requests
+	*
+	*inputs:
+	*DocStream s stream where the request came from and reply is to be served to
+	*char path[] the path of the webservices i.e localhost:2000/index here /index is the path
+	*
+	*result:
+	*a char array that containes the result of the performed command 
+	*/
+	
 	bool Web:get(char path[], DocStream s)
-		{
+	{
 		
 		char pth[] = "/home/lancs/sadla/FYP_Masters/Docker_dana_server"
 		char log[]
@@ -13,7 +27,7 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		char av_host[] =stringUtil.explode(read_file("iam.txt"),"\n\r")[0].string
 		
 		out.println(path)
-		if (path == "/controller_table_log.txt")
+		if (path == "/controller_table_log.txt")//teste the container for replytimes and gets its stats
 		{	
 			ssst = run.execute("./clear_file.bash check.txt")
 			ssst = run.execute("docker ps -q -a >> check.txt")
@@ -29,12 +43,12 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 				out.println("Sent back: $log")
 			}
 		}
-		else if (path == "/WT_controller_table_log.txt")
+		else if (path == "/WT_controller_table_log.txt")//returns back information on the container without running the test
 		{
 			log = read_file("controller_table_log.txt")
 			out.println("Sent back: $log")
 		}
-		else if (path == "/down")
+		else if (path == "/down")//checks to make sure if a container exists if it does powers it down else returns saying conatiner already down
 		{
 			ssst = run.execute("./clear_file.bash check.txt")
 			ssst = run.execute("docker ps -q -a >> check.txt")
@@ -53,7 +67,7 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 				out.println("Sent back: $log")
 			}
 		}
-		else if (path == "/up")
+		else if (path == "/up")//checks to make sure if a container exists if it does not powers it up else returns saying conatiner already up
 		{	
 			ssst = run.execute("./clear_file.bash check.txt")
 			ssst = run.execute("docker ps -q -a >> check.txt")
@@ -72,7 +86,7 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 				out.println("Sent back: $log")
 			}
 		}
-		else if (path == "/down_res.txt")
+		else if (path == "/down_res.txt")//returns container power up/down status file
 		{
 			log = read_file("down_res.txt")
 			out.println("Sent back: $log")
@@ -80,16 +94,36 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		s.write(log)//string concatination done here
 		
 		return true
-		}
+	}
 
+	/**
+	*this function is used by the ws.core module of dana to listen on the specified port for incomming post requests
+	*
+	*inputs:
+	*DocStream s stream where the request came from and reply is to be served to
+	*char path[] the path of the webservices i.e localhost:2000/index here /index is the path
+	*char contentType[] the type of content to post
+	*byte content[] the content itself
+	*result:
+	*a char array that containes the result of the performed command 
+	*/
+	
+	
 	bool Web:post(char path[], char contentType[], byte content[], DocStream stream)
-		{
-		
-		
+	{
 		return true
-		}
+	}
 		
 	
+	/**
+	*this function runs test on the running container to get its id the host thats running its ip it its ip its minimum reply time and average time and a thread count i.e the load on it 
+	*
+	*inputs:
+	*char p[] the path where the resultant logs are to be generated and kept
+	*
+	*result:
+	*a char array that containes the result of the performed test 
+	*/
 	
 	
 	char [] run_log_gen(char p[])
@@ -132,10 +166,23 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		return read_file("controller_table_log.txt")
 	}
 	
+	/**
+	*After the test is run this function is called to generate alog file with the extracted details on the conatiner and store them on the disk
+	*
+	*inputs:
+	*char stats[] the detailed information of the running container 
+	*char c_details[] extracetd conatiner id, hostname and ip of the container
+	*int t_count the load that was put on the container to generate the reply times i.e 1 means 1000ms delay
+	*char p[] path to where the log is to be stored
+	*
+	*result:
+	*log file stored in given location with the above mentioned information 
+	*/
+	
 	
 	void gen_status_table(char stats[],char c_details[],int tCount, char p[])
 	{
-	// three log files:
+		// three log files:
 		//controller_container_stats_log.txt containerid,ip,gateway (c_details)
 		//controller_ttr_log.txt //min avg max avg ttr
 		//status_res.txt host details here (stats)
@@ -162,15 +209,23 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		
 	}
 	
+	/**
+	*this function runs the test on the container and genrates logs that are later used to generate min reply time and average reply time
+	*
+	*inputs:
+	*int tcount the load to put on the conatiner while testing i.e 1 = 1000ms delay in reply time
+	*char p[] the path of where the logs should be temporarily kept
+	*
+	*result:
+	*an int with the average reply time for the container 
+	*/
 	
  
 	int start_test(int tcount,char p[])
 	{
 	
-		int req_num = 10
-		int cnt = 1
+		int req_num = 10//numer of requestes to be made by one thread
 		int threadCount = tcount
-		//int urls_to_check = threadCount
 		Thread myThreads[] = new Thread[threadCount]
 		String urls[] = stringUtil.explode(read_file("tst_urls_log.txt"), "\n\r")//only put 5 links in this file otherwise system will crash
 		
@@ -207,6 +262,17 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 	
 	}
 	
+	/**
+	*this functions launches threads to test the conatiner running the webservice for it minimum reaply average time
+	*
+	*inputs:
+	*String urls[] urls to test on the webservice
+	*char p[] the path where the logs should be kept temporarily
+	*
+	*result:
+	*an int with the minimum reply time result of the tests 
+	*/
+	
 	
 	int get_min_reply_avg_time(String urls[],char p[])
 	{
@@ -227,6 +293,20 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		return min_avg
 	}
  
+	/**
+	*this functions launches threads to test the conatiner running the webservice for its reply average time
+	*
+	*inputs:
+	*int threadCount number of threads to use to test the services
+	*int req_num number of requests each thread should make
+	*int min_rep_avg minimum average reply time of cainter to write in the log
+	*char p[] pathe where the log is to be stored
+	*
+	*result:
+	*an int with the average reply time result of the tests 
+	*/
+	
+	
 	int gen_time_avgs_log(int threadCount,int req_num,int min_rep_avg,char p[])
 	{	
 		int avg_tme[] = new int [threadCount]
@@ -253,7 +333,16 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		return final_avg
 	}
 	
-	
+	/**
+	*this gets the host name and the container id and the status of the running container
+	*
+	*inputs:
+	*char f_n[] name of file to read to extract status
+	*char p[] the path where the logs should be kept
+	*
+	*result:
+	*a char array with the result of the status test in it 
+	*/
 	
 	
 	
@@ -263,10 +352,20 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 						
 		char res[] = read_file(f_n)
 		
-		//out.println("Status result is: $res")
 		return res
 	
 	}
+	
+	/**
+	*this functions gets the id(s) of the running container(s)
+	*
+	*inputs:
+	*char f_n[] file where the ids result is read from
+	*char p[] the path where the logs should be kept
+	*
+	*result:
+	*A string array with the collected ids result in it 
+	*/
 	
 	
 	String[] get_cntnr_id(char f_n[],char p[])
@@ -277,20 +376,27 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		String cntnr_id[]
 		
 		cntnr_id = stringUtil.explode(res, "\n\r")
-		
-		//out.println(cntnr_id[0].string)
-		
+			
 		return cntnr_id
 	
 	}
 	
+	/**
+	*this functions read a json file that has been given as a result of getting the running containers detailed configs
+	*
+	*inputs:
+	*char f_n[] where the detailed reult is to be read from
+	*char inf[] the specific information required from the file
+	*
+	*result:
+	*a char array that containes the specifed result frm the json file 
+	*/
 	
 	char[] extract_info_on_container(char f_n[],char inf[])
 	{
 		char infrm[]
 		
 		char jsonArray[] = new char[]("{ \"array\":", read_file(f_n), "}")
-		//out.println(jsonArray)
 		JSONElement doc = jparser.parseDocument(jsonArray)
 		
 		JSONElement cellA = jparser.getValue(doc, "array").children[0]
@@ -307,6 +413,16 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 	
 	}
 	
+	/**
+	*this functions write to a file in the same directory as the web.dn file
+	*
+	*inputs:
+	*char f_n[] name of file to write to
+	*char d[] data to be written onto the file
+	*
+	*result:
+	*specified file with the given data in the same directory as the web.dn file  
+	*/
 	
 	void write_to_file(char f_n[],char d[])
 	{	
@@ -316,6 +432,16 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		f.close()
 	}
 	
+	/**
+	*this functions reads from a file in the same directory as the web.dn file
+	*
+	*inputs:
+	*char f_n[] name of file to read from
+	*
+	*result:
+	*char array with the contents of the file in it  
+	*/
+	
 	char[] read_file(char f_name[])
 	{
 		File f = new File(f_name, File.FILE_ACCESS_READ)
@@ -324,6 +450,20 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		return q
 		
 	}
+	
+	
+	/**
+	*this functions is used by the average time collection threads to make a given number of requests to the webservice and returns back the average time for those requests
+	*
+	*inputs:
+	*char urls[] urls to make the requests to
+	*int cnt thread number to use to assign the log file a unique name
+	*int reqno number of requests to be made by the file
+	*char p[] path where the log files generated are to be stored
+	*
+	*result:
+	*specified file with the given data in the same directory as the web.dn file  
+	*/
 	
 	int rqst(char url[],int cnt, int reqno,char p[])
 	{
@@ -361,8 +501,4 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 		return avg
 	}
 	
-	
-	
-	
-	
-	}
+}

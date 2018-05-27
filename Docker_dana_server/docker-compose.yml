@@ -1,31 +1,11 @@
+#docker compose file used to launch the container with the dana services that serves webpages
 version: '3'
-
-#networks:
-#  dana-web:
-
 services:
-  #frontend:
-   # build: ./frontend
-    #ports:
-     # - 8080:80
-    #restart: always
-    #networks:
-    #  - dana-web
-
-  #controller:
-   # build: ./controller
-   # restart: always
-   # volumes:
-    #  - //var/run/docker.sock:/var/run/docker.sock:rw
-      #- /var/run/docker.sock:/var/run/docker.sock:rw
-    #networks:
-    #  - dana-web
-
   dana-web-service:
     image: dana-web-service:latest
     build: ./linux
     ports:
         - 5000:2018
     restart: always
-  #  networks:
-  #    - dana-web
+# this uses a docker file to pull an image of ubuntu with dana installed on it and puts the
+# web page serving services on this container  

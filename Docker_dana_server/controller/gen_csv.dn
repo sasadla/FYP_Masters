@@ -1,14 +1,39 @@
+//the component is used to generate the csv manully for knn training in the controller
+
+//to run please launch command line or terminal in same directory as this file in a dana installed pc and do dana gen_csv.dn and then dana gen_csv
+
+//make sure ml_log.txt file is in the same directory as this files compiled version
+
 uses time.DateTime
 uses ws.forms.FileFormField
 component provides App requires io.Output out, data.StringUtil stringUtil,data.IntUtil intUtl,io.File, os.Run run,net.http.HTTPRequest rq  {
  
- 
+	/**
+	*this is main function the runs the csv gen
+	*
+	*inputs:
+	*
+	*result:
+	*csv generated in same directory 
+	*/
+
 	
 	int App:main(AppParam params[])
 	{	
 		run_csv_gen()
 		return 0
 	}
+	
+	/**
+	*this function generates the csv log used in knn training
+	*
+	*
+	*inputs:
+	*
+	*result:
+	*generated log file in the same directory as the cntrlr.o file  
+	*/
+	
 	
 	void run_csv_gen()
 	{
@@ -41,6 +66,18 @@ component provides App requires io.Output out, data.StringUtil stringUtil,data.I
 	
 	}
 
+	/**
+	*this functions write to a file in the same directory as the web.dn file
+	*
+	*inputs:
+	*char f_n[] name of file to write to
+	*char d[] data to be written onto the file
+	*
+	*result:
+	*specified file with the given data in the same directory as the web.dn file  
+	*/
+
+	
 	void write_to_file(char f_n[],char d[])
 	{	
 		File f = new File(f_n, File.FILE_ACCESS_WRITE)
@@ -48,6 +85,17 @@ component provides App requires io.Output out, data.StringUtil stringUtil,data.I
 		f.write("$d\n")
 		f.close()
 	}
+	
+	/**
+	*this functions reads from a file in the same directory as the web.dn file
+	*
+	*inputs:
+	*char f_n[] name of file to read from
+	*
+	*result:
+	*char array with the contents of the file in it  
+	*/
+	
 	
 	char[] read_file(char f_name[])
 	{

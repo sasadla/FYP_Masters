@@ -1,3 +1,16 @@
+	/**
+	*serves back the index page upon get request
+	*
+	*
+	*inputs:
+	*DocStream s stream where the request came from and reply is to be served to
+	*char path[] the path of the webservices i.e localhost:2000/index here /index is the path
+	*
+	*result:
+	*a webpage displaying the main page i.e index page 
+	*/
+
+
 uses ws.forms.FileFormField
 
 component provides ws.Web requires io.Output out, io.FileSystem fileSystem, ws.FormParser fparser {
@@ -43,6 +56,21 @@ component provides ws.Web requires io.Output out, io.FileSystem fileSystem, ws.F
 		return true
 		}
 
+		
+	/**
+	*this function is used by the ws.core module of dana to listen on the specified port for incomming post requests
+	*
+	*inputs:
+	*DocStream s stream where the request came from and reply is to be served to
+	*char path[] the path of the webservices i.e localhost:2000/index here /index is the path
+	*char contentType[] the type of content to post
+	*byte content[] the content itself
+	*result:
+	*a char array that containes the result of the performed command 
+	*/
+	
+		
+	
 	bool Web:post(char path[], char contentType[], byte content[], DocStream stream)
 		{
 		

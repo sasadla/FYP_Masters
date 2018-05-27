@@ -1,7 +1,13 @@
 uses time.DateTime
+//this component makes requestes to the given webservice, it take as input the name of the service to make requests to and the numbers of threads to use to make requests with
+
+//it is ultimately used in tthe project to make the services busy or overloaded to test the controllers response to the changing enviornment
+
 component provides App requires io.Output out, data.StringUtil stringUtil, net.http.HTTPRequest rq, data.IntUtil intUtl,time.DateUtil dtTm,io.File, os.Run run,time.Calendar caln, data.json.JSONParser jparser  {
  
- 
+ /**
+ * this is the main function its params arrays index 0 has the number of threads to use and index 1 has the service name that is to be overloaded
+ */
 	
 	int App:main(AppParam params[])
 	{	
@@ -16,6 +22,16 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 		return 0
 	}
 	
+	/**
+	*this function runs the test on the container and genrates logs that are later used to generate min reply time and average reply time
+	*
+	*inputs:
+	*int tcount the load to put on the conatiner while testing i.e 1 = 1000ms delay in reply time
+	*char p[] the path of where the logs should be temporarily kept
+	*
+	*result:
+	*an int with the average reply time for the container 
+	*/
  
 	void start_test(int tcount,char machine[])
 	{
@@ -63,8 +79,20 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 	
 	}
 	
+	/**
+	*this functions is used by the average time collection threads to make a given number of requests to the webservice and returns back the average time for those requests
+	*
+	*inputs:
+	*char urls[] urls to make the requests to
+	*int cnt thread number to use to assign the log file a unique name
+	*int reqno number of requests to be made by the file
+	*char p[] path where the log files generated are to be stored
+	*
+	*result:
+	*specified file with the given data in the same directory as the web.dn file  
+	*/
 	
-		
+	
 	void rqst(char url[],int cnt, int reqno)
 	{
 		char log_name[] = "requester_log_$(intUtl.intToString(cnt)).txt"
@@ -86,6 +114,16 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 		
 	}
 	
+	/**
+	*this functions write to a file in the same directory as the web.dn file
+	*
+	*inputs:
+	*char f_n[] name of file to write to
+	*char d[] data to be written onto the file
+	*
+	*result:
+	*specified file with the given data in the same directory as the web.dn file  
+	*/
 	
 	void write_to_file(char f_n[],char d[])
 	{	
@@ -94,6 +132,16 @@ component provides App requires io.Output out, data.StringUtil stringUtil, net.h
 		f.write("$d\n")
 		f.close()
 	}
+	
+	/**
+	*this functions reads from a file in the same directory as the web.dn file
+	*
+	*inputs:
+	*char f_n[] name of file to read from
+	*
+	*result:
+	*char array with the contents of the file in it  
+	*/
 	
 	char[] read_file(char f_name[])
 	{

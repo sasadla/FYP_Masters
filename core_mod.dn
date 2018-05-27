@@ -12,6 +12,17 @@ When the located web component is invoked, we pass into its "path" parameter any
 Invocations on web components are serialised, so no concurrency control is necessary to gain mutual exclusion.
 */
 
+
+
+//this is a mod to the dana languages ws.core web service
+//this mod enables us to create a frontend for our project that gets the free ipp from the controller and forwards all traffic to that free machine 
+//it further uses threading to make sure it can handle multiple clients
+
+//please place this file in the following directoy and compile it for the project to work
+//<dana installation directory>/components/ws
+
+//for LINUX execution please change the address of the cntrlr_path on line 319 in the processStream function to the appropriate path in the linux directory for the project also change all \\ to / in sendFile, processStream path declarations
+
 uses Web
 
 const char SWC_PATH[] = "/swc/"
@@ -189,15 +200,29 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 		return false
 		}
 		
+		/**
+		*this function is used by the front end to serve back file data to the client it is used to print the machine learning data, its condensed csv version and its size as a webpage on the client provide the request comes through the front end and not to the container directly 
+		*
+		*inputs:
+		*char command[] the command itself i.e the file whose data is to be sent back
+		*TCPSocket s socket from where the request was recived
+		*char cntrlr_path[] the path where the controller keps all its logs
+		*DocStream s stream where the request came from and reply is to be served to
+		*
+		*result:
+		*relevant file data sent back to client
+		*/
+	
+		
 		bool sendFile(char command[], TCPSocket s,char cntrlr_path[],DocStream ds)
 		{
 		char c[] =stringUtil.explode(command,"/")[0].string
 		char path[]
+		bool dat_set = false
+		
 		if(c == "ml_log")
 		{
-			
-			path = "$cntrlr_path/$c.txt"
-			out.print(path)
+			path = "$cntrlr_path$c.txt"
 		}
 		else if(c == "ml_log_csv")
 		{
@@ -206,7 +231,7 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 		}
 		else if (c == "ml_log_size")
 		{
-			RunStatus st = run.execute("./clear_file.bash ml_log_size")
+			RunStatus st = run.execute("if exist ml_log_size break> ml_log_size")
 			run_csv_gen()
 			path = "ml_log_csv.csv"
 			char temp[] = read_file(path)
@@ -219,9 +244,10 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 			
 		
 		
-		if (fileSystem.exists(path))
+		if (fileSystem.exists(path) && !dat_set)
 			{
 			File fd = new File(path, File.FILE_ACCESS_READ)
+			
 			byte dat[] = fd.read(fd.getSize())
 			
 			s.send("HTTP/1.1 200 OK\r\n")
@@ -252,6 +278,19 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 		return false
 		}
 	
+	/**
+		*this function has been modified to serve the purpose of a front end in our case it essentially reads a request and if it is aclient request to a webpage it redirects it to the free machine and if it is a controller log request it serves back the response 
+		*
+		*this function is further used to generate threads each thread deals with a seperate request 
+		*
+		*inputs:
+		*TCPSocket s socket from where the request was recived
+		*
+		*result:
+		*relevant action taken and result sent back to client 
+		*/
+	
+	
 	void processStream(TCPSocket s)
 		{
 		//parse headers, extract command
@@ -276,14 +315,16 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 		char log_name[] = "free_ips.txt"
 		char failed_at[]
 		char m[]
-		char cnt_pth[] = "/home/lancs/sadla/FYP_Masters/Docker_dana_server/controller"
+		
+		char cnt_pth[] = "D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\controller"
+		
 		DocStream ds = null
-		if(fileSystem.exists("$cnt_pth/$log_name"))
+		if(fileSystem.exists(cnt_pth))
 		{
-			ds = new DocStream(s, cmd.headers,false)
+			ds = new DocStream(s, cmd.headers)
 			bool success = false
 			
-			char f_ip[] = stringUtil.explode(read_file("$(cnt_pth)/$log_name"),"\n\r")[0].string
+			char f_ip[] = stringUtil.explode(read_file("$(cnt_pth)\\$log_name"),"\n\r")[0].string
 			//out.println(f_ip)
 			
 			HTTPResponse r = requester.get("http://$f_ip:5000/$(cmd.resource)", null)/*"http://127.0.0.1:5100"*/
@@ -330,60 +371,33 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 				ds.write(m)
 			}
 			
-			
-			
-			
-			/*
-			String resource = new String(cmd.resource)
-			char handler[]
-			
-			bool success = false
-			
-			if (staticFile(cmd.resource))
-				{
-				success = serveFile(cmd.resource, s)
-				}
-				else if ((handler = getHandler(resource)) != null)
-				{
-				DocStream ds = new DocStream(s, cmd.headers)
-				
-				if (cmd.type == Command.GET)
-					{
-					success = serveFunction_GET(ds, handler, resource.string)
-					}
-					else if (cmd.type == Command.POST)
-					{
-					//read the payload first
-					char ctype[] = getHeaderValue(cmd, "content-type")
-					int plen = intUtil.intFromString(getHeaderValue(cmd, "content-length"))
-					byte payload[] = s.recv(plen)
-					
-					success = serveFunction_POST(ds, handler, resource.string, ctype, payload)
-					}
-				
-				if (success) ds.endStream()
-				}
-			
-			*/
 			if (!success)
 				{
 				ds.write("Webservice offline: $failed_at")
 				
 				}
-			ds.endStream()
-			s.disconnect()
 			
-		}
+					}
 		else
 		{
 			ds.write("Controller path is wrong")
-			ds.endStream()
-		s.disconnect()
 		}
 		ds.endStream()
 		s.disconnect()
 
 	}
+		
+		
+	/**
+	*this functions reads from a file in the same directory as the web.dn file
+	*
+	*inputs:
+	*char f_n[] name of file to read from
+	*
+	*result:
+	*char array with the contents of the file in it  
+	*/
+
 		
 	char[] read_file(char f_name[])
 	{
@@ -395,19 +409,31 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 	}
 		
 		
+	/**
+	*this function generates the csv log used in knn training
+	*
+	*
+	*inputs:
+	*
+	*result:
+	*generated log file in the same directory as the cntrlr.o file  
+	*/
+
+	
+	
 	void run_csv_gen()
 	{
 	
 		char ml_log_csv[] = "ml_log_csv.csv"
-		char cnt_pth[] = "/home/lancs/sadla/FYP_Masters/Docker_dana_server/controller"
-		char log_name_ml[] ="$cnt_pth/ml_log.txt"
+		char cnt_pth[] = "D:\\MSCI\\Fyp_masters\\Fyp_code\\FYP_Masters\\Docker_dana_server\\controller"
+		char log_name_ml[] ="$cnt_pth\\ml_log.txt"
 		char d[]
 		String tmp[]
 		char avg_ttr[]
 		char min_avg_ttr[]
 		char stat[]
 		
-		RunStatus s = run.execute("./clear_file.bash $ml_log_csv")
+		RunStatus s = run.execute("if exist $ml_log_csv break> $ml_log_csv")
 		
 		d = read_file(log_name_ml)
 		tmp = stringUtil.explode(d,">")
@@ -427,6 +453,17 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 	
 	}
 
+	/**
+	*this functions write to a file in the same directory as the web.dn file
+	*
+	*inputs:
+	*char f_n[] name of file to write to
+	*char d[] data to be written onto the file
+	*
+	*result:
+	*specified file with the given data in the same directory as the web.dn file  
+	*/
+	
 	void write_to_file(char f_n[],char d[])
 	{	
 		File f = new File(f_n, File.FILE_ACCESS_WRITE)
@@ -435,7 +472,16 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 		f.close()
 	}
 		
-	
+	/**
+	*main function that listens on socket 2000 for a request and launches a thread against each request to deal with it
+	*
+	*
+	*inputs:
+	*
+	*result:
+	*controller runs and does appropriate calculations and tasks  
+	*/
+
 	int App:main(AppParam params[])
 		{
 		TCPServerSocket s = new TCPServerSocket()
@@ -449,7 +495,6 @@ component provides App requires io.Output out, net.TCPServerSocket, net.TCPSocke
 			
 			if (cs.accept(s))
 				{
-				//processStream(cs)
 				asynch::processStream(cs)
 				}
 			}
