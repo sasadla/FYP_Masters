@@ -26,3 +26,35 @@
 						}
 						
 	}*/
+	
+	
+	
+	void overloaded_found(int i, int skip, String ips_to_check[], char dd[], HTTPResponse r,char log[])
+	{
+			r = rq.get("http://$(ips_to_check[i].string):2018/down_res.txt", null)/*"http://127.0.0.1:5100"*/
+						out.println("in busy i is : $(intUtl.intToString(i)) an skip is: $(intUtl.intToString(skip))")
+						dd = r.content
+						
+						if(i!=skip)
+						{
+							if (dd.arrayLength > 0)
+							{
+								out.println("OVERLOADED ACTIVE")
+								r = rq.get("http://$(ips_to_check[i].string):2018/up", null)/*"http://127.0.0.1:5100"*/	
+								log = r.content
+								out.println(log)
+								if(i >= ips_to_check.arrayLength)
+								{
+									ovrldd_found = false
+								}
+								
+								test_run = true
+								skip_assigned = false
+							}
+							else
+							{
+								out.println("OVERLOADED ACTIVE ELSE")
+							}
+						}
+						ovrldd_done = true
+	}
