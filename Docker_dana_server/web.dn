@@ -49,6 +49,7 @@ component provides ws.Web requires ws.FormParser fparser, io.Output out, os.Syst
 			else
 			{
 				log = "Webservice on $av_host already Down"
+				RunStatus sts = run.execute("echo d_down_success >> down_res.txt")
 				out.println("Sent back: $log")
 			}
 		}
