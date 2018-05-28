@@ -118,8 +118,7 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 				}
 				out.println(ips_to_check[i].string)
 					
-						
-						
+								
 				log = r.content
 					
 				if (!(log == "Webservice down Cannot run test") || !(log.arrayLength > 0))
@@ -136,7 +135,7 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 						
 				}
 								
-				if(!test_run)
+				if(!test_run || log == "Webservice down Cannot run test")
 				{
 					ad = false
 				}
