@@ -52,15 +52,17 @@ component provides App requires io.Output out, data.StringUtil stringUtil,data.I
 		tmp = stringUtil.explode(d,">")
 		write_to_file(ml_log_csv,"AVG_TTR,MIN_AVG_TTR,Status,")
 		for(int i = 0; i < tmp.arrayLength ; i++){
-		
-			avg_ttr = stringUtil.explode(stringUtil.explode(stringUtil.explode(tmp[i].string,":")[4].string,"\n\r")[0].string," ")[0].string
-			min_avg_ttr = stringUtil.explode(stringUtil.explode(stringUtil.explode(tmp[i].string,":")[5].string,"\n\r")[0].string," ")[0].string
-			stat = stringUtil.explode(stringUtil.explode(stringUtil.explode(tmp[i].string,":")[7].string,"\n\r")[0].string," ")[0].string
-			
-			//out.println("file is:\n $(tmp[i].string)$avg_ttr,$min_avg_ttr,$stat")
-			out.print("-")
-			write_to_file(ml_log_csv,"$avg_ttr,$min_avg_ttr,$stat,")
-		
+			if (!(stringUtil.explode(tmp[i].string,":")[0].string == "Webservice down Cannot run testStatus is"))
+			{
+				avg_ttr = stringUtil.explode(stringUtil.explode(stringUtil.explode(tmp[i].string,":")[4].string,"\n\r")[0].string," ")[0].string
+				min_avg_ttr = stringUtil.explode(stringUtil.explode(stringUtil.explode(tmp[i].string,":")[5].string,"\n\r")[0].string," ")[0].string
+				stat = stringUtil.explode(stringUtil.explode(stringUtil.explode(tmp[i].string,":")[7].string,"\n\r")[0].string," ")[0].string
+				
+				//out.println("file is:\n $(tmp[i].string)$avg_ttr,$min_avg_ttr,$stat")
+				out.print("-")
+				write_to_file(ml_log_csv,"$avg_ttr,$min_avg_ttr,$stat,")
+			}
+
 		}
 		s = run.execute("$ml_log_csv")
 	
