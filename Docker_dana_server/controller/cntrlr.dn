@@ -52,10 +52,10 @@ component provides App requires io.Output out,io.FileSystem fileSystem, data.Str
 		//min_avg busy above 5899 ,overloades above 10752
 		//avg busy above 4576 ,overloades above 11363
 		
-		do_knn_calculations()
 		
 		while(times)
 		{
+			do_knn_calculations()
 			run_cntrlr()
 			
 		}
